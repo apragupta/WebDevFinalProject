@@ -21,10 +21,10 @@ const MainApp =() => {
     return(
         <Provider store={store}>
         <div className="row mt-2">
-            <div className="col-2 col-lg-1 col-xl-2">
+            <div className="col-2 col-lg-2 col-xl-2">
                 <NavigationSidebar active={active_screen}/>
             </div>
-            <div className="col-10 col-lg-7 col-xl-6">
+            <div className="col-10 col-lg-8 col-xl-8">
                 <Outlet/>
             </div>
 

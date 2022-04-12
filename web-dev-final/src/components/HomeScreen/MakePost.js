@@ -35,7 +35,7 @@ const MakePost = () => {
              }}>
             <div className="col-2 h-auto pt-2 pe-2 " >
 
-                <img src="https://i.imgur.com/dUUJ6Gm.jpeg" className = "img-fluid w-100 h-auto rounded-circle my-auto px-2 py-1" />
+                <img src="https://i.imgur.com/dUUJ6Gm.jpeg" className = "img-fluid w-auto h-75 rounded-circle my-auto px-2 py-1" />
 
             </div>
 
@@ -64,7 +64,10 @@ const MakePost = () => {
                             <label htmlFor="selectGame" className="form-label mt-4">Select Game</label>
                             <select className="form-select"
                                     id="selectGame"
-                                    onChange={(event)=> setPostGame({gameSet: true, game_id: event.target.value})} >
+                                    onChange={(event)=> setPostGame({gameSet: true, game_id: event.target.value})}
+                                    style={{
+                                        backgroundColor: "var(--bs-body-color)"
+                                    }}>
                                 {
                                     user_games.map && user_games.map(game => <option value={game._id}> {game.name} </option> )
                                 }

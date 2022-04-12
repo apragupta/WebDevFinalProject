@@ -1,9 +1,8 @@
 import './App.css';
 
 import {BrowserRouter, Route,Routes} from "react-router-dom";
-import './vendors/bootstrap/bootstrap.min.css'
-import './vendors/fontawesome/css/all.min.css'
-
+import './vendors/bootstrap/bootstrap.min.css';
+import './vendors/fontawesome/css/all.min.css';
 import MainApp from "./components";
 import HomeScreen from "./components/HomeScreen";
 import Profile from "./components/Profile";

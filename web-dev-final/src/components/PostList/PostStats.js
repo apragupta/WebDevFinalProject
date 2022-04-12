@@ -18,7 +18,7 @@ const PostStats = ({post}) => {
     return (
         <div className="d-flex justify-content-around">
             <i className="far fa-comment me-1"> { post.stats && post.stats.comments} </i>
-            <i className="fas fa-retweet me-1"> { post.stats && post.stats.reposts} </i>
+            <i className="far fa-thumbs-down me-1"> { post.stats && post.stats.reposts} </i>
             <span onClick={() => updatePost(dispatch, {
                 ...post, stats: {...post.stats, likes: calcLikes(post)}, liked: !post.liked}
             )}>
@@ -33,7 +33,7 @@ const PostStats = ({post}) => {
                 }
                 {post.stats && post.stats.likes}
             </span>
-            <i className="fas fa-external-link-alt"></i>
+            <i className="far fa-bookmark"></i>
         </div>
 
 

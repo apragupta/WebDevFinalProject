@@ -14,10 +14,10 @@ const PostListItem = ({post}) => {
         }}>
             <div className="col-2 h-auto pe-2" >
 
-                <img src={post.postedBy.avatar_image} className = "img-fluid w-100 h-auto rounded-circle my-auto px-2 py-1" />
+                <img src={post.postedBy.avatar_image} className = "img-fluid w-auto h-50 rounded-circle my-auto px-2 py-1" />
             </div>
 
-            <div className="col-10 mr-auto p-0 ">
+            <div className="col-8 mr-auto p-0 ">
                 <div className="d-flex justify-content-between ">
                     <div>
                         <p>
@@ -47,6 +47,10 @@ const PostListItem = ({post}) => {
 
 
 
+            </div>
+            <div className="col-2 mx-1 px-1 ">
+                <img src={post.game.header_image} className = "img-fluid w-auto h-auto my-auto px-2 py-1" />
+                <h6>{post.game.name}</h6>
             </div>
             {/*Todo - image/embedding-*/}
 
