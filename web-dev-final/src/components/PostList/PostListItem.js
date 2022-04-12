@@ -44,8 +44,8 @@ const PostListItem = ({post}) => {
 
 
             </div>
-            <div className="col-xl-2 col-lg-3 col-4 mx-1 px-1 text-center">
-                <img src={post.game.header_image} className = "img-fluid w-auto h-auto my-auto" />
+            <div className="col-xl-2 col-lg-3 col-4 mx-1  text-center align-self-center wd-post-game">
+                <img src={post.game.header_image} className = "img-fluid w-auto h-auto wd-post-game-image" />
                 <h6 className="my-auto ">{post.game.name}</h6>
             </div>
             {/*Todo - image/embedding-*/}
