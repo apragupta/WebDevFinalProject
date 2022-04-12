@@ -62,7 +62,7 @@ export default [
             "avatar_image": "https://i.imgur.com/xdq1OiK.jpg"
 
         },
-        "title": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "title": "Wow, yet another counter strike related post!...",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur interdum risus, ac dapibus sapien. Morbi varius molestie nisi. Fusce rhoncus arcu sodales rutrum pharetra. Suspendisse in blandit nibh. Integer sit amet sapien leo. Donec nec iaculis risus. Vivamus euismod arcu in ligula finibus, non sollicitudin erat faucibus.",
 
 

@@ -8,8 +8,6 @@ export const DELETE_POST = 'DELETE_POST';
 
 export const createPost = async (dispatch, post) => {
     const newPost = await service.createPost(post);
-    console.log("post")
-    console.log(post)
 
     dispatch({
         type: CREATE_POST,

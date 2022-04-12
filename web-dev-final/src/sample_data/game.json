@@ -1,4 +1,5 @@
-[{
+[
+  {
     "type": "game",
     "name": "Counter-Strike: Global Offensive",
     "steam_appid": 730,
@@ -369,5 +370,1492 @@
       ],
       "notes": "Includes intense violence and blood."
     }
-  }]
+  },
+{
+        "type": "game",
+        "name": "ELDEN RING",
+        "steam_appid": 1245620,
+        "required_age": "16",
+        "is_free": false,
+        "controller_support": "full",
+        "detailed_description": "<h1>ELDEN RING Deluxe Edition<\/h1><p><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/extras\/ER_Deluxe_Beautyshot_GIF_EN.gif?t=1649774637\" \/><br>The Deluxe Edition includes:<br>• ELDEN RING (full game)<br>• Digital Artbook &amp; Original Soundtrack<\/p><br><h1>About the Game<\/h1><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/extras\/ER_Steam_Gif_616x260.gif?t=1649774637\" \/><br><br>THE NEW FANTASY ACTION RPG.<br>Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.<h2 class=\"bb_tag\">• A Vast World Full of Excitement<\/h2>A vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected. As you explore, the joy of discovering unknown and overwhelming threats await you, leading to a high sense of accomplishment.<h2 class=\"bb_tag\">• Create your Own Character<\/h2>In addition to customizing the appearance of your character, you can freely combine the weapons, armor, and magic that you equip. You can develop your character according to your play style, such as increasing your muscle strength to become a strong warrior, or mastering magic.<h2 class=\"bb_tag\">• An Epic Drama Born from a Myth<\/h2>A multilayered story told in fragments. An epic drama in which the various thoughts of the characters intersect in the Lands Between.<h2 class=\"bb_tag\">• Unique Online Play that Loosely Connects You to Others<\/h2>In addition to multiplayer, where you can directly connect with other players and travel together, the game supports a unique asynchronous online element that allows you to feel the presence of others.",
+        "about_the_game": "<img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/extras\/ER_Steam_Gif_616x260.gif?t=1649774637\" \/><br><br>THE NEW FANTASY ACTION RPG.<br>Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.<h2 class=\"bb_tag\">• A Vast World Full of Excitement<\/h2>A vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected. As you explore, the joy of discovering unknown and overwhelming threats await you, leading to a high sense of accomplishment.<h2 class=\"bb_tag\">• Create your Own Character<\/h2>In addition to customizing the appearance of your character, you can freely combine the weapons, armor, and magic that you equip. You can develop your character according to your play style, such as increasing your muscle strength to become a strong warrior, or mastering magic.<h2 class=\"bb_tag\">• An Epic Drama Born from a Myth<\/h2>A multilayered story told in fragments. An epic drama in which the various thoughts of the characters intersect in the Lands Between.<h2 class=\"bb_tag\">• Unique Online Play that Loosely Connects You to Others<\/h2>In addition to multiplayer, where you can directly connect with other players and travel together, the game supports a unique asynchronous online element that allows you to feel the presence of others.",
+        "short_description": "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+        "supported_languages": "English<strong>*<\/strong>, French, Italian, German, Spanish - Spain, Japanese, Korean, Polish, Portuguese - Brazil, Russian, Simplified Chinese, Spanish - Latin America, Thai, Traditional Chinese<br><strong>*<\/strong>languages with full audio support",
+        "reviews": "“Put a ring on it.”<br>10\/10 – <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/vandal.elespanol.com\/analisis\/xsx\/elden-ring\/102077#p-97\" target=\"_blank\" rel=\"noopener\"  >Vandal<\/a><br><br>“An unmissable open-world masterpiece.”<br>97\/100 – <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/alfabetajuega.com\/analisis\/elden-ring-experiencia-opinion-nota\" target=\"_blank\" rel=\"noopener\"  >Alfabeta Juega<\/a><br><br>“Exploration is jaw dropping.”<br>97\/100 – <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/www.millenium.gg\/analisis\/45551.html\" target=\"_blank\" rel=\"noopener\"  >Millenium<\/a><br>",
+        "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/header.jpg?t=1649774637",
+        "website": null,
+        "pc_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> Windows 10<br><\/li><li><strong>Processor:<\/strong> INTEL CORE I5-8400 or AMD RYZEN 3 3300X<br><\/li><li><strong>Memory:<\/strong> 12 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB<br><\/li><li><strong>DirectX:<\/strong> Version 12<br><\/li><li><strong>Storage:<\/strong> 60 GB available space<br><\/li><li><strong>Sound Card:<\/strong> Windows Compatible Audio Device<br><\/li><li><strong>Additional Notes:<\/strong> <\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> Windows 10\/11<br><\/li><li><strong>Processor:<\/strong> INTEL CORE I7-8700K or AMD RYZEN 5 3600X<br><\/li><li><strong>Memory:<\/strong> 16 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB<br><\/li><li><strong>DirectX:<\/strong> Version 12<br><\/li><li><strong>Storage:<\/strong> 60 GB available space<br><\/li><li><strong>Sound Card:<\/strong> Windows Compatible Audio Device<br><\/li><li><strong>Additional Notes:<\/strong> <\/li><\/ul>"
+        },
+        "mac_requirements": [],
+        "linux_requirements": [],
+        "legal_notice": "ELDEN RING™ & ©BANDAI NAMCO Entertainment Inc. \/ ©2022 FromSoftware, Inc.",
+        "developers": [
+          "FromSoftware Inc."
+        ],
+        "publishers": [
+          "FromSoftware Inc.",
+          "BANDAI NAMCO Entertainment"
+        ],
+        "price_overview": {
+          "currency": "USD",
+          "initial": 5999,
+          "final": 5999,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "$59.99"
+        },
+        "packages": [
+          440408,
+          613950
+        ],
+        "package_groups": [
+          {
+            "name": "default",
+            "title": "Buy ELDEN RING",
+            "description": "",
+            "selection_text": "Select a purchase option",
+            "save_text": "",
+            "display_type": 0,
+            "is_recurring_subscription": "false",
+            "subs": [
+              {
+                "packageid": 440408,
+                "percent_savings_text": " ",
+                "percent_savings": 0,
+                "option_text": "ELDEN RING - $59.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 5999
+              },
+              {
+                "packageid": 613950,
+                "percent_savings_text": " ",
+                "percent_savings": 0,
+                "option_text": "ELDEN RING Deluxe Edition - $79.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 7999
+              }
+            ]
+          }
+        ],
+        "platforms": {
+          "windows": true,
+          "mac": false,
+          "linux": false
+        },
+        "metacritic": {
+          "score": 95,
+          "url": "https:\/\/www.metacritic.com\/game\/pc\/elden-ring?ftag=MCD-06-10aaa1f"
+        },
+        "categories": [
+          {
+            "id": 2,
+            "description": "Single-player"
+          },
+          {
+            "id": 1,
+            "description": "Multi-player"
+          },
+          {
+            "id": 49,
+            "description": "PvP"
+          },
+          {
+            "id": 36,
+            "description": "Online PvP"
+          },
+          {
+            "id": 9,
+            "description": "Co-op"
+          },
+          {
+            "id": 38,
+            "description": "Online Co-op"
+          },
+          {
+            "id": 22,
+            "description": "Steam Achievements"
+          },
+          {
+            "id": 28,
+            "description": "Full controller support"
+          },
+          {
+            "id": 29,
+            "description": "Steam Trading Cards"
+          }
+        ],
+        "genres": [
+          {
+            "id": "1",
+            "description": "Action"
+          },
+          {
+            "id": "3",
+            "description": "RPG"
+          }
+        ],
+        "screenshots": [
+          {
+            "id": 0,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_e80a907c2c43337e53316c71555c3c3035a1343e.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_e80a907c2c43337e53316c71555c3c3035a1343e.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 1,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_25cd489871907387c1b915022a96b196661b6e17.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_25cd489871907387c1b915022a96b196661b6e17.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 2,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_3e556415d1bda00d749b2166ced264bec76f06ee.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_3e556415d1bda00d749b2166ced264bec76f06ee.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 3,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 4,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_c372274833ae6e5437b952fa1979430546a43ad9.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_c372274833ae6e5437b952fa1979430546a43ad9.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 5,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_e87a3e84890ab19f8995566e62762d5f8ed39315.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 6,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_3aec1455923ef49f4e777c2a94dbcd0256f77eb0.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_3aec1455923ef49f4e777c2a94dbcd0256f77eb0.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 7,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_b87601dee58f4dbc36e40a8d803dc6a53ceefe07.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_b87601dee58f4dbc36e40a8d803dc6a53ceefe07.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 8,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_8b58d96262fb0d62a482621b86c6ff85f4f57997.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 9,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_1011610a0e330c41a75ffd0b3a9a1bac3205c46a.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_1011610a0e330c41a75ffd0b3a9a1bac3205c46a.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 10,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_41e2e8f3b0ad631e929e0c2ec3d1f21de883e98c.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_41e2e8f3b0ad631e929e0c2ec3d1f21de883e98c.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 11,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_7dcd7e6c42024c2d5a5a31d758039ded13a47527.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_7dcd7e6c42024c2d5a5a31d758039ded13a47527.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 12,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_abd681cde3402155a35edb82919b7602cc7ec338.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_abd681cde3402155a35edb82919b7602cc7ec338.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 13,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_0b6e59057b02392b21dde62b4dde65d447e1fa3c.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_0b6e59057b02392b21dde62b4dde65d447e1fa3c.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 14,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_7523a8fc7775ae65cabd94d092ebecbd963258b6.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_7523a8fc7775ae65cabd94d092ebecbd963258b6.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 15,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_a176eea67cd421307a6c627514129237d6202890.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_a176eea67cd421307a6c627514129237d6202890.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 16,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_ebb332e63dfab864c3bf3c3b1001b69f4da25f9f.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_ebb332e63dfab864c3bf3c3b1001b69f4da25f9f.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 17,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_24bd769aeffacd45fcd3a7ae9efde22b24b5fca9.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_24bd769aeffacd45fcd3a7ae9efde22b24b5fca9.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 18,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_75f25974c20b8704fe5ee246f74896b550088d3e.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_75f25974c20b8704fe5ee246f74896b550088d3e.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 19,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_fb2957cce97f4633bc743b561f76865e6993c781.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_fb2957cce97f4633bc743b561f76865e6993c781.1920x1080.jpg?t=1649774637"
+          },
+          {
+            "id": 20,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_35ff7ed4b67e2bb73e54f6c10a4f8d9390c16203.600x338.jpg?t=1649774637",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/ss_35ff7ed4b67e2bb73e54f6c10a4f8d9390c16203.1920x1080.jpg?t=1649774637"
+          }
+        ],
+        "movies": [
+          {
+            "id": 256875477,
+            "name": "ELDEN RING Launch Trailer - ESRB",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256875477\/movie.293x165.jpg?t=1645743469",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256875477\/movie480_vp9.webm?t=1645743469",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256875477\/movie_max_vp9.webm?t=1645743469"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256875477\/movie480.mp4?t=1645743469",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256875477\/movie_max.mp4?t=1645743469"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256864891,
+            "name": "ELDEN RING CGI Trailer - ESRB",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256864891\/movie.293x165.jpg?t=1645830855",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256864891\/movie480_vp9.webm?t=1645830855",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256864891\/movie_max_vp9.webm?t=1645830855"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256864891\/movie480.mp4?t=1645830855",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256864891\/movie_max.mp4?t=1645830855"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256859890,
+            "name": "ELDEN RING Pre-order Trailer - ESRB",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256859890\/movie.293x165.jpg?t=1641845061",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256859890\/movie480_vp9.webm?t=1641845061",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256859890\/movie_max_vp9.webm?t=1641845061"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256859890\/movie480.mp4?t=1641845061",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256859890\/movie_max.mp4?t=1641845061"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256839312,
+            "name": "ELDEN RING Official Gameplay Trailer - ESRB",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256839312\/movie.293x165.jpg?t=1641422486",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256839312\/movie480_vp9.webm?t=1641422486",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256839312\/movie_max_vp9.webm?t=1641422486"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256839312\/movie480.mp4?t=1641422486",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256839312\/movie_max.mp4?t=1641422486"
+            },
+            "highlight": true
+          }
+        ],
+        "recommendations": {
+          "total": 326007
+        },
+        "achievements": {
+          "total": 42,
+          "highlighted": [
+            {
+              "name": "Elden Ring",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/1cb1fe89084e822bd7d9ad4df66bc7f917995b38.jpg"
+            },
+            {
+              "name": "Elden Lord",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/e50726be4aca4d2b1f5f14d36859fc8e6f710097.jpg"
+            },
+            {
+              "name": "Age of the Stars",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/7e7369bceba13739025766a72560fe9ce7ac56c9.jpg"
+            },
+            {
+              "name": "Lord of Frenzied Flame",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/230fc53f4bc2d9bf39be031cc198be81508a9c47.jpg"
+            },
+            {
+              "name": "Shardbearer Godrick",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/1e230f1a87d7139e854c47e52337f9d50856ac64.jpg"
+            },
+            {
+              "name": "Shardbearer Radahn",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/f5f1f41ef749459d9ac45750cd1f069d05fe1dd8.jpg"
+            },
+            {
+              "name": "Shardbearer Morgott",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/1ffc295a2cd48b88487d410025d081549d932b27.jpg"
+            },
+            {
+              "name": "Shardbearer Rykard",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/cb0aec39fcc664c4e586750177178b6814a52e0d.jpg"
+            },
+            {
+              "name": "Shardbearer Malenia",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/f704fcd82daf933dd3ce81c4d8ffea3ec65f26f4.jpg"
+            },
+            {
+              "name": "Shardbearer Mohg",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/1245620\/a00f99e4944d09603d64996c5ade85264bcba22d.jpg"
+            }
+          ]
+        },
+        "release_date": {
+          "coming_soon": false,
+          "date": "Feb 24, 2022"
+        },
+        "support_info": {
+          "url": "https:\/\/www.bandainamcoent.com\/support",
+          "email": ""
+        },
+        "background": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/page_bg_generated_v6b.jpg?t=1649774637",
+        "background_raw": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/page.bg.jpg?t=1649774637",
+        "content_descriptors": {
+          "ids": [
+            2,
+            5
+          ],
+          "notes": null
+        }
+      },
+{
+        "type": "game",
+        "name": "Rust",
+        "steam_appid": 252490,
+        "required_age": "17",
+        "is_free": false,
+        "dlc": [
+          1174370,
+          1353060,
+          1670430,
+          1701720
+        ],
+        "detailed_description": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.<br><br><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/Rust_Gif_Opt.gif?t=1645133322\" \/><br><br>Rust is in its 8th year and has now had over 300 content updates, with a guaranteed content patch every month. From regular balance fixes and improvements to AI and graphics updates to adding content like new maps, musical instruments, trains and drones, as well as regular seasons and events, there’s always something interesting or dangerous (or both) happening on the island. Updates to the game include:<br><br><ul class=\"bb_ul\"><li>Procedurally generated worlds with map editor support<br><\/li><li>Host your own servers and with server-side modding support<br><\/li><li>Vehicles:  horses, modular cars, hot air balloons, helicopters, trains and more<br><\/li><li>Complex electrical systems <br><\/li><li>Farming<br><\/li><li>New enemies, wildlife and factions<br><\/li><li>New monuments and areas to explore<br><\/li><li>Gestures and contact system<br><\/li><li>Musical instruments<br><\/li><li>Large train network<br><\/li><li>Huge recent graphics overhaul<br><\/li><li>..and more<\/li><\/ul><h2 class=\"bb_tag\">EXPLORE<\/h2><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/explore.jpg?t=1645133322\" \/><br>You wake naked on a mysterious island armed only with a rock and a torch. You’ll need to brave natural dangers (from heat and cold to thirst and starvation), build a shelter, eat (or be eaten), scavenge materials. Explore the island, its abandoned settlements, mysterious monuments and the factions that occupy them. But, above all, watch out for other survivors...<h2 class=\"bb_tag\">BUILD<\/h2><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/build.jpg?t=1645133322\" \/><br>Design and build bases to defend your territory or control the resources of the island. Research the tech tree, grow farms, command electricity, commandeer vehicles from horses to cars to boats to helicopters. Whatever it takes to get ahead.<h2 class=\"bb_tag\">SURVIVE<\/h2><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/survive.jpg?t=1645133322\" \/><br>There are no rules in Rust but the ones you make for yourself. Craft tools, armor and weapons to defend yourself. Cooperate with friends and allies and build a town together. Explore the island and what’s happening in it. Trade with other players. Or prey on them, raiding their bases and taking their hard-won goods.",
+        "about_the_game": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.<br><br><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/Rust_Gif_Opt.gif?t=1645133322\" \/><br><br>Rust is in its 8th year and has now had over 300 content updates, with a guaranteed content patch every month. From regular balance fixes and improvements to AI and graphics updates to adding content like new maps, musical instruments, trains and drones, as well as regular seasons and events, there’s always something interesting or dangerous (or both) happening on the island. Updates to the game include:<br><br><ul class=\"bb_ul\"><li>Procedurally generated worlds with map editor support<br><\/li><li>Host your own servers and with server-side modding support<br><\/li><li>Vehicles:  horses, modular cars, hot air balloons, helicopters, trains and more<br><\/li><li>Complex electrical systems <br><\/li><li>Farming<br><\/li><li>New enemies, wildlife and factions<br><\/li><li>New monuments and areas to explore<br><\/li><li>Gestures and contact system<br><\/li><li>Musical instruments<br><\/li><li>Large train network<br><\/li><li>Huge recent graphics overhaul<br><\/li><li>..and more<\/li><\/ul><h2 class=\"bb_tag\">EXPLORE<\/h2><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/explore.jpg?t=1645133322\" \/><br>You wake naked on a mysterious island armed only with a rock and a torch. You’ll need to brave natural dangers (from heat and cold to thirst and starvation), build a shelter, eat (or be eaten), scavenge materials. Explore the island, its abandoned settlements, mysterious monuments and the factions that occupy them. But, above all, watch out for other survivors...<h2 class=\"bb_tag\">BUILD<\/h2><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/build.jpg?t=1645133322\" \/><br>Design and build bases to defend your territory or control the resources of the island. Research the tech tree, grow farms, command electricity, commandeer vehicles from horses to cars to boats to helicopters. Whatever it takes to get ahead.<h2 class=\"bb_tag\">SURVIVE<\/h2><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/extras\/survive.jpg?t=1645133322\" \/><br>There are no rules in Rust but the ones you make for yourself. Craft tools, armor and weapons to defend yourself. Cooperate with friends and allies and build a town together. Explore the island and what’s happening in it. Trade with other players. Or prey on them, raiding their bases and taking their hard-won goods.",
+        "short_description": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.",
+        "supported_languages": "English<strong>*<\/strong>, French<strong>*<\/strong>, Italian<strong>*<\/strong>, German<strong>*<\/strong>, Spanish - Spain<strong>*<\/strong>, Japanese<strong>*<\/strong>, Korean<strong>*<\/strong>, Russian<strong>*<\/strong>, Simplified Chinese<strong>*<\/strong>, Ukrainian<strong>*<\/strong>, Polish<strong>*<\/strong>, Portuguese<strong>*<\/strong>, Turkish<strong>*<\/strong>, Arabic, Czech, Danish, Dutch, Finnish, Greek, Norwegian, Portuguese - Brazil, Spanish - Latin America, Swedish, Traditional Chinese, Vietnamese<br><strong>*<\/strong>languages with full audio support",
+        "reviews": "“Rust is one of the cruelest games on Steam, and that's what makes it so compelling.”<br><a href=\"https:\/\/www.pcgamer.com\/uk\/rust-review\/\" target=\"_blank\" rel=\"noreferrer\"  >PC Gamer<\/a><br><br>“Usually, people will just kill you on sight, but not always.”<br><a href=\"https:\/\/www.rockpapershotgun.com\/2018\/02\/12\/rust-review\/\" target=\"_blank\" rel=\"noreferrer\"  >Rock Paper Shotgun<\/a><br><br>“I've never had my feelings hurt in a video game like they were hurt playing Rust”<br>PainKiller Already podcast<br>",
+        "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/header.jpg?t=1645133322",
+        "website": "http:\/\/rust.facepunch.com\/",
+        "pc_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> Windows 8.1 64bit<br><\/li><li><strong>Processor:<\/strong> Intel Core i7-3770 \/ AMD FX-9590 or better<br><\/li><li><strong>Memory:<\/strong> 10 GB RAM<br><\/li><li><strong>Graphics:<\/strong> GTX 670 2GB \/ AMD R9 280 better<br><\/li><li><strong>DirectX:<\/strong> Version 11<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 25 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> SSD is highly recommended or expect longer than average load times.<\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> Windows 11 64bit<br><\/li><li><strong>Processor:<\/strong> Intel Core i7-4790K \/ AMD Ryzen 5 1600<br><\/li><li><strong>Memory:<\/strong> 16 GB RAM<br><\/li><li><strong>Graphics:<\/strong> GTX 980 \/ AMD R9 Fury<br><\/li><li><strong>DirectX:<\/strong> Version 12<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 25 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> SSD is highly recommended.<\/li><\/ul>"
+        },
+        "mac_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> OS X El Capitan 10.11<br><\/li><li><strong>Processor:<\/strong> Intel Core i7-3770 \/ AMD FX-9590 or better<br><\/li><li><strong>Memory:<\/strong> 10 GB RAM<br><\/li><li><strong>Graphics:<\/strong> GTX 670 2GB \/ AMD R9 280 better<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 25 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> Metal is required,<\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> OS X El Capitan 10.11<br><\/li><li><strong>Processor:<\/strong> Intel Core i7-4790K \/ AMD Ryzen 5 1600<br><\/li><li><strong>Memory:<\/strong> 16 GB RAM<br><\/li><li><strong>Graphics:<\/strong> GTX 980 \/ AMD R9 Fury<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 25 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> SSD is highly recommended or expect longer than average load times.<\/li><\/ul>"
+        },
+        "linux_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>Processor:<\/strong> Intel Core i7-3770 \/ AMD FX-9590 or better<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> GTX 670 2GB \/ AMD R9 280 better<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 10 GB available space<\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>Processor:<\/strong> Intel Core i7-4690K \/ AMD Ryzen 5 1600<br><\/li><li><strong>Memory:<\/strong> 16 GB RAM<br><\/li><li><strong>Graphics:<\/strong> GTX 980 \/ AMD R9 Fury<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 12 GB available space<\/li><\/ul>"
+        },
+        "developers": [
+          "Facepunch Studios"
+        ],
+        "publishers": [
+          "Facepunch Studios"
+        ],
+        "price_overview": {
+          "currency": "USD",
+          "initial": 3999,
+          "final": 3999,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "$39.99"
+        },
+        "packages": [
+          244390,
+          578604
+        ],
+        "package_groups": [
+          {
+            "name": "default",
+            "title": "Buy Rust",
+            "description": "",
+            "selection_text": "Select a purchase option",
+            "save_text": "",
+            "display_type": 0,
+            "is_recurring_subscription": "false",
+            "subs": [
+              {
+                "packageid": 244390,
+                "percent_savings_text": " ",
+                "percent_savings": 0,
+                "option_text": "Rust - $39.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 3999
+              },
+              {
+                "packageid": 578604,
+                "percent_savings_text": " ",
+                "percent_savings": 0,
+                "option_text": "Rust - Commercial License - $39.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 3999
+              }
+            ]
+          }
+        ],
+        "platforms": {
+          "windows": true,
+          "mac": true,
+          "linux": false
+        },
+        "metacritic": {
+          "score": 69,
+          "url": "https:\/\/www.metacritic.com\/game\/pc\/rust?ftag=MCD-06-10aaa1f"
+        },
+        "categories": [
+          {
+            "id": 1,
+            "description": "Multi-player"
+          },
+          {
+            "id": 20,
+            "description": "MMO"
+          },
+          {
+            "id": 49,
+            "description": "PvP"
+          },
+          {
+            "id": 36,
+            "description": "Online PvP"
+          },
+          {
+            "id": 9,
+            "description": "Co-op"
+          },
+          {
+            "id": 38,
+            "description": "Online Co-op"
+          },
+          {
+            "id": 27,
+            "description": "Cross-Platform Multiplayer"
+          },
+          {
+            "id": 22,
+            "description": "Steam Achievements"
+          },
+          {
+            "id": 29,
+            "description": "Steam Trading Cards"
+          },
+          {
+            "id": 30,
+            "description": "Steam Workshop"
+          },
+          {
+            "id": 35,
+            "description": "In-App Purchases"
+          },
+          {
+            "id": 8,
+            "description": "Valve Anti-Cheat enabled"
+          },
+          {
+            "id": 15,
+            "description": "Stats"
+          },
+          {
+            "id": 42,
+            "description": "Remote Play on Tablet"
+          }
+        ],
+        "genres": [
+          {
+            "id": "1",
+            "description": "Action"
+          },
+          {
+            "id": "25",
+            "description": "Adventure"
+          },
+          {
+            "id": "23",
+            "description": "Indie"
+          },
+          {
+            "id": "29",
+            "description": "Massively Multiplayer"
+          },
+          {
+            "id": "3",
+            "description": "RPG"
+          }
+        ],
+        "screenshots": [
+          {
+            "id": 0,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_9652dbaf2de41b8c8f8305af714ee258564c453d.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_9652dbaf2de41b8c8f8305af714ee258564c453d.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 1,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_2a8518810024a5fbf9c714e697a43a1201b5d53e.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_2a8518810024a5fbf9c714e697a43a1201b5d53e.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 2,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_e825b087b95e51c3534383cfd75ad6e8038147c3.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_e825b087b95e51c3534383cfd75ad6e8038147c3.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 3,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_aaa718a3cb0696a816456283526842c4f2d6b1bc.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_aaa718a3cb0696a816456283526842c4f2d6b1bc.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 4,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_bbf6c96e490326ec877ae548cb148e53516b5f83.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_bbf6c96e490326ec877ae548cb148e53516b5f83.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 5,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_ac208aa4b50f731c5c910554e5e38845b697491f.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_ac208aa4b50f731c5c910554e5e38845b697491f.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 6,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_24483e657f7e59d74e4914f79c51d9c821454e98.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_24483e657f7e59d74e4914f79c51d9c821454e98.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 7,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_803a18bcbf6004706f12a1f88bb3cadbd9ac5f5b.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_803a18bcbf6004706f12a1f88bb3cadbd9ac5f5b.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 8,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_b6cfe69db0aa6e4e7885efbe3acbe17ea2c24d0f.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_b6cfe69db0aa6e4e7885efbe3acbe17ea2c24d0f.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 9,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_b5925cc5fad7a69486c570e3f912130ae0989f06.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_b5925cc5fad7a69486c570e3f912130ae0989f06.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 10,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_651097c65458ae555b42c42dd9667d7174397bdf.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_651097c65458ae555b42c42dd9667d7174397bdf.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 11,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_9264a17b6bc1b3f9df55cf2aafcc25c6188bba59.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_9264a17b6bc1b3f9df55cf2aafcc25c6188bba59.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 12,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_d41d31519dbb2332e8e4c4010e5ae7bf742a270f.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_d41d31519dbb2332e8e4c4010e5ae7bf742a270f.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 13,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_234b12804c91c911e4095fcb872ef7f1a1371ca2.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_234b12804c91c911e4095fcb872ef7f1a1371ca2.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 14,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_0e646f1a70e5cb8eed00efef8adb9579d40d5b2e.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_0e646f1a70e5cb8eed00efef8adb9579d40d5b2e.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 15,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_f05168330593f4f476cd4a6a6094b248c7c8556e.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_f05168330593f4f476cd4a6a6094b248c7c8556e.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 16,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_827f1bb38361eb3f7de91cff9be5b7176a05a9ac.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_827f1bb38361eb3f7de91cff9be5b7176a05a9ac.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 17,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_a63f203245f322f28cf489bf46beaeec780cccec.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_a63f203245f322f28cf489bf46beaeec780cccec.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 18,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_6c6269c7c6164876585e0728742156b49af966af.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_6c6269c7c6164876585e0728742156b49af966af.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 19,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_f877e413e8c630027fdab7a434e9e771a449d7d5.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_f877e413e8c630027fdab7a434e9e771a449d7d5.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 20,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_1c2d0d1eefee54f0c67626c74eb21699bbb0ef52.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_1c2d0d1eefee54f0c67626c74eb21699bbb0ef52.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 21,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_9dfb2cb3e93ab37ff47c7b2e011b1b9e42351107.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_9dfb2cb3e93ab37ff47c7b2e011b1b9e42351107.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 22,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_c88939db635d959b25eb1bcf9b4c4dcdec04b3fe.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_c88939db635d959b25eb1bcf9b4c4dcdec04b3fe.1920x1080.jpg?t=1645133322"
+          },
+          {
+            "id": 23,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_326282c7485e8aff1ebf6750c82622afef098998.600x338.jpg?t=1645133322",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/ss_326282c7485e8aff1ebf6750c82622afef098998.1920x1080.jpg?t=1645133322"
+          }
+        ],
+        "movies": [
+          {
+            "id": 256684736,
+            "name": "Official Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256684736\/movie.293x165.jpg?t=1624520315",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256684736\/movie480_vp9.webm?t=1624520315",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256684736\/movie_max_vp9.webm?t=1624520315"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256684736\/movie480.mp4?t=1624520315",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256684736\/movie_max.mp4?t=1624520315"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256761600,
+            "name": "Scrap Helicopter",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761600\/movie.293x165.jpg?t=1568120227",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761600\/movie480.webm?t=1568120227",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761600\/movie_max.webm?t=1568120227"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761600\/movie480.mp4?t=1568120227",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761600\/movie_max.mp4?t=1568120227"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256761603,
+            "name": "Excavator",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761603\/movie.293x165.jpg?t=1568120218",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761603\/movie480.webm?t=1568120218",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761603\/movie_max.webm?t=1568120218"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761603\/movie480.mp4?t=1568120218",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256761603\/movie_max.mp4?t=1568120218"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256791647,
+            "name": "Modular Vehicles",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256791647\/movie.293x165.jpg?t=1593743141",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256791647\/movie480_vp9.webm?t=1593743141",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256791647\/movie_max_vp9.webm?t=1593743141"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256791647\/movie480.mp4?t=1593743141",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256791647\/movie_max.mp4?t=1593743141"
+            },
+            "highlight": false
+          }
+        ],
+        "recommendations": {
+          "total": 620664
+        },
+        "achievements": {
+          "total": 90,
+          "highlighted": [
+            {
+              "name": "Place Camp Fire",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/8dde5848abac85e61a376bcadc2a6f267c909324.jpg"
+            },
+            {
+              "name": "Craft Camp Fire",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/f0284c3969b32b838a65da0327c72055182244a7.jpg"
+            },
+            {
+              "name": "Collect Wood",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/d896ed9975dc2b03acc89625ed7b70827354f625.jpg"
+            },
+            {
+              "name": "Craft Stone Hatchet",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/e73a5b8d19963a652ed5bd3b63a8e5cb24d8969d.jpg"
+            },
+            {
+              "name": "Collect 200 Stone",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/9bb0de24d60c60fed3ecf424a8c88138d32768aa.jpg"
+            },
+            {
+              "name": "Craft Stone Pickaxe",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/d02b8e1965d9d46c94406740bf87b50ff309f476.jpg"
+            },
+            {
+              "name": "Place Sleeping Bag",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/1de5839ab559cf5e0254b56edaf08056d064b6af.jpg"
+            },
+            {
+              "name": "Collect 700 Wood",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/4ddf4089ef99a6127829e55fcd83882bd5a5115f.jpg"
+            },
+            {
+              "name": "Craft Spear",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/508043e2b9e9a18435f06128bc157c4b87d38437.jpg"
+            },
+            {
+              "name": "Craft Sleeping Bag",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/252490\/8fbbef71f79837d2b1fd523de8dbd66725d437a1.jpg"
+            }
+          ]
+        },
+        "release_date": {
+          "coming_soon": false,
+          "date": "Feb 8, 2018"
+        },
+        "support_info": {
+          "url": "http:\/\/support.facepunchstudios.com\/",
+          "email": ""
+        },
+        "background": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/page_bg_generated_v6b.jpg?t=1645133322",
+        "background_raw": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/page_bg_generated.jpg?t=1645133322",
+        "content_descriptors": {
+          "ids": [
+            1,
+            2,
+            5
+          ],
+          "notes": "Contains violence and caveman themed nudity.\r\n\r\nIn-game nudity, blood, player-made signs, voice chat and text chat can be disabled from the in-game options menu."
+        }
+      },
+{
+        "type": "game",
+        "name": "FINAL FANTASY XIV Online",
+        "steam_appid": 39210,
+        "required_age": "13",
+        "is_free": false,
+        "dlc": [
+          1592500
+        ],
+        "detailed_description": "<u><strong>Take part in an epic and ever-changing FINAL FANTASY as you adventure and explore with friends from around the world. This product also includes the entitlements to play FINAL FANTASY® XIV: A Realm Reborn and the expansion pack FINAL FANTASY® XIV: HEAVENSWARD.<\/strong><\/u><br><br>For newcomers to FINAL FANTASY XIV Online, the Starter Edition includes two award-winning titles – FINAL FANTASY XIV: A Realm Reborn, and the first expansion, FINAL FANTASY XIV: Heavensward.<br><br>Join over 25 million adventurers worldwide on an adventure that will take you to the heavens and beyond!<br><br>Includes 30-day free subscription period for all newly created service accounts*. User registration and service subscription are required to play the game.<br><br>* The 30-day free play period included with purchase can only be applied once to each platform on a single service account. Moreover, this 30-day free play period is not applicable to platforms on which a license has already been registered.<br><br>LOGO ILLUSTRATION: © 2010, 2014, 2016, 2018, 2021 YOSHITAKA AMANO<br><br><u><strong>Note:<\/strong><\/u><br>FINAL FANTASY XIV Online game packages available on Steam may only be registered and added on a Square Enix account that has the base game “FINAL FANTASY XIV Online Starter Edition&quot; (or formerly known as &quot;FINAL FANTASY XIV: A Realm Reborn”) purchased on Steam.<br><br>To view your 20 digit registration codes after purchase, simply right-click on “FINAL FANTASY XIV” in your Steam “Library” and select “View CD key” on the Steam client. The codes will always be accessible from this location should you ever need to reference them again.<br><br>The registration codes can be redeemed immediately on the Mog Station <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=http:\/\/sqex.to\/Msp\" target=\"_blank\" rel=\"noopener\"  >http:\/\/sqex.to\/Msp<\/a>. If this is your first time installing and registering &quot;FINAL FANTASY XIV Online&quot;, you may redeem your registration codes during the initial installation process.<br><br><u>Please note that the Brazilian and Russian subscription and optional item prices were adjusted on November 15th, 2017. Please visit the following links for further details: <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/na.finalfantasyxiv.com\/lodestone\/news\/detail\/c166dbb941b3cdedc5dd0e007d6c31a26087c79f\" target=\"_blank\" rel=\"noopener\"  >Brazilian<\/a> \/ <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/eu.finalfantasyxiv.com\/lodestone\/news\/detail\/052363809f0743a9dcda3d25d0c3e5907fc4a041\" target=\"_blank\" rel=\"noopener\"  >Russian<\/a> prices.<\/u>",
+        "about_the_game": "<u><strong>Take part in an epic and ever-changing FINAL FANTASY as you adventure and explore with friends from around the world. This product also includes the entitlements to play FINAL FANTASY® XIV: A Realm Reborn and the expansion pack FINAL FANTASY® XIV: HEAVENSWARD.<\/strong><\/u><br><br>For newcomers to FINAL FANTASY XIV Online, the Starter Edition includes two award-winning titles – FINAL FANTASY XIV: A Realm Reborn, and the first expansion, FINAL FANTASY XIV: Heavensward.<br><br>Join over 25 million adventurers worldwide on an adventure that will take you to the heavens and beyond!<br><br>Includes 30-day free subscription period for all newly created service accounts*. User registration and service subscription are required to play the game.<br><br>* The 30-day free play period included with purchase can only be applied once to each platform on a single service account. Moreover, this 30-day free play period is not applicable to platforms on which a license has already been registered.<br><br>LOGO ILLUSTRATION: © 2010, 2014, 2016, 2018, 2021 YOSHITAKA AMANO<br><br><u><strong>Note:<\/strong><\/u><br>FINAL FANTASY XIV Online game packages available on Steam may only be registered and added on a Square Enix account that has the base game “FINAL FANTASY XIV Online Starter Edition&quot; (or formerly known as &quot;FINAL FANTASY XIV: A Realm Reborn”) purchased on Steam.<br><br>To view your 20 digit registration codes after purchase, simply right-click on “FINAL FANTASY XIV” in your Steam “Library” and select “View CD key” on the Steam client. The codes will always be accessible from this location should you ever need to reference them again.<br><br>The registration codes can be redeemed immediately on the Mog Station <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=http:\/\/sqex.to\/Msp\" target=\"_blank\" rel=\"noopener\"  >http:\/\/sqex.to\/Msp<\/a>. If this is your first time installing and registering &quot;FINAL FANTASY XIV Online&quot;, you may redeem your registration codes during the initial installation process.<br><br><u>Please note that the Brazilian and Russian subscription and optional item prices were adjusted on November 15th, 2017. Please visit the following links for further details: <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/na.finalfantasyxiv.com\/lodestone\/news\/detail\/c166dbb941b3cdedc5dd0e007d6c31a26087c79f\" target=\"_blank\" rel=\"noopener\"  >Brazilian<\/a> \/ <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/eu.finalfantasyxiv.com\/lodestone\/news\/detail\/052363809f0743a9dcda3d25d0c3e5907fc4a041\" target=\"_blank\" rel=\"noopener\"  >Russian<\/a> prices.<\/u>",
+        "short_description": "Take part in an epic and ever-changing FINAL FANTASY as you adventure and explore with friends from around the world.",
+        "supported_languages": "English<strong>*<\/strong>, French<strong>*<\/strong>, German<strong>*<\/strong>, Japanese<strong>*<\/strong><br><strong>*<\/strong>languages with full audio support",
+        "reviews": "“a great MMORPG experience”<br>8.6 \/ 10 – <a href=\"http:\/\/www.ign.com\/articles\/2013\/09\/11\/final-fantasy-xiv-a-realm-reborn-review\" target=\"_blank\" rel=\"noreferrer\"  >IGN<\/a><br><br>“One of the best takes on the MMO experience I’ve ever seen”<br>92 \/ 100 – <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=http:\/\/www.tentonhammer.com\/reviews\/final-fantasy-xiv-a-realm-reborn\" target=\"_blank\" rel=\"noopener\"  >Ten Ton Hammer<\/a><br><br>“rounds up every great MMO feature we’ve seen in the last decade”<br>9 \/ 10 – <a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=http:\/\/www.insidegamingdaily.com\/2013\/09\/24\/final-fantasy-xiv-a-realm-reborn-review\/\" target=\"_blank\" rel=\"noopener\"  >Machinima Inside Gaming<\/a><br>",
+        "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/header.jpg?t=1646695302",
+        "website": "http:\/\/www.finalfantasyxiv.com\/",
+        "pc_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> Windows® 8.1 64 bit, Windows® 10 64 bit, Windows® 11 64 bit<br><\/li><li><strong>Processor:<\/strong> Intel® Core™i5 2.4GHz or higher<br><\/li><li><strong>Memory:<\/strong> 4 GB RAM<br><\/li><li><strong>Graphics:<\/strong> 1280 x 720: NVIDIA® Geforce® GTX750 or higher, AMD Radeon™ R7 260X or higher<br><\/li><li><strong>DirectX:<\/strong> Version 11<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 80 GB available space<br><\/li><li><strong>Sound Card:<\/strong> A sound card which supports DirectSound®<br><\/li><li><strong>Additional Notes:<\/strong> System Requirements may be subject to change. If you are using a router, please set up your ports so that the below packets can pass through. [Ports that may be used] TCP：80, 443, 54992～54994, 55006～55007, 55021～55040<\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> Windows® 8.1 64 bit, Windows® 10 64 bit, Windows® 11 64 bit<br><\/li><li><strong>Processor:<\/strong> Intel® Core™i7 3GHz or higher<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> 1920 x 1080: NVIDIA® Geforce® GTX970 or higher AMD Radeon™ RX 480 or higher<br><\/li><li><strong>DirectX:<\/strong> Version 11<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 80 GB available space<br><\/li><li><strong>Sound Card:<\/strong> A sound card which supports DirectSound®<br><\/li><li><strong>Additional Notes:<\/strong> System Requirements may be subject to change. If you are using a router, please set up your ports so that the below packets can pass through. [Ports that may be used] TCP：80, 443, 54992～54994, 55006～55007, 55021～55040<\/li><\/ul>"
+        },
+        "mac_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br><\/li><li><strong>OS:<\/strong> macOS Mojave 10.14.3<br><\/li><li><strong>Processor:<\/strong> iMac (Retina 5K, 27-inch Late 2014) or higher<br><\/li><li><strong>Memory:<\/strong> 4 GB RAM<br><\/li><li><strong>Graphics:<\/strong> AMD Radeon™ R9 M295X or higher<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 60 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> If you are using a router, please set up your ports so that the below packets can pass through. [Ports that may be used] TCP：80, 443, 54992 - 54994, 55006 - 55007, 55021 - 55040<\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<\/li><\/ul>"
+        },
+        "linux_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<\/li><\/ul>",
+          "recommended": "<strong>Recommended:<\/strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<\/li><\/ul>"
+        },
+        "legal_notice": "© 2010 - 2022 SQUARE ENIX CO., LTD. All Rights Reserved.<br \/>\r\nFINAL FANTASY, FINAL FANTASY XIV, FFXIV, SQUARE ENIX, and the SQUARE ENIX logo are registered trademarks or trademarks of Square Enix Holdings Co., Ltd.<br \/>\r\nENDWALKER, SHADOWBRINGERS, STORMBLOOD, HEAVENSWARD, and A REALM REBORN is a registered trademark or trademark of Square Enix Co., Ltd.<br \/>\r\nLOGO ILLUSTRATION: © 2010, 2014, 2016, 2018, 2021 YOSHITAKA AMANO<br \/>\r\nAll other trademarks are the properties of their respective owners.",
+        "developers": [
+          "Square Enix"
+        ],
+        "publishers": [
+          "Square Enix"
+        ],
+        "demos": [
+          {
+            "appid": 312060,
+            "description": ""
+          }
+        ],
+        "price_overview": {
+          "currency": "USD",
+          "initial": 1999,
+          "final": 1999,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "$19.99"
+        },
+        "packages": [
+          33936
+        ],
+        "package_groups": [
+          {
+            "name": "default",
+            "title": "Buy FINAL FANTASY XIV Online",
+            "description": "",
+            "selection_text": "Select a purchase option",
+            "save_text": "",
+            "display_type": 0,
+            "is_recurring_subscription": "false",
+            "subs": [
+              {
+                "packageid": 33936,
+                "percent_savings_text": " ",
+                "percent_savings": 0,
+                "option_text": "FINAL FANTASY XIV Online Starter Edition - $19.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 1999
+              }
+            ]
+          }
+        ],
+        "platforms": {
+          "windows": true,
+          "mac": false,
+          "linux": false
+        },
+        "metacritic": {
+          "score": 83,
+          "url": "https:\/\/www.metacritic.com\/game\/pc\/final-fantasy-xiv-online-a-realm-reborn?ftag=MCD-06-10aaa1f"
+        },
+        "categories": [
+          {
+            "id": 2,
+            "description": "Single-player"
+          },
+          {
+            "id": 1,
+            "description": "Multi-player"
+          },
+          {
+            "id": 20,
+            "description": "MMO"
+          },
+          {
+            "id": 49,
+            "description": "PvP"
+          },
+          {
+            "id": 36,
+            "description": "Online PvP"
+          },
+          {
+            "id": 9,
+            "description": "Co-op"
+          },
+          {
+            "id": 38,
+            "description": "Online Co-op"
+          },
+          {
+            "id": 27,
+            "description": "Cross-Platform Multiplayer"
+          },
+          {
+            "id": 18,
+            "description": "Partial Controller Support"
+          },
+          {
+            "id": 42,
+            "description": "Remote Play on Tablet"
+          }
+        ],
+        "genres": [
+          {
+            "id": "29",
+            "description": "Massively Multiplayer"
+          },
+          {
+            "id": "3",
+            "description": "RPG"
+          }
+        ],
+        "screenshots": [
+          {
+            "id": 0,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_ca57d5322b116ffaab2de37958df59eba8c7807a.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_ca57d5322b116ffaab2de37958df59eba8c7807a.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 1,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_f1bc7a959795c1fad6bfc602ccbd0e311075a454.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_f1bc7a959795c1fad6bfc602ccbd0e311075a454.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 2,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_ddb71dc0c9a667de5c23e0b3823dad3590d5e9bb.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_ddb71dc0c9a667de5c23e0b3823dad3590d5e9bb.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 3,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_912ffecab72b0ec4132e100582a6592e559ac3aa.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_912ffecab72b0ec4132e100582a6592e559ac3aa.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 4,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_d37db153382217ad479679691899588e8d173937.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_d37db153382217ad479679691899588e8d173937.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 5,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_b13bbf3e5c841c759483c63604b0359080700dbd.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_b13bbf3e5c841c759483c63604b0359080700dbd.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 6,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_ed8445bec9d85b79079f7ec46be38adc4068e3c5.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_ed8445bec9d85b79079f7ec46be38adc4068e3c5.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 7,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_e4686dc9cbe1b0d9d4d96bc029c766b195325209.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_e4686dc9cbe1b0d9d4d96bc029c766b195325209.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 8,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_634fd54775211fc96a911857f4baac7109985b5b.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_634fd54775211fc96a911857f4baac7109985b5b.1920x1080.jpg?t=1646695302"
+          },
+          {
+            "id": 9,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_8d189c2d2e92705f09375ab1bc951196c4bc33c1.600x338.jpg?t=1646695302",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/ss_8d189c2d2e92705f09375ab1bc951196c4bc33c1.1920x1080.jpg?t=1646695302"
+          }
+        ],
+        "movies": [
+          {
+            "id": 2029865,
+            "name": "FINAL FANTASY XIV A Realm Reborn - A New Beginning (NA)",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2029865\/movie.293x165.jpg?t=1447359267",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2029865\/movie480.webm?t=1447359267",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2029865\/movie_max.webm?t=1447359267"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2029865\/movie480.mp4?t=1447359267",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2029865\/movie_max.mp4?t=1447359267"
+            },
+            "highlight": true
+          }
+        ],
+        "recommendations": {
+          "total": 50822
+        },
+        "release_date": {
+          "coming_soon": false,
+          "date": "Feb 18, 2014"
+        },
+        "support_info": {
+          "url": "http:\/\/support.na.square-enix.com\/main.php?id=5382&amp;la=1",
+          "email": ""
+        },
+        "background": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/page_bg_generated_v6b.jpg?t=1646695302",
+        "background_raw": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/page.bg.jpg?t=1646695302",
+        "content_descriptors": {
+          "ids": [],
+          "notes": null
+        }
+      },
+{
+        "type": "game",
+        "name": "Call of Duty®: Black Ops III",
+        "steam_appid": 311210,
+        "required_age": "17",
+        "is_free": false,
+        "controller_support": "full",
+        "dlc": [
+          581450,
+          366843,
+          366849,
+          426730,
+          470190,
+          660850,
+          830450,
+          830451,
+          830460,
+          830461
+        ],
+        "detailed_description": "<h1>Zombies Chronicles Deluxe Edition<\/h1><p><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/extras\/CODBO3_Zombies_Chronicles_Deluxe-PC_Bundle-Banner_Special_Announcement-628x230.png?t=1646763462\" \/><br><br>Now with more content than ever before.<br><br>Call of Duty®: Black Ops III Zombies Chronicles Deluxe includes the full base game, Season Pass, Zombies Chronicles &amp; additional bonus digital content including:<br><br>The Giant Bonus Map: Zombies returns in all of its undead glory with &quot;The Giant&quot;. Re-live the chaos of Treyarch's classic &quot;Der Riese&quot; Zombies map, picking up the Zombies story with Dempsey, Nikolai, Richtofen, and Takeo where Origins left off.<br><br>3 Personalization Packs: Fan favorite Cyborg &amp; Weaponized 115 packs along with a new Black Ops 3 pack. Each pack comes with a weapon camo, reticles, and calling card.<br><br>The Zombies Chronicles content expansion which delivers 8 remastered classic maps from  Call of Duty®: World at War, Call of Duty®: Black Ops and Call of Duty®: Black Ops II.<\/p><br><h1>Mod Tools Open Beta Now Live<\/h1><p><img src=\"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/extras\/CODBO3-PC_ModTools-Art_Logo-616x232.png?t=1646763462\" \/><br><br>The Black Ops 3 Mod Tools Open Beta has arrived!  Full version Black Ops 3 owners can install the Mod Tools under the Tool Section via the Steam Library titled <strong><i>Call of Duty: Black Ops III - Mod Tools<\/i><\/strong>.<h2 class=\"bb_tag\">Mod Tools Include:<\/h2><ul class=\"bb_ul\"><li>Black Ops 3 Steam Workshop*<br><\/li><li>Unranked Server Browser*<br><\/li><li>Radiant Level Editor<br><\/li><li>APE, Asset Property Editor<br><\/li><li>Mod Tools Launcher<br><\/li><li>Optional additional level building assets from a variety of official Black Ops 3 maps can be installed under the DLC section of Call of Duty: Black Ops III - Mod Tools<br><\/li><li>Full examples of the multiplayer map Combine and the Zombies map The Giant<br><\/li><li>New Server Settings Menu in Multiplayer Custom Games and Zombies Private Game where you can set how your server will display in the Unranked Server Browser*<br><\/li><li>New Mods Menu where you can load and unload your subscribed mods*<\/li><\/ul><br>*<i>Downloading the mod tools is not required for these items or to play Black Ops 3 Steam Workshop content<\/i><h2 class=\"bb_tag\">Modding Guides:<\/h2><ul class=\"bb_ul\"><li><a href=\"http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=768774420\" target=\"_blank\" rel=\"noreferrer\"  ><u>Official - How to Play - Workshop Guide<\/u><\/a><br><\/li><li><a href=\"http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=770558798\" target=\"_blank\" rel=\"noreferrer\"  ><u>Official - How to Create - Workshop Guide<\/u><\/a><\/li><\/ul><\/p><br><h1>About the Game<\/h1>Call of Duty®: Black Ops III Zombies Chronicles Edition includes the full base game and the Zombies Chronicles content expansion.<br><br>Call of Duty: Black Ops III combines three unique game modes: Campaign, Multiplayer, and Zombies, providing fans with the deepest and most ambitious Call of Duty ever.<br><br>The Zombies Chronicles content expansion delivers 8 remastered classic Zombies maps from Call of Duty®: World at War, Call of Duty®: Black Ops and Call of Duty®: Black Ops II. Complete maps from the original saga are fully remastered and HD playable within Call of Duty®: Black Ops III.",
+        "about_the_game": "Call of Duty®: Black Ops III Zombies Chronicles Edition includes the full base game and the Zombies Chronicles content expansion.<br \/>\r\n<br \/>\r\nCall of Duty: Black Ops III combines three unique game modes: Campaign, Multiplayer, and Zombies, providing fans with the deepest and most ambitious Call of Duty ever.<br \/>\r\n<br \/>\r\nThe Zombies Chronicles content expansion delivers 8 remastered classic Zombies maps from Call of Duty®: World at War, Call of Duty®: Black Ops and Call of Duty®: Black Ops II. Complete maps from the original saga are fully remastered and HD playable within Call of Duty®: Black Ops III.",
+        "short_description": "Call of Duty®: Black Ops III Zombies Chronicles Edition includes the full base game plus the Zombies Chronicles content expansion.",
+        "supported_languages": "English<strong>*<\/strong>, French<strong>*<\/strong>, Italian<strong>*<\/strong>, German<strong>*<\/strong>, Spanish - Spain<strong>*<\/strong>, Simplified Chinese, Traditional Chinese, Japanese, Polish, Portuguese - Brazil<strong>*<\/strong>, Russian<strong>*<\/strong><br><strong>*<\/strong>languages with full audio support",
+        "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/header.jpg?t=1646763462",
+        "website": "https:\/\/www.callofduty.com\/blackops3",
+        "pc_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> Windows 7 64-Bit \/ Windows 8 64-Bit \/ Windows 8.1 64-Bit<br><\/li><li><strong>Processor:<\/strong> Intel® Core™ i3-530 @ 2.93 GHz \/ AMD Phenom™ II X4 810 @ 2.60 GHz<br><\/li><li><strong>Memory:<\/strong> 6 GB RAM<br><\/li><li><strong>Graphics:<\/strong> NVIDIA® GeForce® GTX 470 @ 1GB \/ ATI® Radeon™ HD 6970 @ 1GB<br><\/li><li><strong>DirectX:<\/strong> Version 11<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 100 GB available space<br><\/li><li><strong>Sound Card:<\/strong> DirectX Compatible<\/li><\/ul>"
+        },
+        "mac_requirements": {
+          "minimum": "<strong>Minimum:<\/strong><br><ul class=\"bb_ul\"><li><strong>OS:<\/strong> 10.13.6 (High Sierra) or later<br><\/li><li><strong>Processor:<\/strong> Intel® Core™ i5 (4 Cores) @ 2.3 GHz<br><\/li><li><strong>Memory:<\/strong> 8 GB RAM<br><\/li><li><strong>Graphics:<\/strong> ATI® Radeon™ M295X @ 2GB<br><\/li><li><strong>Network:<\/strong> Broadband Internet connection<br><\/li><li><strong>Storage:<\/strong> 150 GB available space<br><\/li><li><strong>Additional Notes:<\/strong> NVIDIA and Intel GPUs are not officially supported hardware.<\/li><\/ul>"
+        },
+        "linux_requirements": [],
+        "legal_notice": "© 2008-2017 Activision Publishing, Inc. ACTIVISION, CALL OF DUTY, CALL OF DUTY BLACK OPS, and stylized roman numerals II and III are trademarks of Activision Publishing, Inc.<br \/>\r\n<br \/>\r\nDLC content in the Season Pass may be sold separately. All Season Pass content has been released. If you purchase the Season Pass, do not also purchase the standalone map packs, as you will be charged for them. Season Pass and DLC content may not be available in all territories. Pricing may vary by platform.",
+        "developers": [
+          "Treyarch",
+          "Aspyr (Mac)"
+        ],
+        "publishers": [
+          "Activision",
+          "Aspyr (Mac)"
+        ],
+        "price_overview": {
+          "currency": "USD",
+          "initial": 5999,
+          "final": 1979,
+          "discount_percent": 67,
+          "initial_formatted": "$59.99",
+          "final_formatted": "$19.79"
+        },
+        "packages": [
+          113188,
+          202582,
+          84207
+        ],
+        "package_groups": [
+          {
+            "name": "default",
+            "title": "Buy Call of Duty®: Black Ops III",
+            "description": "",
+            "selection_text": "Select a purchase option",
+            "save_text": "",
+            "display_type": 0,
+            "is_recurring_subscription": "false",
+            "subs": [
+              {
+                "packageid": 84207,
+                "percent_savings_text": " ",
+                "percent_savings": 0,
+                "option_text": "Call of Duty: Black Ops III - Multiplayer Starter Pack - $14.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 1499
+              },
+              {
+                "packageid": 113188,
+                "percent_savings_text": "-67% ",
+                "percent_savings": 0,
+                "option_text": "Call of Duty®: Black Ops III - Zombies Chronicles Edition (RoW) - <span class=\"discount_original_price\">$59.99<\/span> $19.79",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 1979
+              },
+              {
+                "packageid": 202582,
+                "percent_savings_text": "-60% ",
+                "percent_savings": 0,
+                "option_text": "Call of Duty&reg;: Black Ops III - Zombies Deluxe (RoW) - <span class=\"discount_original_price\">$99.99<\/span> $39.99",
+                "option_description": "",
+                "can_get_free_license": "0",
+                "is_free_license": false,
+                "price_in_cents_with_discount": 3999
+              }
+            ]
+          }
+        ],
+        "platforms": {
+          "windows": true,
+          "mac": true,
+          "linux": false
+        },
+        "metacritic": {
+          "score": 73,
+          "url": "https:\/\/www.metacritic.com\/game\/pc\/call-of-duty-black-ops-iii?ftag=MCD-06-10aaa1f"
+        },
+        "categories": [
+          {
+            "id": 2,
+            "description": "Single-player"
+          },
+          {
+            "id": 1,
+            "description": "Multi-player"
+          },
+          {
+            "id": 9,
+            "description": "Co-op"
+          },
+          {
+            "id": 24,
+            "description": "Shared\/Split Screen"
+          },
+          {
+            "id": 22,
+            "description": "Steam Achievements"
+          },
+          {
+            "id": 28,
+            "description": "Full controller support"
+          },
+          {
+            "id": 29,
+            "description": "Steam Trading Cards"
+          },
+          {
+            "id": 30,
+            "description": "Steam Workshop"
+          },
+          {
+            "id": 8,
+            "description": "Valve Anti-Cheat enabled"
+          },
+          {
+            "id": 25,
+            "description": "Steam Leaderboards"
+          },
+          {
+            "id": 41,
+            "description": "Remote Play on Phone"
+          },
+          {
+            "id": 42,
+            "description": "Remote Play on Tablet"
+          },
+          {
+            "id": 43,
+            "description": "Remote Play on TV"
+          },
+          {
+            "id": 44,
+            "description": "Remote Play Together"
+          }
+        ],
+        "genres": [
+          {
+            "id": "1",
+            "description": "Action"
+          },
+          {
+            "id": "25",
+            "description": "Adventure"
+          }
+        ],
+        "screenshots": [
+          {
+            "id": 0,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_ca7376d838d5714f916936f0070824c27c4c5641.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_ca7376d838d5714f916936f0070824c27c4c5641.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 1,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_150874824f4fff0915e63ea2ade5410e576a2b70.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_150874824f4fff0915e63ea2ade5410e576a2b70.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 2,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_4b270e7a32d3a93a8119e7bcc3d8dcaa784f84f1.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_4b270e7a32d3a93a8119e7bcc3d8dcaa784f84f1.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 3,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_c4f8101a3529e2e430641af1e061926b1f57e4e7.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_c4f8101a3529e2e430641af1e061926b1f57e4e7.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 4,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_5f7f870196c956da97f37b066310e963643a63a8.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_5f7f870196c956da97f37b066310e963643a63a8.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 5,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_3a84113daacead987f549fbc3bd95fa9e66a833b.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_3a84113daacead987f549fbc3bd95fa9e66a833b.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 6,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_dfcf315c0c02ae7b62b47306c4b9ae774c2b14d0.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_dfcf315c0c02ae7b62b47306c4b9ae774c2b14d0.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 7,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_44b153c469da3d79a03221e11b51c59807f3b6e7.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_44b153c469da3d79a03221e11b51c59807f3b6e7.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 8,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_1e4a1d817d5b6b456bec8f71f5cb99e6a306e759.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_1e4a1d817d5b6b456bec8f71f5cb99e6a306e759.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 9,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_fb8189adfd4a639392544169e5a526be020b7fdd.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_fb8189adfd4a639392544169e5a526be020b7fdd.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 10,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_01c9cbde469b82ab719fb30c491f5e1102894607.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_01c9cbde469b82ab719fb30c491f5e1102894607.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 11,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_fd59cd3b0af53cef7f9a726f3dbfc92625452f9e.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_fd59cd3b0af53cef7f9a726f3dbfc92625452f9e.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 12,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_61b6c855912c4542162252584b73dec0f9962f38.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_61b6c855912c4542162252584b73dec0f9962f38.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 13,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_5ab9e51484a92cefa60d1959ddc8067c90fccac2.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_5ab9e51484a92cefa60d1959ddc8067c90fccac2.1920x1080.jpg?t=1646763462"
+          },
+          {
+            "id": 14,
+            "path_thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_31f499fa9bb7eb4b4cd5209988ff5f1d81756027.600x338.jpg?t=1646763462",
+            "path_full": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/ss_31f499fa9bb7eb4b4cd5209988ff5f1d81756027.1920x1080.jpg?t=1646763462"
+          }
+        ],
+        "movies": [
+          {
+            "id": 256785837,
+            "name": "Celebrating 10 Years of Black Ops",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256785837\/movie.293x165.jpg?t=1589836574",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256785837\/movie480_vp9.webm?t=1589836574",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256785837\/movie_max_vp9.webm?t=1589836574"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256785837\/movie480.mp4?t=1589836574",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256785837\/movie_max.mp4?t=1589836574"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256672764,
+            "name": "Call of Duty®: Black Ops III - 10\/18 Black Market Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256672764\/movie.293x165.jpg?t=1476830888",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256672764\/movie480.webm?t=1476830888",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256672764\/movie_max.webm?t=1476830888"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256672764\/movie480.mp4?t=1476830888",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256672764\/movie_max.mp4?t=1476830888"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256662080,
+            "name": "Call of Duty®: Black Ops III - 3\/22 Black Market Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256662080\/movie.293x165.jpg?t=1476830898",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256662080\/movie480.webm?t=1476830898",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256662080\/movie_max.webm?t=1476830898"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256662080\/movie480.mp4?t=1476830898",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256662080\/movie_max.mp4?t=1476830898"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256659175,
+            "name": "Call of Duty®: Black Ops III - Black Market Update",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256659175\/movie.293x165.jpg?t=1464917136",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256659175\/movie480.webm?t=1464917136",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256659175\/movie_max.webm?t=1464917136"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256659175\/movie480.mp4?t=1464917136",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256659175\/movie_max.mp4?t=1464917136"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256658334,
+            "name": "Call of Duty®: Black Ops III - Launch Gameplay Accolades",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256658334\/movie.293x165.jpg?t=1470330654",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256658334\/movie480.webm?t=1470330654",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256658334\/movie_max.webm?t=1470330654"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256658334\/movie480.mp4?t=1470330654",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256658334\/movie_max.mp4?t=1470330654"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256657989,
+            "name": "Call of Duty®: Black Ops III Live Action Trailer - “Seize Glory”",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657989\/movie.293x165.jpg?t=1447378774",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657989\/movie480.webm?t=1447378774",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657989\/movie_max.webm?t=1447378774"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657989\/movie480.mp4?t=1447378774",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657989\/movie_max.mp4?t=1447378774"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256657928,
+            "name": "Call of Duty®: Black Ops III - Nuk3town Bonus Map Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657928\/movie.293x165.jpg?t=1457029384",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657928\/movie480.webm?t=1457029384",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657928\/movie_max.webm?t=1457029384"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657928\/movie480.mp4?t=1457029384",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657928\/movie_max.mp4?t=1457029384"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256657042,
+            "name": "Call of Duty®: Black Ops III - Zombies Shadows of Evil Prologue Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657042\/movie.293x165.jpg?t=1447378361",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657042\/movie480.webm?t=1447378361",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657042\/movie_max.webm?t=1447378361"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657042\/movie480.mp4?t=1447378361",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256657042\/movie_max.mp4?t=1447378361"
+            },
+            "highlight": true
+          },
+          {
+            "id": 256656991,
+            "name": "Call of Duty®: Black Ops III - Story Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256656991\/movie.293x165.jpg?t=1447378338",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256656991\/movie480.webm?t=1447378338",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256656991\/movie_max.webm?t=1447378338"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256656991\/movie480.mp4?t=1447378338",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256656991\/movie_max.mp4?t=1447378338"
+            },
+            "highlight": false
+          },
+          {
+            "id": 2040750,
+            "name": "Call of Duty®: Black Ops III - Zombie Reveal Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040750\/movie.293x165.jpg?t=1447377079",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040750\/movie480.webm?t=1447377079",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040750\/movie_max.webm?t=1447377079"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040750\/movie480.mp4?t=1447377079",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040750\/movie_max.mp4?t=1447377079"
+            },
+            "highlight": false
+          },
+          {
+            "id": 2038894,
+            "name": "Call of Duty®: Black Ops III - Reveal Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2038894\/movie.293x165.jpg?t=1447373583",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2038894\/movie480.webm?t=1447373583",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2038894\/movie_max.webm?t=1447373583"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2038894\/movie480.mp4?t=1447373583",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2038894\/movie_max.mp4?t=1447373583"
+            },
+            "highlight": false
+          },
+          {
+            "id": 2040192,
+            "name": "Call of Duty®: Black Ops III - MP Reveal Trailer",
+            "thumbnail": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040192\/movie.293x165.jpg?t=1447376715",
+            "webm": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040192\/movie480.webm?t=1447376715",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040192\/movie_max.webm?t=1447376715"
+            },
+            "mp4": {
+              "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040192\/movie480.mp4?t=1447376715",
+              "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2040192\/movie_max.mp4?t=1447376715"
+            },
+            "highlight": false
+          }
+        ],
+        "recommendations": {
+          "total": 65336
+        },
+        "achievements": {
+          "total": 98,
+          "highlighted": [
+            {
+              "name": "Disavowed",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/9e7be918ab894a01f7728744ba615eac1820817c.jpg"
+            },
+            {
+              "name": "A Second Chance",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/936a1c5bd72edb720616e40eab136d672d607a4a.jpg"
+            },
+            {
+              "name": "High Tide",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/6090b4e792a1023679013b471e2aa71ecd5d4f99.jpg"
+            },
+            {
+              "name": "Belly of the Beast",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/474b8a9fb5b38c894cd1f1957a63b679bb771216.jpg"
+            },
+            {
+              "name": "Into the Abyss",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/e24f7b67ee2e209383ad61e5db207235e5c1b36c.jpg"
+            },
+            {
+              "name": "Blood for Blood",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/caaa4c120cc31a3b3844078901690924622eefec.jpg"
+            },
+            {
+              "name": "Friends and Foes",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/8264162bd63715cce724a4c0e43200863e9db401.jpg"
+            },
+            {
+              "name": "Understanding Madness",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/5be087b25337e1be80fc34fab49516a9bc77b6b6.jpg"
+            },
+            {
+              "name": "Fly, Swim, Shoot",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/8b85c34b1028b1a36a15b1a2a5163c887f127b43.jpg"
+            },
+            {
+              "name": "200 Stories of Sheer Adventure!",
+              "path": "https:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/311210\/13a1311666c200fe0d063946a86ff12eccafdacc.jpg"
+            }
+          ]
+        },
+        "release_date": {
+          "coming_soon": false,
+          "date": "Nov 5, 2015"
+        },
+        "support_info": {
+          "url": "http:\/\/support.activision.com\/",
+          "email": ""
+        },
+        "background": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/page_bg_generated_v6b.jpg?t=1646763462",
+        "background_raw": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/311210\/page.bg.jpg?t=1646763462",
+        "content_descriptors": {
+          "ids": [],
+          "notes": null
+        }
+      }
+
+]
 

@@ -28,11 +28,8 @@ export const createPost = async (post) => {
         "avatar_image": "https://i.imgur.com/xdq1OiK.jpg"
 
     }
-    console.log("my_posts")
-    console.log(my_posts)
+
     my_posts.unshift(newPost);
-    console.log("my_posts2")
-    console.log(my_posts)
 
     return newPost;
 

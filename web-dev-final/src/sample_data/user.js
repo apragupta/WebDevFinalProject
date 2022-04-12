@@ -16,29 +16,24 @@ export default [{
   "games": [
     {
       "_id": 730,
-      "name": "Counter Strike"
+      "name": "Counter Strike",
+      "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
     },
 
     {
-      "_id": 1,
-      "name": "Fortnite"
+      "_id": 124620,
+      "name": "ELDEN RING",
+      "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/header.jpg?t=1649774637"
     },
     {
-      "_id": 2,
-      "name": "Elden Ring"
+      "_id": 39210,
+      "name": "FINAL FANTASY XIV Online",
+      "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/header.jpg?t=1646695302"
     },
     {
-      "_id": 3,
-      "name": "Celeste"
-    },
-
-    {
-      "_id": 4,
-      "name": "Portal"
-    },
-    {
-      "_id": 5,
-      "name": "Control"
+      "_id": 252490,
+      "name": "Rust",
+      "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/header.jpg?t=1645133322"
     }
   ],
   "posts": [
