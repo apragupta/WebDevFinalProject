@@ -1,4 +1,4 @@
-{
+[{
     "type": "game",
     "name": "Counter-Strike: Global Offensive",
     "steam_appid": 730,
@@ -369,5 +369,5 @@
       ],
       "notes": "Includes intense violence and blood."
     }
-  }
+  }]
 

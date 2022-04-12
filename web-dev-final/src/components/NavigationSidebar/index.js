@@ -42,11 +42,13 @@ const NavigationSidebar = ({active = "home"}) =>{
 
             {/*Note - this should only be there for loggedIn users*/}
 
-        <div className="py-2 ">
+        <div  className="py-2 ">
+            <Link to = "./login">
             <button className="  btn btn-primary btn-block rounded-pill w-100 h-auto mx-auto px-0">
-                Login/Register
+                Login <span className="d-none d-xl-inline-block">/Register </span>
 
             </button>
+            </Link>
         </div>
 
 

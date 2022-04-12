@@ -1,9 +1,12 @@
 import react from 'react'
-
-
+import PostList from "../PostList";
+import MakePost from "./MakePost";
 const HomeScreen = () => {
     return(
-        <h1> Home </h1>
+        <div>
+            <MakePost/>
+            <PostList/>
+        </div>
     )
 }
 
