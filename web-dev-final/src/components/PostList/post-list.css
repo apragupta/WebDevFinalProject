@@ -6,6 +6,7 @@ color: var(--bs-gray-600);
 
 .wd-post-text{
     color: var(--bs-gray-100);
+    font-weight: lighter;
 }
 
 .wd-inherit-bkg {
@@ -19,6 +20,7 @@ color: var(--bs-gray-600);
     border-radius: 2em !important;
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+    color: var(--bs-gray-100);
 }
 
 .wd-post-game-image {

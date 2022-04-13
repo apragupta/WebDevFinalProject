@@ -25,7 +25,7 @@ function App() {
             <Route path="home" exact={true} element = {<HomeScreen/>}/>
             <Route path="profile" element = {<Profile/>}/>
             <Route path="login" element = {<Login/>}/>
-            <Route path="game" element = {<GameDetails/>}/>
+            <Route path="game/:id" element = {<GameDetails/>}/>
             <Route path="search" element = {<SearchGames/>}/>
             <Route path="privacy" element = {<PrivacyPolicy/>}/>
             <Route path = "edit-profile" element = {<EditProfile/>}/>

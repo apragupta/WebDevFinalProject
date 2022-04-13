@@ -1,27 +1,40 @@
-import React from "react"
+import React, {useState} from "react"
+import'./nav-bar.css'
 
 import {Link} from "react-router-dom";
 
 const NavigationSidebar = ({active = "home"}) =>{
+
+    let [active_screen, setActive_screen] = useState({
+        active: active
+    })
+
+    const handleClickScreen = (event) => {
+        setActive_screen({
+            active: event.currentTarget.id
+        })
+    }
+
     return(
         <div>
-        <div className="list-group p-0">
+        <div className="list-group wd-nav-bar-border p-0 my-2">
 
 
-                <Link to = "./home" className={`list-group-item list-group-item-action ${active === 'home' ? 'active' : ''}`}>
+                <Link onClick={handleClickScreen}
+                    to = "./home" id="home" className={`list-group-item list-group-item-action ${active_screen.active === 'home' ? 'active' : ''}`}>
                     <i className="fa fa-home"></i> <span className="d-xl-inline d-none">Home</span>
                 </Link>
 
 
 
 
-                <Link to= "./profile" className={`list-group-item list-group-item-action ${active === 'profile' ? 'active' : ''}`}>
+                <Link onClick={handleClickScreen} to= "./profile" id="profile" className={`list-group-item list-group-item-action ${active_screen.active === 'profile' ? 'active' : ''}`}>
                     <i className="fa fa-user"></i> <span className="d-xl-inline d-none">Profile</span>
                 </Link>
 
 
 
-                <Link to= "./search" className={`list-group-item list-group-item-action ${active === 'search' ? 'active' : ''}`}>
+                <Link onClick={handleClickScreen}  to= "./search" id="search" className={`list-group-item list-group-item-action ${active_screen.active === 'search' ? 'active' : ''}`}>
                     <i className="fa fa-search"></i> <span className="d-xl-inline d-none">Search Games</span>
                 </Link>
 
@@ -29,13 +42,13 @@ const NavigationSidebar = ({active = "home"}) =>{
 
             {/*Note - this should only be there for loggedIn users*/}
 
-                <Link to = "./edit-profile" className={`list-group-item list-group-item-action ${active === 'edit-profile' ? 'active' : ''}`}>
+                <Link onClick={handleClickScreen}  to = "./edit-profile" id="edit-profile" className={`list-group-item list-group-item-action ${active_screen.active === 'edit-profile' ? 'active' : ''}`}>
                     <i className="fas fa-pencil-alt"></i> <span className="d-xl-inline d-none">Edit Profile</span>
                 </Link>
 
 
 
-                <Link to = "./privacy" className={`list-group-item list-group-item-action ${active === 'privacy' ? 'active' : ''}`}>
+                <Link onClick={handleClickScreen}  to = "./privacy" id="privacy" className={`list-group-item list-group-item-action ${active_screen.active === 'privacy' ? 'active' : ''}`}>
                     <i className="fas fa-user-secret"></i> <span className="d-xl-inline d-none">Privacy Policy</span>
                 </Link>
         </div>

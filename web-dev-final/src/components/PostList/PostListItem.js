@@ -9,19 +9,19 @@ const PostListItem = ({post}) => {
 
 
     return(
-        <div className="list-group-item d-flex   my-2 py-2 wd-inherit-bkg wd-post-list">
-            <div className="col-xl-1 col-2 h-auto pe-3 ratio-1x1" >
+        <div className="list-group-item d-flex my-2 py-3 wd-inherit-bkg wd-post-list">
+            <div className="col-2 h-auto px-lg-3 px-2 ratio-1x1" >
 
                 <img src={post.postedBy.avatar_image} className = "img-fluid  rounded-circle " />
             </div>
 
-            <div className="col-xl-9 col-lg-7 col-6 mr-auto p-0 ">
+            <div className="col-lg-7 col-6 mr-auto p-0 ">
                 <div className="d-flex justify-content-between ">
                     <div>
-                        <p>
-                    <span className="fw-bold m-0"> {post.postedBy && post.postedBy.name}</span>
-                            <span className="m-0 wd-username-color" >@{post.postedBy.username && post.postedBy.username}</span>
-                        </p>
+                        <div className="d-flex justify-content-start mb-1">
+                            <div className="fw-bold me-1 "> {post.postedBy && post.postedBy.name}</div>
+                            <div className="me-1 wd-username-color" >@{post.postedBy.username && post.postedBy.username}</div>
+                        </div>
 
                         <p><strong>{post.title}</strong></p>
                     </div>
@@ -44,7 +44,7 @@ const PostListItem = ({post}) => {
 
 
             </div>
-            <div className="col-xl-2 col-lg-3 col-4 mx-1  text-center align-self-center wd-post-game">
+            <div className="col-lg-3 col-4 mx-1  text-center align-self-center wd-post-game">
                 <img src={post.game.header_image} className = "img-fluid w-auto h-auto wd-post-game-image" />
                 <h6 className="my-auto ">{post.game.name}</h6>
             </div>

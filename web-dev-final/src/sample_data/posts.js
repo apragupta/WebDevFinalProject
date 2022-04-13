@@ -144,10 +144,10 @@ export default [
     },
     {
         "_id": 4,
-        "game": {
-            "_id": 730,
-            "name":"Counter-Strike: Global Offensive",
-            "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
+        "game":{
+            "_id": 124620,
+            "name": "ELDEN RING",
+            "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/header.jpg?t=1649774637"
         },
         "postedBy": {
             "_id": 1,
@@ -156,7 +156,7 @@ export default [
             "avatar_image": "https://i.imgur.com/xdq1OiK.jpg"
 
         },
-        "title": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "title": "This post is related to elden ring",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur interdum risus, ac dapibus sapien. Morbi varius molestie nisi. Fusce rhoncus arcu sodales rutrum pharetra. Suspendisse in blandit nibh. Integer sit amet sapien leo. Donec nec iaculis risus. Vivamus euismod arcu in ligula finibus, non sollicitudin erat faucibus.",
 
 
@@ -191,10 +191,10 @@ export default [
     },
     {
         "_id": 5,
-        "game": {
-            "_id": 730,
-            "name":"Counter-Strike: Global Offensive",
-            "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
+        "game":  {
+            "_id": 252490,
+            "name": "Rust",
+            "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/header.jpg?t=1645133322"
         },
         "postedBy": {
             "_id": 1,
@@ -203,7 +203,7 @@ export default [
             "avatar_image": "https://i.imgur.com/xdq1OiK.jpg"
 
         },
-        "title": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "title": "This post is related to Rust",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur interdum risus, ac dapibus sapien. Morbi varius molestie nisi. Fusce rhoncus arcu sodales rutrum pharetra. Suspendisse in blandit nibh. Integer sit amet sapien leo. Donec nec iaculis risus. Vivamus euismod arcu in ligula finibus, non sollicitudin erat faucibus.",
 
 

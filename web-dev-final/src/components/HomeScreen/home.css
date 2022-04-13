@@ -1,14 +1,20 @@
 .wd-body-bkg-color {
     background-color: var(--bs-body-bg);
 }
+.wd-font-color {
+    color: var(--bs-gray-100)
+}
+.wd-border-color {
+    border-color: var(--bs-gray-600) !important;
+}
 .wd-post-input {
-    color: white;
+    color: var(--bs-gray-100);
     background-color: transparent;
     padding: 0px;
     padding-top: 20px;
     border-bottom: solid;
     border-bottom-width: 1px;
-    border-color: rgb(82, 88, 92)
+    border-color: var(--bs-gray-600);
 }
 
 .wd-make-post {
@@ -19,6 +25,20 @@
 }
 
 .wd-post-input:focus {
-    background-color: transparent;
-    color: white;
+    background-color: var(--bs-dark);
+    color: var(--bs-gray-100);
+   outline: none;
+
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+ }
+.wd-search-bar {
+    color: var(--bs-gray-100);
 }
+
+.wd-search-bar:focus {
+    background-color: var(--bs-dark);
+    color: var(--bs-gray-100);
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;}
