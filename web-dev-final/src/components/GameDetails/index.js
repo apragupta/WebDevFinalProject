@@ -49,9 +49,9 @@ const GameDetails = () => {
 
             <img src={gameDetails.header_image} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
-            <div className="d-flex justify-content-between  mb-2">
-                <h2 className="w-75 h-auto m-0"> {game_search_result.name}</h2>
-                <button className="  align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto px-0"
+            <div className="d-flex justify-content-between  mb-3">
+                <h2 className="w-75 h-auto p-0 pe-1 mb-0"> {game_search_result.name}</h2>
+                <button className=" align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto "
                 disabled={game_followed}>
                     {game_followed? "Followed!":"Follow"}
 

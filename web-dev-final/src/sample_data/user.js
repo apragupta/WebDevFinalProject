@@ -16,7 +16,7 @@ export default [{
   "games": [
     {
       "_id": 1372,
-      "name": "Counter Strike",
+      "name": "Counter-Strike: Global Offensive",
       "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
     },
 
