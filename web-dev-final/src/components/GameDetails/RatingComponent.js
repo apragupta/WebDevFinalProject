@@ -3,8 +3,8 @@ import React from 'react';
 const RatingComponent = ({game}) => {
     const rating_string = () => game.total_rating? Math.round(game.total_rating *100)/100 + "%": "unavailable";
     return (
-        <div className="d-flex justify-content-between">
-            <div className="d-flex w-75 justify-content-start mb-1">
+        <div className="d-flex justify-content-between ">
+            <div className="d-flex w-75 justify-content-start">
                 <small className="pe-2">
                     {"Rating: " + rating_string() }
                 </small>

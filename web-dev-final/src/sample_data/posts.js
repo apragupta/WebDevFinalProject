@@ -4,7 +4,7 @@ export default [
 
         "_id": 1,
         "game": {
-            "_id": 730,
+            "_id": 1372,
             "name":"Counter-Strike: Global Offensive",
             "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
         },
@@ -51,7 +51,7 @@ export default [
     {
         "_id": 2,
         "game": {
-            "_id": 730,
+            "_id": 1372,
             "name":"Counter-Strike: Global Offensive",
             "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
         },
@@ -98,7 +98,7 @@ export default [
     {
         "_id": 3,
         "game": {
-            "_id": 730,
+            "_id": 1372,
             "name":"Counter-Strike: Global Offensive",
             "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
         },
@@ -239,7 +239,7 @@ export default [
     {
         "_id": 6,
         "game": {
-            "_id": 730,
+            "_id": 1372,
             "name":"Counter-Strike: Global Offensive",
             "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
         },
@@ -286,7 +286,7 @@ export default [
     {
         "_id": 7,
         "game": {
-            "_id": 730,
+            "_id": 1372,
             "name":"Counter-Strike: Global Offensive",
             "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
         },
@@ -333,7 +333,7 @@ export default [
     {
         "_id": 8,
         "game": {
-            "_id": 730,
+            "_id": 1372,
             "name":"Counter-Strike: Global Offensive",
             "header_image": "https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/header.jpg?t=1641233427"
         },
