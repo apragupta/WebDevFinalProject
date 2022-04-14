@@ -3,6 +3,10 @@
     font-weight: lighter;
 }
 
+.wd-tag-text {
+    font-weight: normal;
+}
+
 .wd-paragraph-border {
     border-style: solid;
     border-width: 1px;

@@ -6,9 +6,11 @@ import sample_posts from '../../sample_data/posts.js'
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
 import {findAllPosts} from "../../actions/posts-actions";
+import Tag from "./Tag";
 import './game.css'
 import parse from "html-react-parser";
 import RatingComponent from "./RatingComponent";
+import React from "react";
 
 let posts = sample_posts
 const GameDetails = () => {
@@ -38,12 +40,33 @@ const GameDetails = () => {
 
         <div>
 
+            {/*TODO: figure out fields tht give you header_image genre for igdb and add here (only works for steam right now)*/}
+
             <img src={gameDetails.header_image} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
-            <h1 > {gameDetails.name}</h1>
+            <div className="d-flex justify-content-between  mb-2">
+                <h2 className="w-75 h-auto m-0"> {game_search_result.name}</h2>
+                <button className="  align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto px-0">
+                    Follow
+
+                </button>
+            </div>
+
+
+                <span hidden={!steam_appid}>
+                <h6>Developers:  {gameDetails.developers.map(dev => <Tag type={"secondary"} text={dev}/>)}
+                </h6>
+                <h6>Genres:  {gameDetails.genres.map(genre => <Tag type={"info"} text={genre.description}/>)}
+                </h6>
+
+                </span>
             <RatingComponent game={game_search_result} />
             <p className="wd-post-text mt-3 pt-3 border-top border-1">{ (steam_appid && parse(gameDetails.detailed_description)) || (game_search_result.summary)}</p>
+
+
             </div>
+
+            <h1>Posts</h1>
             <PostList posts={game_posts}/>
 
         </div>
