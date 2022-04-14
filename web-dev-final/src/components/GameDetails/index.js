@@ -21,7 +21,7 @@ const GameDetails = ({match}) => {
 
             <img src={gameDetails.header_image} className="w-100"/>
             <h1> {gameDetails.name}</h1>
-            <p className="wd-post-text text-center">{gameDetails.short_description}</p>
+            <p className="wd-post-text">{gameDetails.detailed_description}</p>
 
             <PostList posts={game_posts}/>
 
