@@ -6,6 +6,8 @@ import sample_posts from '../../sample_data/posts.js'
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
 import {findAllPosts} from "../../actions/posts-actions";
+import user from '../../sample_data/user'
+
 import Tag from "./Tag";
 import './game.css'
 import parse from "html-react-parser";
@@ -16,7 +18,7 @@ let posts = sample_posts
 const GameDetails = () => {
     //
     let { id } = useParams();
-
+    let this_user = user[0]
 
     const getGameSearchResult = () => game_search.find(game=> game.id == id)
     const game_search_result = getGameSearchResult()
@@ -30,10 +32,13 @@ const GameDetails = () => {
 
     const getGameDetails = () => game_details.find(game=> game.steam_appid == steam_appid);
     const getGamePosts = () => posts.filter(post=> parseInt(post.game._id) == parseInt(id));
+    const user_follows_game = () => this_user.games.find(games=> games._id == id)
+
 
 
     const gameDetails = getGameDetails();
     const game_posts = getGamePosts()
+    const game_followed = user_follows_game()
 
     return(
 
@@ -46,8 +51,9 @@ const GameDetails = () => {
             <div className="wd-paragraph-border my-3">
             <div className="d-flex justify-content-between  mb-2">
                 <h2 className="w-75 h-auto m-0"> {game_search_result.name}</h2>
-                <button className="  align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto px-0">
-                    Follow
+                <button className="  align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto px-0"
+                disabled={game_followed}>
+                    {game_followed? "Followed!":"Follow"}
 
                 </button>
             </div>
