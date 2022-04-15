@@ -9,7 +9,7 @@ const PostListItem = ({post}) => {
 
 
     return(
-        <div className="list-group-item d-flex my-2 p-3 wd-inherit-bkg wd-post-list">
+        <div className="list-group-item d-flex my-2  wd-inherit-bkg wd-post-list">
             <div className="col-lg-2 col-sm-3 col-4  h-auto  p-0 ratio-1x1 pe-4  pt-1" >
 
                 <img src={post.postedBy.avatar_image} className = "img-fluid   rounded-circle wd-avatar-border " />

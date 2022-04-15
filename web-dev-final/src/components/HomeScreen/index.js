@@ -4,6 +4,7 @@ import MakePost from "./MakePost";
 import SearchComponent from "../SearchGames/searchComponent";
 import {useDispatch, useSelector} from "react-redux";
 import {findAllPosts} from "../../actions/posts-actions";
+import './home.css'
 
 const HomeScreen = () => {
     const posts = useSelector(
