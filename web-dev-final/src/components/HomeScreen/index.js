@@ -16,8 +16,11 @@ const HomeScreen = () => {
     return(
         <div>
             <SearchComponent/>
+
             <MakePost/>
+            <div className="wd-post-list-border">
             <PostList posts={posts}/>
+            </div>
         </div>
     )
 }

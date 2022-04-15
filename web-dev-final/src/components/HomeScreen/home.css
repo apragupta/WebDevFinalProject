@@ -19,9 +19,12 @@
 
 .wd-make-post {
     border-style: solid;
-    border-width: 1px !important;
+
+    border-width: 0.5px !important;
+
     border-color: var(--bs-gray-600);
     border-radius: 2em !important;
+    padding-right: 2em;
 }
 
 .wd-post-input:focus {
@@ -42,3 +45,19 @@
     outline: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;}
+
+.wd-avatar-border {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--bs-gray-600) !important;
+}
+
+.wd-post-list-border {
+    border-style: solid;
+    border-width:  0.5px !important;
+    border-color: var(--bs-gray-600);
+    border-radius: 2em !important;
+    color: var(--bs-gray-100);
+    margin-top: 1em;
+
+}

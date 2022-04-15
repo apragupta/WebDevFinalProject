@@ -2,7 +2,6 @@ import react, {useEffect} from 'react'
 import {useParams} from "react-router-dom";
 import game_details from '../../sample_data/game.json'
 import game_search from '../../sample_data/games_search.json'
-import sample_posts from '../../sample_data/posts.js'
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
 import {findAllPosts} from "../../actions/posts-actions";
@@ -14,9 +13,14 @@ import parse from "html-react-parser";
 import RatingComponent from "./RatingComponent";
 import React from "react";
 
-let posts = sample_posts
 const GameDetails = () => {
-    //
+
+    const dispatch = useDispatch();
+    useEffect(() => {findAllPosts(dispatch)} );
+    const posts = useSelector(
+        state => state.posts);
+
+
     let { id } = useParams();
     let this_user = user[0]
 
@@ -39,6 +43,7 @@ const GameDetails = () => {
     const gameDetails = getGameDetails();
     const game_posts = getGamePosts()
     const game_followed = user_follows_game()
+    console.log(gameDetails)
 
     return(
 

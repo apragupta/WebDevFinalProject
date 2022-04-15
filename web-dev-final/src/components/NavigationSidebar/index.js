@@ -22,20 +22,20 @@ const NavigationSidebar = ({active = "home"}) =>{
 
                 <Link onClick={handleClickScreen}
                     to = "./home" id="home" className={`list-group-item list-group-item-action ${active_screen.active === 'home' ? 'active' : ''}`}>
-                    <i className="fa fa-home"></i> <span className="d-xl-inline d-none">Home</span>
+                    <i className="fa fa-home pe-1"></i> <span className="d-xl-inline d-none">Home</span>
                 </Link>
 
 
 
 
                 <Link onClick={handleClickScreen} to= "./profile" id="profile" className={`list-group-item list-group-item-action ${active_screen.active === 'profile' ? 'active' : ''}`}>
-                    <i className="fa fa-user"></i> <span className="d-xl-inline d-none">Profile</span>
+                    <i className="fa fa-user pe-1"></i> <span className="d-xl-inline d-none">Profile</span>
                 </Link>
 
 
 
                 <Link onClick={handleClickScreen}  to= "./search" id="search" className={`list-group-item list-group-item-action ${active_screen.active === 'search' ? 'active' : ''}`}>
-                    <i className="fa fa-search"></i> <span className="d-xl-inline d-none">Search Games</span>
+                    <i className="fa fa-search pe-1"></i> <span className="d-xl-inline d-none">Search Games</span>
                 </Link>
 
 
@@ -43,13 +43,13 @@ const NavigationSidebar = ({active = "home"}) =>{
             {/*Note - this should only be there for loggedIn users*/}
 
                 <Link onClick={handleClickScreen}  to = "./edit-profile" id="edit-profile" className={`list-group-item list-group-item-action ${active_screen.active === 'edit-profile' ? 'active' : ''}`}>
-                    <i className="fas fa-pencil-alt"></i> <span className="d-xl-inline d-none">Edit Profile</span>
+                    <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
                 </Link>
 
 
 
                 <Link onClick={handleClickScreen}  to = "./privacy" id="privacy" className={`list-group-item list-group-item-action ${active_screen.active === 'privacy' ? 'active' : ''}`}>
-                    <i className="fas fa-user-secret"></i> <span className="d-xl-inline d-none">Privacy Policy</span>
+                    <i className="fas fa-user-secret pe-1"></i> <span className="d-xl-inline d-none">Privacy Policy</span>
                 </Link>
         </div>
 

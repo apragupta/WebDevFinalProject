@@ -1,3 +1,8 @@
 .wd-nav-bar-border {
     border-radius: 1em !important;
 }
+
+.list-group-item.active {
+    background-color: var(--bs-dark);
+    border-width: 0px !important;
+}
