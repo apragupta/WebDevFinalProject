@@ -78,7 +78,9 @@ const GameDetails = () => {
             </div>
 
             <h1>Posts</h1>
+            <div className="wd-post-list-border">
             <PostList posts={game_posts}/>
+            </div>
 
         </div>
     )
