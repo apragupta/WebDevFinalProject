@@ -1,6 +1,5 @@
 import {Outlet} from "react-router-dom";
 import NavigationSidebar from "./NavigationSidebar";
-import GameSidebarItem from "./GamesSidebar/GameItem";
 import postsReducer from "./reducers/posts-reducer";
 import gamesReducer from "./reducers/games-reducer";
 import userReducer from "./reducers/user-reducer";
@@ -9,9 +8,10 @@ import logger from 'redux-logger'
 
 import {Provider} from "react-redux";
 import GameSidebar from "./GamesSidebar";
+import searchReducer from "./reducers/search-reducer";
 
 const reducer = combineReducers({
-    posts: postsReducer, games: gamesReducer, user: userReducer
+    posts: postsReducer, games: gamesReducer, user: userReducer, search: searchReducer
 });
 const store = createStore(reducer,applyMiddleware(logger));
 

@@ -13,8 +13,6 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import EditProfile from "./components/EditProfile";
 
 
-
-
 function App() {
   return (
     <BrowserRouter>
