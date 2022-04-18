@@ -1,6 +1,5 @@
 import {Outlet} from "react-router-dom";
 import NavigationSidebar from "./NavigationSidebar";
-import GameSidebarItem from "./GamesSidebar/GameItem";
 import postsReducer from "./reducers/posts-reducer";
 import gamesReducer from "./reducers/games-reducer";
 import userReducer from "./reducers/user-reducer";

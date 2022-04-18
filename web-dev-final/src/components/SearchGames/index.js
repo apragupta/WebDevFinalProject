@@ -1,14 +1,13 @@
 import SearchComponent from "./searchComponent";
 import SearchItem from "./SearchItem";
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 
 
 const SearchGames = () => {
     const searchResults = useSelector(
         state => state.search);
-    const dispatch = useDispatch();
     return(
         <div>
         <h1> Search Games </h1>
