@@ -4,7 +4,7 @@ export default [{
   "name": "Apra Gupta",
   "avatar_image": "https://i.imgur.com/dUUJ6Gm.jpeg",
   "banner_image": "https://i.imgur.com/lIIZAmC.jpg",
-  "bio": "My name is Apra Gupta and this is my bio, wow!",
+  "bio": "My name is Apra Gupta and this is my bio, wow! it is suuuper long, i have alot to say omg \"My name is Apra Gupta and this is my bio, wow! it is suuuper long, i have alot to say omg",
   "steam_id": 456,
   "join_date": "04-10-2022",
   "liked": [
@@ -42,7 +42,8 @@ export default [{
 
   "bookmarks": [
     1,2,6
-  ]
+  ],
+  "user_tier": "premium"
 
 
 

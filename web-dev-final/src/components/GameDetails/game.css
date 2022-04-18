@@ -9,7 +9,7 @@
 
 .wd-paragraph-border {
     border-style: solid;
-    border-width: 1px;
+    border-width: 0.5px;
     border-color: var(--bs-gray-600);
     border-radius: 2em;
     padding: 1em;
@@ -21,8 +21,14 @@
     border-radius: 2em;
     border-style: solid;
     margin-bottom: 3px;
-    border-width: 1px;
+    border-width: 0.5px;
     border-color: var(--bs-gray-600);
 
 
+}
+
+.wd-avatar-border {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--bs-gray-500) !important;
 }

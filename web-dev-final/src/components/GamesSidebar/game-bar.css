@@ -6,7 +6,7 @@
 
 .wd-game-item {
     border-style: solid;
-    border-width: 1px !important;
+    border-width: 0.5px !important;
     border-color: var(--bs-gray-600);
     border-radius: 1em !important;
     padding: 0px;

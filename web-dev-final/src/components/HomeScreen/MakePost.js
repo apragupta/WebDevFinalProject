@@ -59,10 +59,10 @@ const MakePost = () => {
 
     return (
 
-        <div className="list-group-item d-flex  my-2 py-3  wd-make-post align-content-end wd-body-bkg-color ">
-            <div className=" col-2 h-auto pt-1 px-lg-3 px-2 ratio-1x1 " >
+        <div className="list-group-item d-flex  mb-2 py-4 align-content-end wd-body-bkg-color wd-make-post">
+            <div className=" col-2 h-auto pt-1  pe-3 ratio-1x1 " >
 
-                <img src="https://i.imgur.com/dUUJ6Gm.jpeg" className = "img-fluid  rounded-circle my-auto " />
+                <img src="https://i.imgur.com/dUUJ6Gm.jpeg" className = "img-fluid  rounded-circle my-auto wd-avatar-border " />
 
             </div>
 
