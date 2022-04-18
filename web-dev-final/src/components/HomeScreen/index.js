@@ -4,6 +4,7 @@ import MakePost from "./MakePost";
 import SearchComponent from "../SearchGames/searchComponent";
 import {useDispatch, useSelector} from "react-redux";
 import {findAllPosts} from "../../actions/posts-actions";
+import './home.css'
 
 const HomeScreen = () => {
     const posts = useSelector(
@@ -16,8 +17,11 @@ const HomeScreen = () => {
     return(
         <div>
             <SearchComponent/>
+
             <MakePost/>
+            <div className="wd-post-list-border">
             <PostList posts={posts}/>
+            </div>
         </div>
     )
 }

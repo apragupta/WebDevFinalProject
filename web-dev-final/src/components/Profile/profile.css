@@ -1,0 +1,23 @@
+.nav-link {
+    border-top-left-radius: 1em !important;
+    border-top-right-radius: 1em !important;
+    border-style: solid;
+    margin-right: 1em;
+
+
+}
+.nav-link:hover {
+    border-bottom-color: var(--bs-body-bg) !important;
+    border-bottom-width: 2px !important;
+}
+
+.nav-tabs {
+    /*padding-bottom: 1em !important;*/
+    margin-bottom: 1em !important;
+
+}
+
+.nav-link.active {
+    border-bottom-color: var(--bs-body-bg) !important;
+    border-bottom-width: 2px !important;
+}

@@ -32,8 +32,11 @@ const PostStats = ({post}) => {
                     liked: !post.liked})}
     const handleDisLike = () => { updatePost(dispatch, {
         ...post, stats: {...post.stats,
-            disliked: calcDisLikes(post)},
+            dislikes: calcDisLikes(post)},
         disliked: !post.disliked})}
+
+    const handleBookmark = () => { updatePost(dispatch,
+        {...post,  bookmarked: !post.bookmarked})}
 
 
     return (
@@ -71,7 +74,21 @@ const PostStats = ({post}) => {
                 }
 
             </span>
-            <i className="far fa-bookmark"></i>
+            <span onClick={handleBookmark} className="align-text-top">
+                  {
+                      post.bookmarked &&
+                      <i className="fa fa-bookmark d-flex float-start"
+                         style={{color: 'white'}}>
+                      </i>
+                  }
+                {
+                    !post.bookmarked &&
+                    <i className="far fa-bookmark  float-start">
+
+                    </i>
+                }
+
+            </span>
         </div>
 
 

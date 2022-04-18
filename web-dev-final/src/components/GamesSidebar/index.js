@@ -2,20 +2,19 @@ import React from 'react';
 import {useSelector} from "react-redux";
 import GameSidebarItem from "./GameItem";
 import './game-bar.css'
+import GamesList from "./GamesList";
 
 const GameSidebar = () => {
     const user = useSelector(state => state.user);
     const user_games = user.games
     return (
-        <ul className="list-group ">
-            <li className=" list-group-item rounded-top p-2  wd-body-bkg-color wd-game-item" key = {0}>
+        <div>
+            <div className=" list-group-item rounded-top p-2  wd-body-bkg-color wd-game-item" key = {0}>
                 <strong>My Games</strong>
-            </li>
+            </div>
+            <GamesList user_games={user_games}/>
+        </div>
 
-            {
-                user_games.map((game,index) => {
-                    return(<GameSidebarItem game= {game} key = {index}/>);})}
-        </ul>
     );
 };
 
