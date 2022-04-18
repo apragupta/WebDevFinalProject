@@ -9,9 +9,10 @@ import logger from 'redux-logger'
 
 import {Provider} from "react-redux";
 import GameSidebar from "./GamesSidebar";
+import searchReducer from "./reducers/search-reducer";
 
 const reducer = combineReducers({
-    posts: postsReducer, games: gamesReducer, user: userReducer
+    posts: postsReducer, games: gamesReducer, user: userReducer, search: searchReducer
 });
 const store = createStore(reducer,applyMiddleware(logger));
 
