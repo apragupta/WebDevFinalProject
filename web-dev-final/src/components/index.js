@@ -11,7 +11,9 @@ import GameSidebar from "./GamesSidebar";
 import searchReducer from "./reducers/search-reducer";
 
 const reducer = combineReducers({
-    posts: postsReducer, games: gamesReducer, user: userReducer, search: searchReducer
+    posts: postsReducer,
+    game: gamesReducer,
+    user: userReducer, search: searchReducer
 });
 const store = createStore(reducer,applyMiddleware(logger));
 

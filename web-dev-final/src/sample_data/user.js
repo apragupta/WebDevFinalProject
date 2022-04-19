@@ -21,17 +21,17 @@ export default [{
     },
 
     {
-      "_id": 124620,
+      "_id": 119133,
       "name": "ELDEN RING",
       "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/1245620\/header.jpg?t=1649774637"
     },
     {
-      "_id": 39210,
+      "_id": 386,
       "name": "FINAL FANTASY XIV Online",
       "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/39210\/header.jpg?t=1646695302"
     },
     {
-      "_id": 252490,
+      "_id": 3277,
       "name": "Rust",
       "header_image":"https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/252490\/header.jpg?t=1645133322"
     }
