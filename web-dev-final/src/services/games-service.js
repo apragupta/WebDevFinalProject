@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_BASE = process.env.REACT_APP_API_BASE;
+// const API_BASE = process.env.REACT_APP_API_BASE;
 
-
+const API_BASE = 'https://steam-game-forum.herokuapp.com/api';
 const GAME_API = `${API_BASE}/apps`;
 
 

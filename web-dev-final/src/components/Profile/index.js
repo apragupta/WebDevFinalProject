@@ -23,7 +23,7 @@ const Profile = () => {
     //whether or not this is the loggedin user
     const my_account = true;
     const dispatch = useDispatch();
-    useEffect(() => {findAllPosts(dispatch)} );
+    useEffect(() => {findAllPosts(dispatch)}, [dispatch]);
     const posts = useSelector(
         state => state.posts);
 

@@ -13,7 +13,7 @@ const HomeScreen = () => {
     const dispatch = useDispatch();
 
 
-    useEffect(() => {findAllPosts(dispatch)} ); //useEffect is kinda like componentDidMount = it is called when the component first renders
+    useEffect(() => {findAllPosts(dispatch)}, [dispatch]); //useEffect is kinda like componentDidMount = it is called when the component first renders
     return(
         <div>
             <SearchComponent/>
