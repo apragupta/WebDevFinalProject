@@ -1,20 +1,30 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../HomeScreen/home.css'
 import {useDispatch} from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {search} from "../../actions/search-actions";
 
 
 
-const SearchComponent = () => {
+const SearchComponent = (startingTerm) => {
+
+    let navigate = useNavigate();
+
 
     let [searchTerm, setSearchTerm]
-        = useState("");
+        = useState(startingTerm.startingTerm || "");
     const dispatch = useDispatch();
 
     const searchClickHandler = () => {
         console.log(searchTerm);
         search(dispatch, searchTerm)
+        navigate(`/search/${encodeURIComponent(searchTerm)}`)
     }
+
+
+    useEffect(() => {if (startingTerm.startingTerm) search(dispatch, startingTerm.startingTerm);},
+        [startingTerm.startingTerm]);
+
 
 
     return (
@@ -27,7 +37,9 @@ const SearchComponent = () => {
                 </div>
                 <input type="search" placeholder="Search Games"  className="form-control  border-0 wd-body-bkg-color wd-search-bar"
                        onChange={(event) =>
-                           setSearchTerm(event.target.value)}/>
+                           setSearchTerm(event.target.value)} value={searchTerm}
+                       onKeyUp={(event) => {
+                           if (event.code === "Enter") searchClickHandler()}}/>
             </div>
 
     );

@@ -11,9 +11,11 @@ const HomeScreen = () => {
         state => state.posts);
 
     const dispatch = useDispatch();
+    const updateNav = () => {
+        dispatch({type: 'nav-change', value:'home'});
+    };
 
-
-    useEffect(() => {findAllPosts(dispatch)}, [dispatch]); //useEffect is kinda like componentDidMount = it is called when the component first renders
+    useEffect(() => {findAllPosts(dispatch); updateNav()}, [dispatch]); //useEffect is kinda like componentDidMount = it is called when the component first renders
     return(
         <div>
             <SearchComponent/>

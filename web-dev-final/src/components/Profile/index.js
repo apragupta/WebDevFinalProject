@@ -23,6 +23,10 @@ const Profile = () => {
     //whether or not this is the loggedin user
     const my_account = true;
     const dispatch = useDispatch();
+    const updateNav = () => {
+        dispatch({type: 'nav-change', value:'profile'});
+    };
+    useEffect(updateNav);
     useEffect(() => {findAllPosts(dispatch)}, [dispatch]);
     const posts = useSelector(
         state => state.posts);
