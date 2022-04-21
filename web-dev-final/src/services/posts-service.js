@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 //const POSTS_API = `${API_BASE}/posts`;
-const API_BASE = 'https://steam-game-forum.herokuapp.com/api';
+const API_BASE = 'https://webdev-final-server-1.herokuapp.com/api';
 const POSTS_API = `${API_BASE}/posts`;
 
 

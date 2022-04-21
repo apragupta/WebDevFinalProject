@@ -1,5 +1,5 @@
 export default [{
-  "_id": 1,
+  "_id": "62615f8352e1b898edf51bc6",
   "username":"apragupta",
   "name": "Apra Gupta",
   "avatar_image": "https://i.imgur.com/dUUJ6Gm.jpeg",
@@ -8,10 +8,11 @@ export default [{
   "steam_id": 456,
   "join_date": "04-10-2022",
   "liked": [
-    1,4
+    "626079f99d3e7dae266498f2",
+    "626082239d3e7dae2664a636"
   ],
   "disliked": [
-    2,3
+    "62607b1b9d3e7dae2664a292"
   ],
   "games": [
     {
@@ -37,11 +38,14 @@ export default [{
     }
   ],
   "posts": [
-    5,6
+    "626082d29d3e7dae2664a639",
+    "626082239d3e7dae2664a636",
+    "62607b1b9d3e7dae2664a292",
+    "626079f99d3e7dae266498f2"
   ],
 
   "bookmarks": [
-    1,2,6
+    "626082d29d3e7dae2664a639"
   ],
   "user_tier": "premium"
 
