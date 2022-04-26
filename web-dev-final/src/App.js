@@ -11,17 +11,25 @@ import Login from "./components/Login";
 import SearchGames from "./components/SearchGames";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import EditProfile from "./components/EditProfile";
+import SecureRoute from "./components/secure-route";
+
+import {ProfileProvider} from "./contexts/profile-context";
 
 
 function App() {
   return (
+      <ProfileProvider>
     <BrowserRouter>
       <div className="container">
         <Routes>
           <Route path="/" element = {<MainApp/>}>
             <Route index element={<HomeScreen/>}/>
             <Route path="home" exact={true} element = {<HomeScreen/>}/>
-            <Route path="profile" element = {<Profile/>}/>
+            <Route path="/profile" element={
+              <SecureRoute>
+                <Profile/>
+              </SecureRoute>
+            }/>
             <Route path="login" element = {<Login/>}/>
             <Route path="game/:id" element = {<GameDetails/>}/>
             <Route path="search" element = {<SearchGames/>}/>
@@ -34,6 +42,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+      </ProfileProvider>
   );
 }
 

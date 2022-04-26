@@ -8,7 +8,10 @@ import '../GameDetails/game.css'
 import '../HomeScreen/home.css'
 import './profile.css'
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import * as service from "../../services/auth-service";
+import * as userService from "../../services/users-service";
+import {useProfile} from "../../contexts/profile-context";
 
 import {Tabs,Tab} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
@@ -17,50 +20,67 @@ import GameDetails from "../GameDetails";
 import GamesSidebarItem from "../GamesSidebar/GameItem.js";
 import GameSidebarItem from "../GamesSidebar/GameItem";
 import GamesList from "../GamesSidebar/GamesList";
+import * as userActions from "../../actions/users-actions";
 
-const Profile = () => {
-    let this_user = user[0]
+const Profile = async (userId) => {
+
+
+    const {profile} = useProfile()
+    const navigate = useNavigate()
+
+    const logout = async () => {
+        await service.logout()
+        navigate('/signin')
+    }
+
+    let this_user = useSelector(state => state.fetchedUser);
+
+    if (!userId) this_user = profile;
     //whether or not this is the loggedin user
     const my_account = true;
     const dispatch = useDispatch();
     const updateNav = () => {
-        dispatch({type: 'nav-change', value:'profile'});
+        dispatch({type: 'nav-change', value: 'profile'});
     };
     useEffect(updateNav);
-    useEffect(() => {findAllPosts(dispatch)}, [dispatch]);
+    useEffect(() => {
+        findAllPosts(dispatch)
+    }, [dispatch]);
+    useEffect(() => {
+        userActions.findUser(dispatch, userId);
+    }, [dispatch, userId])
     const posts = useSelector(
         state => state.posts);
 
-    const filter_user_posts_by = (field) => posts.filter(post=> this_user[field].includes(post._id))
+    const filter_user_posts_by = (field) => posts.filter(post => this_user[field].includes(post._id))
 
 
-    return(
+    return (
         <div>
-
-            {/*TODO: figure out fields tht give you header_image genre for igdb and add here (only works for steam right now)*/}
-
             <img src={this_user.banner_image} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
                         <h1 className=" h-auto p-0 pe-1 mb-0"> {this_user.name}
-                            <Link to = "../edit-profile" id="edit-profile" className="btn btn-light btn-sm rounded-pill ms-2 h-50 w-auto "
-                            hidden={!my_account}>
+                            <Link to="../edit-profile" id="edit-profile"
+                                  className="btn btn-light btn-sm rounded-pill ms-2 h-50 w-auto "
+                                  hidden={!my_account}>
                                 <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
                             </Link>
                         </h1>
                         <p className="wd-post-text mb-1"> @{this_user.username} &nbsp;
                             <span>
-                                <Tag type={this_user.user_tier=="premium"?"warning":"info"} text={this_user.user_tier}/>
+                                <Tag type={this_user.user_tier === "premium" ? "warning" : "info"}
+                                     text={this_user.user_tier}/>
                             </span>
                         </p>
                         <p className="wd-post-text m-0">
                             <span>
                                 <i className="far fa-calendar-alt"> &nbsp;</i>
                             </span>
-                                Joined {
-                                        new Date(this_user.join_date).toLocaleString('en-us',{month:'short', year:'numeric'})
-                                    }
+                            Joined {
+                            new Date(this_user.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
+                        }
                         </p>
                         <p className="wd-post-text m-0">
                             <span>
@@ -68,22 +88,20 @@ const Profile = () => {
                             </span>{this_user.posts.length} posts</p>
 
 
-
-
                     </div>
-                    <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center" >
+                    <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
 
-                        <img src={this_user.avatar_image} className = "img-fluid  rounded-circle wd-avatar-border " />
+                        <img src={this_user.avatar_image} className="img-fluid  rounded-circle wd-avatar-border "/>
                     </div>
 
                 </div>
-                <p className="wd-post-text mt-3 pt-3 border-top border-1">{ this_user.bio}</p>
+                <p className="wd-post-text mt-3 pt-3 border-top border-1">{this_user.bio}</p>
 
             </div>
 
             {/*Taken from bootswatch*/}
             <div className="wd-post-list-border p-3">
-                <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className="mb-3" justify variant="tabs" >
+                <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className="mb-3" justify variant="tabs">
                     <Tab eventKey="all" title="Posts">
                         <PostList posts={posts}/>
                     </Tab>
@@ -102,9 +120,8 @@ const Profile = () => {
                 </Tabs>
 
 
-
-        </div>
             </div>
+        </div>
     )
 }
 
