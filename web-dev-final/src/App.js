@@ -31,7 +31,7 @@ function App() {
                 <ProfileWrapper/>
               </SecureRoute>
             }/>
-            <Route path={"/profile/:id"} element = {<ProfileWrapper/>}/>
+            <Route path={"/profile/:userId"} element = {<ProfileWrapper/>}/>
             <Route path="login" element = {<Login/>}/>
             <Route path="game/:id" element = {<GameDetails/>}/>
             <Route path="search" element = {<SearchGames/>}/>

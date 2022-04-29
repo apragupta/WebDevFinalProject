@@ -10,6 +10,7 @@ import Profile from "../Profile";
 const ProfileWrapper = () => {
 
     const {userId} = useParams();
+    console.log(userId);
 
     const {profile} = useProfile()
     console.log(profile);
@@ -28,7 +29,6 @@ const ProfileWrapper = () => {
         this_user = profile;
         uid = profile._id;
     }
-    const my_account = true;
     const dispatch = useDispatch();
     const updateNav = () => {
         dispatch({type: 'nav-change', value: 'profile'});
@@ -43,7 +43,9 @@ const ProfileWrapper = () => {
     const posts = useSelector(
         state => state.posts);
 
-    return (<Profile posts={this_user}/>);
+    console.log(this_user);
+
+    return (this_user ? <Profile posts={this_user}/> : <div></div>);
 
 }
 
