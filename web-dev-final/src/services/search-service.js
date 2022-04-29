@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API_BASE = process.env.REACT_APP_API_BASE;
 
-const API_BASE = process.env.API_URL ||  'https://webdev-final-server-1.herokuapp.com/api';
+const API_BASE = process.env.API_URL ||  "http://localhost:4000/api";
 const SEARCH_API = `${API_BASE}/search`;
 
 

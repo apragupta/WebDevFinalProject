@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = process.env.API_URL  ||   'https://webdev-final-server-1.herokuapp.com/api';
+const API_BASE = process.env.API_URL  ||  "http://localhost:4000/api";
 const POSTS_API = `${API_BASE}/users`;
 
 
