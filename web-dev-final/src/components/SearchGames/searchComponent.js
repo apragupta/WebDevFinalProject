@@ -23,7 +23,7 @@ const SearchComponent = (startingTerm) => {
 
 
     useEffect(() => {if (startingTerm.startingTerm) search(dispatch, startingTerm.startingTerm);},
-        [startingTerm.startingTerm]);
+        [startingTerm.startingTerm, dispatch]);
 
 
 
