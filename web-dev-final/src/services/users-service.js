@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = process.env.SERVER_APP_API_BASE;
+const API_BASE = process.env.SERVER_APP_API_BASE || 'http://localhost:4000/api';
 const POSTS_API = `${API_BASE}/users`;
 
 
