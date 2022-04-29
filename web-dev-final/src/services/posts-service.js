@@ -2,7 +2,7 @@
 import axios from "axios";
 // let my_posts = sample_posts;
 
-const API_BASE = process.env.SERVER_APP_API_BASE || 'http://localhost:4000/api';
+const API_BASE = process.env.SERVER_APP_API_BASE || 'https://webdev-final-server-1.herokuapp.com/api';
 const POSTS_API = `${API_BASE}/posts`;
 console.log(POSTS_API);
 
