@@ -6,6 +6,7 @@ import './vendors/fontawesome/css/all.min.css';
 import MainApp from "./components";
 import HomeScreen from "./components/HomeScreen";
 import Profile from "./components/Profile";
+import ProfileWrapper from "./components/ProfileWrapper"
 import GameDetails from "./components/GameDetails";
 import Login from "./components/Login";
 import SearchGames from "./components/SearchGames";
@@ -27,9 +28,10 @@ function App() {
             <Route path="home" exact={true} element = {<HomeScreen/>}/>
             <Route path="/profile" element={
               <SecureRoute>
-                <Profile/>
+                <ProfileWrapper/>
               </SecureRoute>
             }/>
+            <Route path={"/profile/:id"} element = {<ProfileWrapper/>}/>
             <Route path="login" element = {<Login/>}/>
             <Route path="game/:id" element = {<GameDetails/>}/>
             <Route path="search" element = {<SearchGames/>}/>

@@ -22,80 +22,53 @@ import GameSidebarItem from "../GamesSidebar/GameItem";
 import GamesList from "../GamesSidebar/GamesList";
 import * as userActions from "../../actions/users-actions";
 
-const Profile = async (userId) => {
+const Profile = (profile) => {
 
 
-    const {profile} = useProfile()
-    const navigate = useNavigate()
 
-    const logout = async () => {
-        await service.logout()
-        navigate('/signin')
-    }
+    const filter_user_posts_by = (field) => profile.posts.filter(post => profile[field].includes(post._id))
+    console.log('rendering profile');
 
-    let this_user = useSelector(state => state.fetchedUser);
-
-    if (!userId) this_user = profile;
-    //whether or not this is the loggedin user
-    const my_account = true;
-    const dispatch = useDispatch();
-    const updateNav = () => {
-        dispatch({type: 'nav-change', value: 'profile'});
-    };
-    useEffect(updateNav);
-    useEffect(() => {
-        findAllPosts(dispatch)
-    }, [dispatch]);
-    useEffect(() => {
-        userActions.findUser(dispatch, userId);
-    }, [dispatch, userId])
-    const posts = useSelector(
-        state => state.posts);
-
-    const filter_user_posts_by = (field) => posts.filter(post => this_user[field].includes(post._id))
-
+    const join_date = profile && new Date(profile.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
 
     return (
+
         <div>
-            <img src={this_user.banner_image} className="w-100 wd-game-header "/>
+            <img src={profile && profile.banner_image || ""} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
-                        <h1 className=" h-auto p-0 pe-1 mb-0"> {this_user.name}
+                        <h1 className=" h-auto p-0 pe-1 mb-0"> {profile &&  profile.name || ""}
                             <Link to="../edit-profile" id="edit-profile"
                                   className="btn btn-light btn-sm rounded-pill ms-2 h-50 w-auto "
-                                  hidden={!my_account}>
+                                  hidden={!profile.is_me}>
                                 <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
                             </Link>
                         </h1>
-                        <p className="wd-post-text mb-1"> @{this_user.username} &nbsp;
+                        <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
                             <span>
-                                <Tag type={this_user.user_tier === "premium" ? "warning" : "info"}
-                                     text={this_user.user_tier}/>
+                                <Tag type={profile &&  profile.user_tier || "premium" === "premium" ? "warning" : "info"}
+                                     text={profile &&  profile.user_tier || ""}/>
                             </span>
                         </p>
                         <p className="wd-post-text m-0">
                             <span>
                                 <i className="far fa-calendar-alt"> &nbsp;</i>
                             </span>
-                            Joined {
-                            new Date(this_user.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
-                        }
+                            Joined {""}
                         </p>
                         <p className="wd-post-text m-0">
                             <span>
                                 <i className="fas fa-pen-alt"> &nbsp;</i>
-                            </span>{this_user.posts.length} posts</p>
-
-
+                            </span>{profile &&  profile.posts && profile.posts.length || 0} posts</p>
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
 
-                        <img src={this_user.avatar_image} className="img-fluid  rounded-circle wd-avatar-border "/>
+                        <img src={profile &&  profile.avatar_image || ""} className="img-fluid  rounded-circle wd-avatar-border "/>
                     </div>
 
                 </div>
-                <p className="wd-post-text mt-3 pt-3 border-top border-1">{this_user.bio}</p>
+                <p className="wd-post-text mt-3 pt-3 border-top border-1">{profile && profile.bio || ""}</p>
 
             </div>
 
@@ -103,19 +76,19 @@ const Profile = async (userId) => {
             <div className="wd-post-list-border p-3">
                 <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className="mb-3" justify variant="tabs">
                     <Tab eventKey="all" title="Posts">
-                        <PostList posts={posts}/>
+                        <PostList posts={profile.posts}/>
                     </Tab>
                     <Tab eventKey="liked" title="Likes">
-                        <PostList posts={filter_user_posts_by("liked")}/>
+                        <PostList posts={[] || filter_user_posts_by("liked")}/>
                     </Tab>
                     <Tab eventKey="disliked" title="Dislikes">
-                        <PostList posts={filter_user_posts_by("disliked")}/>
+                        <PostList posts={[] || filter_user_posts_by("disliked")}/>
                     </Tab>
                     <Tab eventKey="bookmarked" title="Bookmarks">
-                        <PostList posts={filter_user_posts_by("bookmarks")}/>
+                        <PostList posts={[] || filter_user_posts_by("bookmarks")}/>
                     </Tab>
                     <Tab eventKey="games" title="Games">
-                        <GamesList user_games={this_user.games}/>
+                        <GamesList user_games={(profile && profile.games) || []}/>
                     </Tab>
                 </Tabs>
 
