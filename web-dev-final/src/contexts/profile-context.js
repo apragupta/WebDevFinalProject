@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import * as service from "../services/auth-service";
 
-const ProfileContext = React.createContext()
+const ProfileContext = React.createContext(undefined);
 
 export const ProfileProvider = ({children}) => {
     const [profile, setProfile] = useState()
@@ -12,6 +12,7 @@ export const ProfileProvider = ({children}) => {
                 email,
                 password
             )
+            console.log(p);
             setProfile(p)
         } catch (e) {
             throw e
