@@ -1,5 +1,7 @@
 // import sample_posts from "../sample_data/posts.js"
 import axios from "axios";
+const api = axios.create({withCredentials: true})
+
 // let my_posts = sample_posts;
 
 
@@ -21,12 +23,12 @@ export const createPost = async (post) => {
     
     
     const newPost = post;
-    const response = await axios.post(POSTS_API, newPost)
+    const response = await api.post(POSTS_API, newPost)
     return response.data;
 
 }
 export const findAllPosts = async () => {
-    const response = await axios.get(POSTS_API);
+    const response = await api.get(POSTS_API);
     const posts = response.data;
     return posts;
 
@@ -34,14 +36,14 @@ export const findAllPosts = async () => {
     // return get_posts;
 }
 export const deletePost = async (post) => {
-    const response = await axios.delete(`${POSTS_API}/${post._id}`);
+    const response = await api.delete(`${POSTS_API}/${post._id}`);
     return response.data;
 
     // const postIdToDelete = post._id;
     // my_posts = my_posts.filter(p=> p._id !== postIdToDelete);
 }
 export const updatePost = async (post) => {
-    const response = await axios.put(`${POSTS_API}/${post._id}`,post);
+    const response = await api.put(`${POSTS_API}/${post._id}`,post);
     return response.data;
 
     // const postIdToUpdate = post._id;
@@ -51,30 +53,30 @@ export const updatePost = async (post) => {
 }
 
 export const findPostsByGameId = async (gid) => {
-    const response = await axios.get(`${GAME_API}/${encodeURIComponent(gid)}/posts`);
+    const response = await api.get(`${GAME_API}/${encodeURIComponent(gid)}/posts`);
     return response.data;
 }
 
 export const getPostsByUserId = async (userId) => {
-    const response = await axios.get(`${USER_API}/${userId}/posts`);
+    const response = await api.get(`${USER_API}/${userId}/posts`);
     const posts = response.data;
     return posts;
 }
 
 export const getLikedPostsByUserId = async (userId) => {
-    const response = await axios.get(`${USER_API}/${userId}/likes`);
+    const response = await api.get(`${USER_API}/${userId}/likes`);
     const posts = response.data;
     return posts;
 }
 
 export const getDislikedPostsByUserId = async (userId) => {
-    const response = await axios.get(`${USER_API}/${userId}/dislikes`);
+    const response = await api.get(`${USER_API}/${userId}/dislikes`);
     const posts = response.data;
     return posts;
 }
 
 export const getBookmarkedPostsByUserId = async (userId) => {
-    const response = await axios.get(`${USER_API}/${userId}/bookmarks`);
+    const response = await api.get(`${USER_API}/${userId}/bookmarks`);
     const posts = response.data;
     return posts;
 }
