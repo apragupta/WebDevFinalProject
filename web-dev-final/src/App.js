@@ -7,6 +7,7 @@ import MainApp from "./components";
 import HomeScreen from "./components/HomeScreen";
 import Profile from "./components/Profile";
 import ProfileWrapper from "./components/ProfileWrapper"
+import EditProfileWrapper from './components/ProfileWrapper/edit-profile-wrapper';
 import GameDetails from "./components/GameDetails";
 import Login from "./components/Login";
 import SearchGames from "./components/SearchGames";
@@ -27,12 +28,12 @@ function App() {
               <Route path="/" element = {<MainApp/>}>
                 <Route index element={<HomeScreen/>}/>
                 <Route path="home" exact={true} element = {<HomeScreen/>}/>
-                <Route path="/profile" element={
+                <Route path="profile" element={
                   <SecureRoute>
                     <ProfileWrapper/>
                   </SecureRoute>
                 }/>
-                <Route path={"/profile/:userId"} element = {<ProfileWrapper/>}/>
+                <Route path={"profile/:userId"} element = {<ProfileWrapper/>}/>
                 <Route path="login" element = {<Login/>}/>
 
                 <Route path="register" element = {<Register/>}/>
@@ -41,8 +42,11 @@ function App() {
                 <Route path="search" element = {<SearchGames/>}/>
                 <Route path="search/:term" element = {<SearchGames/>}/>
                 <Route path="privacy" element = {<PrivacyPolicy/>}/>
-                <Route path = "edit-profile" element = {<EditProfile/>}/>
-
+              <Route path="edit-profile" element={
+                <SecureRoute>
+                  <EditProfileWrapper/>
+                </SecureRoute>
+              }/>
               </Route>
 
             </Routes>
