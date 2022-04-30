@@ -10,6 +10,7 @@ import {Provider} from "react-redux";
 import GameSidebar from "./GamesSidebar";
 import searchReducer from "./reducers/search-reducer";
 import activeReducer from "./reducers/active-reducer";
+import SecureContent from "./secure-content";
 
 const reducer = combineReducers({
     posts: postsReducer,
@@ -35,9 +36,14 @@ const MainApp =() => {
             <div className="col-10 col-lg-7 col-xl-6">
                 <Outlet/>
             </div>
+
             <div className="d-none d-lg-block col-lg-4 ">
-                <GameSidebar/>
+                <SecureContent>
+
+                 <GameSidebar/>
+                </SecureContent>
             </div>
+
 
         </div>
         </Provider>

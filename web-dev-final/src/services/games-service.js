@@ -1,4 +1,5 @@
 import axios from "axios";
+const api = axios.create({withCredentials: true})
 
 // const API_BASE = process.env.REACT_APP_API_BASE;
 
@@ -7,7 +8,7 @@ const GAME_API = `${API_BASE}/game`;
 
 
 export const findGame = async (gid) => {
-    const response = await axios.get(`${GAME_API}/${encodeURIComponent(gid)}`);
+    const response = await api.get(`${GAME_API}/${encodeURIComponent(gid)}`);
     return response.data;
 
 }

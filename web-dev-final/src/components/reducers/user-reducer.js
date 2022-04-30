@@ -1,10 +1,17 @@
-import users from "../../sample_data/user.js"
-import gameJson from "../../sample_data/game.json";
-let user = users[0]
+import {FIND_USER} from "../../actions/users-actions";
 
 
-const userReducer = (state = user) => {
-    return(state);
+const userReducer = (state=null,action) => {
+    switch(action.type){
+
+        case FIND_USER:
+            return action.user;
+            break
+
+        default:
+            return state;
+
+    }
 };
 
 export default userReducer;
