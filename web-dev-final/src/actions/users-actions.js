@@ -1,7 +1,7 @@
 import * as service from '../services/users-service'
 
 export const FIND_USER = 'FIND_USER';
-
+export const USER_POSTS = 'USER_POSTS'
 
 
 export const findUser = async (dispatch, userId) => {
@@ -11,3 +11,4 @@ export const findUser = async (dispatch, userId) => {
         user
     });
 }
+

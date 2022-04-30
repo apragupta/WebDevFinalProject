@@ -22,13 +22,13 @@ import GameSidebarItem from "../GamesSidebar/GameItem";
 import GamesList from "../GamesSidebar/GamesList";
 import * as userActions from "../../actions/users-actions";
 
-const Profile = (profile) => {
+const Profile = ({profile}) => {
 
 
 
-    const filter_user_posts_by = (field) => profile.posts.filter(post => profile[field].includes(post._id))
+    // const filter_user_posts_by = (field) => profile.posts.filter(post => profile[field].includes(post._id))
     console.log('rendering profile');
-
+    console.log(profile)
     const join_date = profile && new Date(profile.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
 
     return (
@@ -73,27 +73,27 @@ const Profile = (profile) => {
             </div>
 
             {/*Taken from bootswatch*/}
-            <div className="wd-post-list-border p-3">
-                <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className="mb-3" justify variant="tabs">
-                    <Tab eventKey="all" title="Posts">
-                        <PostList posts={profile.posts}/>
-                    </Tab>
-                    <Tab eventKey="liked" title="Likes">
-                        <PostList posts={[] || filter_user_posts_by("liked")}/>
-                    </Tab>
-                    <Tab eventKey="disliked" title="Dislikes">
-                        <PostList posts={[] || filter_user_posts_by("disliked")}/>
-                    </Tab>
-                    <Tab eventKey="bookmarked" title="Bookmarks">
-                        <PostList posts={[] || filter_user_posts_by("bookmarks")}/>
-                    </Tab>
-                    <Tab eventKey="games" title="Games">
-                        <GamesList user_games={(profile && profile.games) || []}/>
-                    </Tab>
-                </Tabs>
+            {/*<div className="wd-post-list-border p-3">*/}
+            {/*    <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className="mb-3" justify variant="tabs">*/}
+            {/*        <Tab eventKey="all" title="Posts">*/}
+            {/*            <PostList posts={profile.posts}/>*/}
+            {/*        </Tab>*/}
+            {/*        <Tab eventKey="liked" title="Likes">*/}
+            {/*            <PostList posts={[] || filter_user_posts_by("liked")}/>*/}
+            {/*        </Tab>*/}
+            {/*        <Tab eventKey="disliked" title="Dislikes">*/}
+            {/*            <PostList posts={[] || filter_user_posts_by("disliked")}/>*/}
+            {/*        </Tab>*/}
+            {/*        <Tab eventKey="bookmarked" title="Bookmarks">*/}
+            {/*            <PostList posts={[] || filter_user_posts_by("bookmarks")}/>*/}
+            {/*        </Tab>*/}
+            {/*        <Tab eventKey="games" title="Games">*/}
+            {/*            <GamesList user_games={(profile && profile.games) || []}/>*/}
+            {/*        </Tab>*/}
+            {/*    </Tabs>*/}
 
 
-            </div>
+            {/*</div>*/}
         </div>
     )
 }

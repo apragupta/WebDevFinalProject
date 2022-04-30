@@ -2,7 +2,7 @@ import react, {useEffect} from 'react'
 import {useParams} from "react-router-dom";
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
-import {findAllPosts} from "../../actions/posts-actions";
+import {findGamePosts} from "../../actions/posts-actions";
 import user from '../../sample_data/user'
 
 import Tag from "./Tag";
@@ -15,9 +15,13 @@ import {findGame} from "../../actions/games-actions";
 const GameDetails = () => {
 
     const dispatch = useDispatch();
-    useEffect(() => {findAllPosts(dispatch)}, [dispatch]);
+
     let { id } = useParams();
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
+
+    useEffect(() => {findGamePosts(dispatch, id)}, [dispatch]);
+
+
     const posts = useSelector(
         state => state.posts);
     const game = useSelector(

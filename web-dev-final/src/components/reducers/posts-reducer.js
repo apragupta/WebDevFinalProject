@@ -1,13 +1,13 @@
 import {
     DELETE_POST,
-    FIND_ALL_POSTS,
+    FIND_POSTS,
     CREATE_POST,
     UPDATE_POST} from "../../actions/posts-actions";
 
 const postsReducer =
     (state = [], action) => {
         switch (action.type) {
-            case FIND_ALL_POSTS:
+            case FIND_POSTS:
                 return action.posts
             case DELETE_POST:
                 return state.filter(

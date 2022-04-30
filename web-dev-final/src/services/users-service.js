@@ -1,17 +1,18 @@
 import axios from "axios";
 
 const API_BASE = process.env.API_URL  ||  "http://localhost:4000/api";
-const POSTS_API = `${API_BASE}/users`;
+const USER_API = `${API_BASE}/users`;
 
 
 export const getUser = async (userId) => {
-    const response = await axios.get(`${POSTS_API}/users/${userId}`);
-    const posts = response.data;
-    return posts;
+    const response = await axios.get(`${USER_API}/${userId}`);
+    const user = response.data;
+    return user;
 
 }
 export const updateUser = async (user) => {
-    const response = await axios.put(`${POSTS_API}/users/${user._id}`,user);
+    const response = await axios.put(`${USER_API}/${user._id}`,user);
     return response.data;
 
 }
+
