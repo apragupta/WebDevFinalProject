@@ -17,8 +17,9 @@ const ProfileWrapper = () => {
     return ( <Profile profile={profile}/> )
 
 
-    // const {userId} = useParams();
-    // console.log(userId);
+    const {userId} = useParams();
+    console.log("user id")
+    console.log(userId);
     //
     // const {profile} = useProfile()
     // console.log(profile);

@@ -12,6 +12,7 @@ export const ProfileProvider = ({children}) => {
                 email,
                 password
             )
+            console.log("p")
             console.log(p);
             setProfile(p)
         } catch (e) {
