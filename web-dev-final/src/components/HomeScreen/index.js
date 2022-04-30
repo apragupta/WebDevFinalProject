@@ -22,7 +22,7 @@ const HomeScreen = () => {
             <SearchComponent/>
 
             <SecureContent>
-            <MakePost/>
+                <MakePost/>
             </SecureContent>
             <div className="wd-post-list-border">
             <PostList posts={posts}/>

@@ -10,6 +10,8 @@ const Login = () => {
     const passwordRef = useRef()
     const navigate = useNavigate()
     const {signin} = useProfile()
+
+
     const handleSignin = async () => {
         console.log(emailRef);
         console.log(passwordRef);
@@ -21,7 +23,7 @@ const Login = () => {
             navigate("/profile")
         } catch (e) {
             console.log(e);
-            alert('oops')
+            alert('Not a valid combination!')
         }
     }
 

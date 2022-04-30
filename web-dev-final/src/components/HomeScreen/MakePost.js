@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {createPost} from "../../actions/posts-actions";
 import "./home.css"
+import {useProfile} from "../../contexts/profile-context";
 
 
 const MakePost = () => {
 
-    const user = useSelector(
-        state => state.user);
+    const {profile} = useProfile();
 
     let [gameSet, setGameSet] =
         useState({
@@ -24,7 +24,7 @@ const MakePost = () => {
 
 
 
-    const user_games = user.games;
+    const user_games = profile.games;
 
     const gameSetHandler = (event) => {
 
