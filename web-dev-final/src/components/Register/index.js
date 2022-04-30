@@ -1,12 +1,10 @@
-import react, {useEffect, useState} from 'react'
+
 import './../GameDetails/game.css'
 import './login.css'
-import React, {useRef} from 'react';
+import React from 'react';
 import * as service from '../../services/auth-service'
 import {useNavigate} from "react-router-dom";
-import {useProfile} from "../../contexts/profile-context";
 import { yupResolver } from '@hookform/resolvers/yup';
-import {findAllPosts} from "../../actions/posts-actions";
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
 const Register = () => {
@@ -24,13 +22,12 @@ const Register = () => {
             .required('Username is required')
             .min(4, 'Username must be at least 4 characters'),
         name: Yup.string()
-            .required('Name is required'),
-
+            .required('Name is required')
 
     });
 
-    const formOptions = { resolver: yupResolver(validationSchema) };
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const formOptions = { resolver: yupResolver(validationSchema), mode: "onChange" };
+    const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
     const navigate = useNavigate()
     const  onSubmit = async(data)  => {
@@ -94,7 +91,7 @@ const Register = () => {
                 <div className="d-flex flex-column align-items-center">
                     <div className="d-flex align-items-center flex-column">
                         <label htmlFor="createAccount" className="d-flex flex-column align-items-center">
-                            <button type="submit" id="createAccount" className="btn btn-primary rounded-pill  wd-login-button-size ">Sign Up</button>
+                            <button disabled={!formState.isValid} type="submit" id="createAccount" className="btn btn-primary rounded-pill  wd-login-button-size ">Sign Up</button>
                         </label>
                     </div>
 
