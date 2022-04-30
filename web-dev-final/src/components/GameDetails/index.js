@@ -19,7 +19,7 @@ const GameDetails = () => {
     let { id } = useParams();
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
 
-    useEffect(() => {findGamePosts(dispatch, id)}, [dispatch]);
+    useEffect(() => {findGamePosts(dispatch, id)}, [dispatch, id]);
 
 
     const posts = useSelector(
