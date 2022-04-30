@@ -11,7 +11,7 @@ export const getUser = async (userId) => {
 
 }
 
-// TODO: change this so that only the current user can update their profile, use session
+// TODO: change this so that only the current user can update their profile, use session - move to auth service changes
 export const updateUser = async (user) => {
     const response = await axios.put(`${USER_API}/${user._id}`,user);
     return response.data;

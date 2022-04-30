@@ -91,7 +91,7 @@ const Profile = ({profile}) => {
                     <Tab eventKey={DISLIKED_POSTS} title="Dislikes">
                         <ProfilePostListWrapper type={ActiveTab} userId={profile._id}/>
                     </Tab>
-                    <Tab eventKey={DISLIKED_POSTS} title="Bookmarks">
+                    <Tab eventKey={BOOKMARKED_POSTS} title="Bookmarks">
                         <ProfilePostListWrapper type={ActiveTab} userId={profile._id}/>
                     </Tab>
                     <Tab eventKey="games" title="Games">
