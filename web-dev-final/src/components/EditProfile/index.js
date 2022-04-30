@@ -51,37 +51,45 @@ const EditProfile = ({ profile }) => {
 
     return (
         <div>
+
             <img src={profile && profile.banner_image || ""} className="w-100 wd-game-header" />
-            <label for="banner_pic" className="wd-profile-field">Banner image: </label>
-            <input type="file" ref={bannerRef}id="banner_pic" name="banner_pic"/>
+            <label for="banner_pic" className="col-form-label ">Banner image: </label>
+            <input type="file" ref={bannerRef}id="banner_pic" name="banner_pic" className="form-control rounded-pill"/>
+
+
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between mb-3">
+                    <div className="w-75">
+                        <label htmlFor="profile_pic" className="col-form-label">Profile image: </label>
+                        <input type="file" ref={avatarRef} id="profile_pic" name="profile_pic"
+                               className="form-control rounded-pill"/>
+                    </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
                         <img src={profile && profile.avatar_image || ""} className="img-fluid  rounded-circle wd-avatar-border " />
                     </div>
-                    <div className="w-75">
-                        <label for="profile_pic" className="wd-profile-field">Profile image: </label>
-                        <input type="file" ref={avatarRef} id="profile_pic" name="profile_pic" />
-                    </div>
+
+
                 </div>
-                <label for="profile_username" className="wd-profile-field">Username: </label>
-                <input type="text" ref={usernameRef} id="profile_username" name="profile_username" defaultValue={profile.username} /><br></br>
+
+                <label for="profile_username" className="col-form-label">Username: </label>
+
+                <input type="text" ref={usernameRef} id="profile_username" name="profile_username" defaultValue={profile.username} className="form-control rounded-pill me-3" />
                 
-                <label for="profile_name" className="wd-profile-field">Name: </label>
-                <input type="text" ref={nameRef}id="profile_name" name="profile_name" defaultValue={profile.name} /><br></br>
+                <label for="profile_name" className="col-form-label">Name: </label>
+                <input type="text" ref={nameRef}id="profile_name" name="profile_name" defaultValue={profile.name} className="form-control rounded-pill me-3" />
 
-                <label for="profile_password" className="wd-profile-field">Password: </label>
-                <input type="password" ref={passwordRef} id="profile_password" name="profile_password" defaultValue={profile.password} /><br></br>
+                <label for="profile_password" className="col-form-label">Password: </label>
+                <input type="password" ref={passwordRef} id="profile_password" name="profile_password" defaultValue={profile.password} className="form-control rounded-pill me-3" />
 
-                <label for="profile_email" className="wd-profile-field">Email: </label>
-                <input type="text" ref={emailRef}id="profile_email" name="profile_email" defaultValue={profile.email} /><br></br>
+                <label for="profile_email" className="col-form-label">Email: </label>
+                <input type="text" ref={emailRef}id="profile_email" name="profile_email" defaultValue={profile.email} className="form-control rounded-pill me-3"/>
 
-                <label for="profile_bio" className="wd-profile-field">Bio (500 character limit): </label>
-                <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} />
+                <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
+                <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
             </div>
-            <div className="w-50">
-                <button onClick={handleEditProfileCancel} className="btn btn-danger btn-block rounded-pill w-60 h-auto mx-auto px-0">Cancel</button>
-                <button onClick={handleEditProfileSave} className="btn btn-success btn-block rounded-pill w-40 h-auto mx-auto px-0">Save</button>
+            <div className="d-flex justify-content-center mb-2">
+                <button onClick={handleEditProfileCancel} className="btn btn-danger btn-block rounded-pill w-50 h-auto mx-2 ">Cancel</button>
+                <button onClick={handleEditProfileSave} className="btn btn-success btn-block rounded-pill w-50 h-auto  mx-2 ">Save</button>
             </div>
         </div>);
 }

@@ -3,10 +3,11 @@ import {useSelector} from "react-redux";
 import GameSidebarItem from "./GameItem";
 import './game-bar.css'
 import GamesList from "./GamesList";
+import {useProfile} from "../../contexts/profile-context";
 
 const GameSidebar = () => {
-    const user = useSelector(state => state.user);
-    const user_games = user.games
+    const {profile} = useProfile();
+    const user_games = profile.games
     return (
         <div>
             <div className=" list-group-item rounded-top p-2  wd-body-bkg-color wd-game-item" key = {0}>

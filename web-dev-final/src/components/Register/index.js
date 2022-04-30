@@ -93,7 +93,7 @@ const Register = () => {
                 <div className="d-flex flex-column align-items-center">
                     <div className="d-flex align-items-center flex-column">
                         <label htmlFor="createAccount" className="d-flex flex-column align-items-center">
-                            <button disabled={!formState.isValid} type="submit" id="createAccount" className="btn btn-primary rounded-pill  wd-login-button-size mt-1">Sign Up</button>
+                            <button disabled={!formState.isValid} type="submit" id="createAccount" className="btn btn-primary rounded-pill  wd-login-button-size mt-3">Sign Up</button>
                         </label>
                     </div>
 
