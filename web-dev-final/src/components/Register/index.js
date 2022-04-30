@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-import './../GameDetails/game.css'
-import './login.css'
-import React from 'react';
-import * as service from '../../services/auth-service'
-import {useNavigate} from "react-router-dom";
-import { yupResolver } from '@hookform/resolvers/yup';
-=======
 import react, {useEffect, useState} from 'react'
 import './../GameDetails/game.css'
 import './login.css'
@@ -16,7 +7,6 @@ import {useNavigate} from "react-router-dom";
 import {useProfile} from "../../contexts/profile-context";
 import { yupResolver } from '@hookform/resolvers/yup';
 import {findAllPosts} from "../../actions/posts-actions";
->>>>>>> 5763a18 (Login refactor)
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
 const Register = () => {
