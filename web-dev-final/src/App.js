@@ -34,7 +34,9 @@ function App() {
                 }/>
                 <Route path={"/profile/:userId"} element = {<ProfileWrapper/>}/>
                 <Route path="login" element = {<Login/>}/>
+
                 <Route path="register" element = {<Register/>}/>
+
                 <Route path="game/:id" element = {<GameDetails/>}/>
                 <Route path="search" element = {<SearchGames/>}/>
                 <Route path="search/:term" element = {<SearchGames/>}/>
