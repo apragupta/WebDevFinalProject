@@ -14,6 +14,7 @@ const EditProfile = ({ profile }) => {
     const usernameRef = useRef();
     const nameRef = useRef();
     const bioRef = useRef();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const updateNav = () => {
         dispatch({type: 'nav-change', value:'edit-profile'});
@@ -28,11 +29,20 @@ const EditProfile = ({ profile }) => {
         console.log(nameRef.current.value);
         console.log(bioRef.current.value);
         try {
-            const user = await userService.getUser(profile._id);
-            console.log(user);
+            profile.banner_image = bannerRef.current.value ? bannerRef.current.value : profile.banner_image;
+            profile.avatar_image = avatarRef.current.value ? avatarRef.current.value : profile.avatar_image;
+            profile.username = usernameRef.current.value ? usernameRef.current.value : profile.username;
+            profile.name = nameRef.current.value ? nameRef.current.value : profile.bname;
+            profile.bio = bioRef.current.value ? bioRef.current.value : profile.bio;
+            const updatedUser = await userService.updateUser(profile);
+            console.log(profile);
         } catch (e) {
             console.log(e);
         }
+    }
+
+    const handleEditProfileCancel = () => {
+        navigate('/profile');
     }
 
     return (
@@ -60,7 +70,7 @@ const EditProfile = ({ profile }) => {
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} />
             </div>
             <div className="w-50">
-                <button className="btn btn-danger btn-block rounded-pill w-60 h-auto mx-auto px-0">Cancel</button>
+                <button onClick={handleEditProfileCancel} className="btn btn-danger btn-block rounded-pill w-60 h-auto mx-auto px-0">Cancel</button>
                 <button onClick={handleEditProfileSave} className="btn btn-success btn-block rounded-pill w-40 h-auto mx-auto px-0">Save</button>
             </div>
         </div>);
