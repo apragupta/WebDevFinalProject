@@ -11,6 +11,8 @@ import axios from "axios";
 //const POSTS_API = `${API_BASE}/posts`;
 const API_BASE = process.env.API_URL || "http://localhost:4000/api";
 const POSTS_API = `${API_BASE}/posts`;
+const USER_API = `${API_BASE}/user`;
+const GAME_API = `${API_BASE}/game`;
 
 
 
@@ -63,4 +65,13 @@ export const updatePost = async (post) => {
 
 }
 
+export const findPostsByGameId = async (gid) => {
+    const response = await axios.get(`${GAME_API}/${encodeURIComponent(gid)}/posts`);
+    return response.data;
+}
 
+export const getPostsByUserId = async (userId) => {
+    const response = await axios.get(`${USER_API}/${userId}`);
+    const posts = response.data;
+    return posts;
+}

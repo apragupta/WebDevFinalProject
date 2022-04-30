@@ -21,31 +21,31 @@ import Register from "./components/Register";
 function App() {
   return (
       <ProfileProvider>
-    <BrowserRouter>
-      <div className="container">
-        <Routes>
-          <Route path="/" element = {<MainApp/>}>
-            <Route index element={<HomeScreen/>}/>
-            <Route path="home" exact={true} element = {<HomeScreen/>}/>
-            <Route path="/profile" element={
-              <SecureRoute>
-                <ProfileWrapper/>
-              </SecureRoute>
-            }/>
-            <Route path={"/profile/:userId"} element = {<ProfileWrapper/>}/>
-            <Route path="login" element = {<Login/>}/>
-            <Route path="register" element = {<Register/>}/>
-            <Route path="game/:id" element = {<GameDetails/>}/>
-            <Route path="search" element = {<SearchGames/>}/>
-            <Route path="search/:term" element = {<SearchGames/>}/>
-            <Route path="privacy" element = {<PrivacyPolicy/>}/>
-            <Route path = "edit-profile" element = {<EditProfile/>}/>
+        <BrowserRouter>
+          <div className="container">
+            <Routes>
+              <Route path="/" element = {<MainApp/>}>
+                <Route index element={<HomeScreen/>}/>
+                <Route path="home" exact={true} element = {<HomeScreen/>}/>
+                <Route path="/profile" element={
+                  <SecureRoute>
+                    <ProfileWrapper/>
+                  </SecureRoute>
+                }/>
+                <Route path={"/profile/:userId"} element = {<ProfileWrapper/>}/>
+                <Route path="login" element = {<Login/>}/>
+                <Route path="register" element = {<Register/>}/>
+                <Route path="game/:id" element = {<GameDetails/>}/>
+                <Route path="search" element = {<SearchGames/>}/>
+                <Route path="search/:term" element = {<SearchGames/>}/>
+                <Route path="privacy" element = {<PrivacyPolicy/>}/>
+                <Route path = "edit-profile" element = {<EditProfile/>}/>
 
-          </Route>
+              </Route>
 
-        </Routes>
-      </div>
-    </BrowserRouter>
+            </Routes>
+          </div>
+        </BrowserRouter>
       </ProfileProvider>
   );
 }
