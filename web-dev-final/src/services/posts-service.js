@@ -11,7 +11,7 @@ import axios from "axios";
 //const POSTS_API = `${API_BASE}/posts`;
 const API_BASE = process.env.API_URL || "http://localhost:4000/api";
 const POSTS_API = `${API_BASE}/posts`;
-const USER_API = `${API_BASE}/user`;
+const USER_API = `${API_BASE}/users`;
 const GAME_API = `${API_BASE}/game`;
 
 
@@ -21,22 +21,7 @@ export const createPost = async (post) => {
     
     
     const newPost = post;
-    // newPost._id =  (new Date()).getTime() + '';
-    newPost.stats  = {"likes":0, "comments":0, "dislikes": 0}
-    // default username and image is: Apra Gupta
-    newPost.postedBy = {
-        "_id": 1,
-        "name": "Apra Gupta",
-        "username": "apragupta",
-        "avatar_image": "https://i.imgur.com/xdq1OiK.jpg"
-
-    }
-    
     const response = await axios.post(POSTS_API, newPost)
-
-    // my_posts.unshift(newPost);
-
-    // return newPost;
     return response.data;
 
 }
@@ -71,7 +56,25 @@ export const findPostsByGameId = async (gid) => {
 }
 
 export const getPostsByUserId = async (userId) => {
-    const response = await axios.get(`${USER_API}/${userId}`);
+    const response = await axios.get(`${USER_API}/${userId}/posts`);
+    const posts = response.data;
+    return posts;
+}
+
+export const getLikedPostsByUserId = async (userId) => {
+    const response = await axios.get(`${USER_API}/${userId}/likes`);
+    const posts = response.data;
+    return posts;
+}
+
+export const getDislikedPostsByUserId = async (userId) => {
+    const response = await axios.get(`${USER_API}/${userId}/dislikes`);
+    const posts = response.data;
+    return posts;
+}
+
+export const getBookmarkedPostsByUserId = async (userId) => {
+    const response = await axios.get(`${USER_API}/${userId}/bookmarks`);
     const posts = response.data;
     return posts;
 }

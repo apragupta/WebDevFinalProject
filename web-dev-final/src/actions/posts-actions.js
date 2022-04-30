@@ -55,7 +55,32 @@ export const findUserPosts = async (dispatch, userId) => {
 
 }
 
+export const findUserLikedPosts = async (dispatch, userId) => {
+    const posts = await service.getLikedPostsByUserId(userId);
+    dispatch({
+        type: FIND_POSTS,
+        posts
+    });
 
+}
+
+export const findUserDislikedPosts = async (dispatch, userId) => {
+    const posts = await service.getDislikedPostsByUserId(userId);
+    dispatch({
+        type: FIND_POSTS,
+        posts
+    });
+
+}
+
+export const findUserBookmarkedPosts = async (dispatch, userId) => {
+    const posts = await service.getBookmarkedPostsByUserId(userId);
+    dispatch({
+        type: FIND_POSTS,
+        posts
+    });
+
+}
 
 
 
