@@ -10,6 +10,8 @@ export const getUser = async (userId) => {
     return user;
 
 }
+
+// TODO: change this so that only the current user can update their profile, use session
 export const updateUser = async (user) => {
     const response = await axios.put(`${USER_API}/${user._id}`,user);
     return response.data;
