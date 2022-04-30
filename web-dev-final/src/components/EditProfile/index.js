@@ -35,7 +35,7 @@ const EditProfile = ({ profile }) => {
             profile.name = nameRef.current.value ? nameRef.current.value : profile.bname;
             profile.bio = bioRef.current.value ? bioRef.current.value : profile.bio;
             const updatedUser = await userService.updateUser(profile);
-            console.log(profile);
+            console.log(updatedUser);
         } catch (e) {
             console.log(e);
         }
