@@ -4,11 +4,10 @@ import'./nav-bar.css'
 import {Link, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {useProfile} from "../../contexts/profile-context";
-import * as service from "../../services/auth-service";
 
 const NavigationSidebar = () =>{
 
-    const {checkLoggedIn} = useProfile();
+    const {checkLoggedIn, signout} = useProfile();
     const [currentUser, setCurrentUser] = useState()
 
     const check = async () => {
@@ -25,8 +24,8 @@ const NavigationSidebar = () =>{
     const active = useSelector(state => state.active);
     const navigate = useNavigate();
 
-    const logout = async () => {
-        await service.logout()
+    const logoutNav = async () => {
+        await signout()
         navigate('/home')
     }
 
@@ -57,7 +56,7 @@ const NavigationSidebar = () =>{
 
         <div  className="py-2 ">
             {currentUser ?
-                <button onClick={logout} className="  btn btn-primary btn-block rounded-pill w-100 h-auto mx-auto px-0">
+                <button onClick={logoutNav} className="  btn btn-primary btn-block rounded-pill w-100 h-auto mx-auto px-0">
                     Logout
                 </button>
                 :
