@@ -26,21 +26,11 @@ const Login = () => {
     }
 
     const handleSignup = async () => {
-        try {
-            console.log(emailRef);
-            console.log(passwordRef);
-            await service.signup(
-                emailRef.current.value,
-                passwordRef.current.value
-            )
-            navigate('/profile')
-        } catch (e) {
-            alert('oops')
-        }
+        navigate('/register')
     }
     return(
         <div>
-            <h1 className="mb-4"> Login/Register</h1>
+            <h1 className="mb-4">Login</h1>
             {/*taken from footswatch sample code*/}
             <fieldset className="wd-paragraph-border ">
 
@@ -67,8 +57,10 @@ const Login = () => {
                 <div className="d-flex align-items-end flex-column">
                     <button onClick={handleSignin} type="submit" className="btn btn-primary rounded-pill  wd-login-button-size mb-4">Login
                     </button>
-                    <label htmlFor="createAccount" className="form-label text-light pe-2 ">No account?</label>
-                    <button onClick={handleSignup}  type="submit" id="createAccount" className="btn btn-primary rounded-pill  wd-login-button-size ">Create Account</button>
+                    <label htmlFor="createAccount" className="d-flex flex-column align-items-center">
+                        <p className="text-light pe-2">No account?</p>
+                        <button onClick={handleSignup}  type="submit" id="createAccount" className="btn btn-primary rounded-pill  wd-login-button-size ">Create Account</button>
+                    </label>
                 </div>
                 </div>
 
