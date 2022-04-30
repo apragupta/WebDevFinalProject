@@ -22,6 +22,9 @@ export const ProfileProvider = ({children}) => {
 
     const checkLoggedIn = async () => {
         try {
+            if (profile) {
+                return profile;
+            }
             const p = await service.profile()
             setProfile(p)
             return p
@@ -42,7 +45,16 @@ export const ProfileProvider = ({children}) => {
         }
     }
 
-    const value = {profile, signup, checkLoggedIn, signin}
+    const signout = async() => {
+        try {
+            await service.logout()
+            setProfile(undefined)
+        } catch (e) {
+            throw e
+        }
+    }
+
+    const value = {profile, signup, checkLoggedIn, signin, signout}
     return(
         <ProfileContext.Provider value={value}>
             {children}
