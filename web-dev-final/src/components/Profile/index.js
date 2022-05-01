@@ -42,7 +42,7 @@ const Profile = ({profile}) => {
         }
     }
 
-    useEffect(() => { check() },[profile])
+    useEffect(() => { check() })
 
     const join_date = profile && new Date(profile.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
     const [ActiveTab, setActiveTab] = useState(ALL_POSTS)
