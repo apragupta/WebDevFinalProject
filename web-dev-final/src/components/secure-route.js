@@ -16,7 +16,7 @@ const SecureRoute = ({children}) => {
             setWaiting(false)
         }
     }
-    useEffect(() => { check() }, [children])
+    useEffect(() => { check() })
 
     if(currentUser) {
         return children
