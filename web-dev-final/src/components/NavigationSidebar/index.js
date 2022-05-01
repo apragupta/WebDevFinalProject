@@ -10,6 +10,7 @@ const NavigationSidebar = () =>{
     const {checkLoggedIn, signout} = useProfile();
     const [currentUser, setCurrentUser] = useState()
 
+
     const check = async () => {
         try {
             const user = await checkLoggedIn()
@@ -19,9 +20,10 @@ const NavigationSidebar = () =>{
             setCurrentUser(false)
         }
     }
-    useEffect(() => { check() })
+    
 
     const active = useSelector(state => state.active);
+    useEffect(() => { check() },[active])
     const navigate = useNavigate();
 
     const logoutNav = async () => {

@@ -17,11 +17,10 @@ export const BOOKMARKED_POSTS = 'BOOKMARKED_POSTS';
 
 
 const ProfilePostListWrapper = ({type, userId}) => {
-    console.log("type")
-    console.log(type)
-    console.log(userId)
     const dispatch = useDispatch();
     useEffect(() => {
+        console.log("happening")
+        console.log(type,userId)
         switch(type) {
             case ALL_POSTS:
                 findUserPosts(dispatch, userId);
@@ -37,6 +36,7 @@ const ProfilePostListWrapper = ({type, userId}) => {
                 break;
             default:
                 findUserPosts(dispatch, userId);
+                break;
         }},[dispatch,type,userId]);
 
 

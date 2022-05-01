@@ -26,12 +26,17 @@ export const ProfileProvider = ({children}) => {
                 return profile;
             }
             const p = await service.profile()
+            console.log("in checkloggedin")
+            console.log(p)
             setProfile(p)
             return p
         } catch (e) {
             throw e
         }
     }
+
+
+
 
     const signup = async (email, password) => {
         try {

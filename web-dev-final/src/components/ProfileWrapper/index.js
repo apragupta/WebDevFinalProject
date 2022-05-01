@@ -26,8 +26,7 @@ const ProfileWrapper = () => {
     console.log("profile")
     console.log(profile);
 
-    const navigate = useNavigate()
-    console.log("in profile");
+    console.log("in profile wrapper 2");
 
     let this_user = useSelector(state => state.user);
     let uid = userId;
@@ -35,13 +34,12 @@ const ProfileWrapper = () => {
     if (!userId) {
         console.log("yeet")
         this_user = profile;
-        uid = profile._id;
     }
 
     const updateNav = () => {
         dispatch({type: 'nav-change', value: 'profile'});
     };
-    useEffect(updateNav);
+    useEffect(updateNav, [dispatch]);
 
 
     console.log("this user")

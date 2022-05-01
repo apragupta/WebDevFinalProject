@@ -2,7 +2,7 @@ import * as service from '../services/posts-service'
 import {USER_POSTS} from "./users-actions";
 
 export const CREATE_POST = 'CREATE_POST';
-export const FIND_POSTS = 'FIND_ALL_POSTS';
+export const FIND_POSTS = 'FIND_POSTS';
 export const UPDATE_POST = 'UPDATE_POST';
 export const DELETE_POST = 'DELETE_POST';
 
