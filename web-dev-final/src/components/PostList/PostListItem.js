@@ -51,10 +51,10 @@ const PostListItem = ({post}) => {
 
             </div>
 
-            <div className="col-lg-3 col-sm-3 d-sm-block d-none ms-1  p-0 text-center align-self-center wd-post-game">
-                <Link to={`../game/${post.game._id}`} id="game-link">
-                <img src={post.game.header_image} className = "img-fluid w-auto h-auto wd-post-game-image" />
-                <h6 className="my-auto ">{post.game.name}</h6>
+            <div className="col-lg-3 col-sm-3 d-sm-block d-none ms-1  p-0 pb-1 text-center align-self-center wd-post-game">
+                <Link to={`../game/${post.game._id}`} id="game-link" >
+                    <img src={post.game.header_image} className = "img-fluid w-auto h-auto wd-post-game-image " />
+                    <h6 className="my-auto wd-font-color">{post.game.name}</h6>
                 </Link>
             </div>
 
