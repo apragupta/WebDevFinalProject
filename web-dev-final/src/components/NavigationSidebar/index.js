@@ -23,7 +23,7 @@ const NavigationSidebar = () =>{
     
 
     const active = useSelector(state => state.active);
-    useEffect(() => { check() },[active])
+    useEffect(() => { check() })
     const navigate = useNavigate();
 
     const logoutNav = async () => {
