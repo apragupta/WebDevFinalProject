@@ -11,6 +11,12 @@ export const getUser = async (userId) => {
 
 }
 
+export const getUserGamesFollowed = async (userId) =>{
+    const response = await api.get(`${USER_API}/${userId}/followed`);
+    const games = response.data;
+    return games;
+}
+
 // TODO: change this so that only the current user can update their profile, use session - move to auth service changes
 export const updateUser = async (user) => {
     const response = await api.put(`${USER_API}/${user._id}`,user);

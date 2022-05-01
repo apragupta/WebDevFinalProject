@@ -15,7 +15,7 @@ const SecureContent = ({children}) => {
         } catch (e) {
         }
     }
-    useEffect(() => { check() }, [])
+    useEffect(() => { check() })
 
 
     if(currentUser) {

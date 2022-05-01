@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
 import {findGamePosts} from "../../actions/posts-actions";
-import user from '../../sample_data/user'
+
 
 import Tag from "./Tag";
 import './game.css'
@@ -11,10 +11,13 @@ import parse from "html-react-parser";
 import RatingComponent from "./RatingComponent";
 import React from "react";
 import {findGame} from "../../actions/games-actions";
+import {useProfile} from "../../contexts/profile-context";
+
 
 const GameDetails = () => {
 
     const dispatch = useDispatch();
+    const {profile} = useProfile()
 
     let { id } = useParams();
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
@@ -30,22 +33,40 @@ const GameDetails = () => {
     if (game === null) {
         return <></>
     }
-    console.log(game);
+
     const gameDetails = game.gameDetails;
     const game_search_result = game.gameSearchResult
 
 
 
-    let this_user = user[0]
 
-    const getGamePosts = () => posts.filter(post=> parseInt(post.game._id) == parseInt(id));
-    const user_follows_game = () => this_user.games.find(games=> games._id == id)
+    const user_follows_game = (profile) => {
+        console.log(profile.games)
+        console.log(id)
+        return profile && profile.games.includes(id)
+    }
+
+    const FollowButtonString =  (profile) => {
+
+       if (profile) {
+           if(user_follows_game(profile)) {
+               return "Followed!"
+           }
+           else{
+               return "Follow"
+           }
+
+       }
+       else {
+           return "Login to Follow"
+       }
+
+    }
 
 
 
-    const game_posts = getGamePosts()
-    const game_followed = user_follows_game()
-    console.log(gameDetails);
+    const game_followed = profile && user_follows_game(profile)
+
 
     return(
 
@@ -58,11 +79,15 @@ const GameDetails = () => {
             <div className="wd-paragraph-border my-3">
             <div className="d-flex justify-content-between  mb-3">
                 <h2 className="w-75 h-auto p-0 pe-1 mb-0"> {game_search_result.name}</h2>
+
                 <button className=" align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto "
-                disabled={game_followed}>
-                    {game_followed? "Followed!":"Follow"}
+                disabled={!profile ||  game_followed}>
+                    {
+                        FollowButtonString(profile)
+                    }
 
                 </button>
+
             </div>
 
 
@@ -81,7 +106,7 @@ const GameDetails = () => {
 
             <h1>Posts</h1>
             <div className="wd-post-list-border">
-            <PostList posts={game_posts}/>
+            <PostList posts={posts}/>
             </div>
 
         </div>

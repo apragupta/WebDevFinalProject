@@ -55,7 +55,7 @@ const Login = () => {
                         <input type="password" ref={passwordRef} className="form-control rounded-pill me-3" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
                 </div>
-                <div className="d-flex flex-column align-items-center wd-move-left">
+                <div className="d-flex flex-column align-items-center ">
                 <div className="d-flex align-items-end flex-column">
                     <button onClick={handleSignin} type="submit" className="btn btn-primary rounded-pill  wd-login-button-size mb-4">Login
                     </button>

@@ -49,6 +49,8 @@ const EditProfile = ({ profile }) => {
         navigate('/profile');
     }
 
+
+
     return (
         <div>
 
@@ -58,8 +60,8 @@ const EditProfile = ({ profile }) => {
 
 
             <div className="wd-paragraph-border my-3">
-                <div className="d-flex justify-content-between mb-3">
-                    <div className="w-75">
+                <div className="d-flex justify-content-between mb-3  ">
+                    <div className="w-75 align-self-center">
                         <label htmlFor="profile_pic" className="col-form-label">Profile image: </label>
                         <input type="file" ref={avatarRef} id="profile_pic" name="profile_pic"
                                className="form-control rounded-pill"/>

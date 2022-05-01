@@ -25,15 +25,31 @@ import GamesList from "../GamesSidebar/GamesList";
 import * as userActions from "../../actions/users-actions";
 import SecureContent from "../secure-content";
 
+
 const Profile = ({profile}) => {
 
+   const [loggedinInUser, setLoggedInUser] = useState()
+    const {checkLoggedIn} = useProfile()
+    const check = async () => {
 
+        try {
+            const user = await checkLoggedIn()
+            if (user._id == profile._id)
+                setLoggedInUser(true)
+            else{ setLoggedInUser(false)}
+        } catch (e) {
+            setLoggedInUser(false)
+        }
+    }
 
+    useEffect(() => { check() })
 
-    console.log('rendering profile');
-    console.log(profile)
     const join_date = profile && new Date(profile.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
     const [ActiveTab, setActiveTab] = useState(ALL_POSTS)
+    console.log("in profile")
+
+
+
     return (
 
         <div>
@@ -42,12 +58,13 @@ const Profile = ({profile}) => {
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
                         <h1 className=" h-auto p-0 pe-1 mb-0"> {profile &&  profile.name || ""}
-                            <SecureContent>
-                            <Link to="../edit-profile" id="edit-profile"
+
+                                {loggedinInUser &&
+                                    <Link to="../edit-profile" id="edit-profile"
                                   className="btn btn-light btn-sm rounded-pill ms-2 h-50 w-auto ">
                                 <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
-                            </Link>
-                            </SecureContent>
+                            </Link>}
+
                         </h1>
                         <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
                             <span>
@@ -57,9 +74,9 @@ const Profile = ({profile}) => {
                         </p>
                         <p className="wd-post-text m-0">
                             <span>
-                                <i className="far fa-calendar-alt"> &nbsp;</i>
+                                <i className="far fa-calendar-alt"> &nbsp; </i>
                             </span>
-                            Joined {""}
+                            Joined {join_date}
                         </p>
                         <p className="wd-post-text m-0">
                             <span>
