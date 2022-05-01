@@ -1,13 +1,20 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {createPost} from "../../actions/posts-actions";
 import "./home.css"
 import {useProfile} from "../../contexts/profile-context";
+import {findUser, getUserGames} from "../../actions/users-actions";
+import {getUserGamesFollowed} from "../../services/users-service";
 
 
 const MakePost = () => {
 
+    console.log("make-post")
+
+
     const {profile} = useProfile();
+
+
 
     let [gameSet, setGameSet] =
         useState({
@@ -21,26 +28,22 @@ const MakePost = () => {
             title: ''});
 
 
+    const dispatch = useDispatch();
+    useEffect(() => {
+        findUser(dispatch,profile._id)
+        getUserGames(dispatch,profile._id)}, [dispatch, profile._id]);
 
 
 
-    const user_games = profile.games;
-
-    const gameSetHandler = (event) => {
-
-        const game_id =  event.target.value
-        const game = user_games.find(g=> g._id == game_id )
-
-        setGameSet({set:true})
-        setNewPost({...newPost,game:{
-                _id: game_id,
-                name:game.name,
-                header_image: game.header_image
-
-            }})
+    const user = useSelector(state => state.user);
 
 
-    }
+
+
+
+
+
+
 
     const enterPostHandler = (event) =>{
         setNewPost({
@@ -55,14 +58,33 @@ const MakePost = () => {
         setGameSet({set:false})}
 
 
-    const dispatch = useDispatch();
+
+    if(user && user.games){
+        const user_games = user.games;
+        const gameSetHandler = (event) => {
+
+            const game_id =  event.target.value
+            const game = user_games.find(g=> g.id == game_id )
+
+            setGameSet({set:true})
+            setNewPost({...newPost,game:{
+                    _id: game_id,
+                    name:game.name,
+                    header_image: game.headerImage
+
+                }})
+
+
+        }
 
     return (
+
+
 
         <div className="list-group-item d-flex  mb-2 py-4 align-content-end wd-body-bkg-color wd-make-post">
             <div className=" col-2 h-auto pt-1  pe-3 ratio-1x1 " >
 
-                <img src="https://i.imgur.com/dUUJ6Gm.jpeg" className = "img-fluid  rounded-circle my-auto wd-avatar-border " />
+                <img src={profile.header_image} className = "img-fluid  rounded-circle my-auto wd-avatar-border " />
 
             </div>
 
@@ -84,7 +106,7 @@ const MakePost = () => {
                                     value={gameSet.set?newPost.game._id:""}>
                                 <option value="" disabled selected hidden>Games..</option>
                                 {
-                                    user_games.map && user_games.map(game => <option value={game._id}> {game.name} </option> )
+                                    user_games.map && user_games.map(game => <option value={game.id}> {game.name} </option> )
                                 }
                             </select>
 
@@ -105,6 +127,9 @@ const MakePost = () => {
 
 
 
-    );
+    )}
+    else{
+        return <div></div>
+    };
 }
 export default MakePost;

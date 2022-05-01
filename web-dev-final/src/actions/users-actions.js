@@ -2,6 +2,7 @@ import * as service from '../services/users-service'
 
 export const FIND_USER = 'FIND_USER';
 export const USER_POSTS = 'USER_POSTS'
+export const USER_GAMES = 'USER_GAMES'
 
 
 export const findUser = async (dispatch, userId) => {
@@ -12,3 +13,10 @@ export const findUser = async (dispatch, userId) => {
     });
 }
 
+export const getUserGames = async (dispatch, userId) => {
+    const games = await service.getUserGamesFollowed(userId);
+    dispatch({
+        type: USER_GAMES,
+        games
+    });
+}

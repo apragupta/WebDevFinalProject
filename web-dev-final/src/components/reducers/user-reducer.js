@@ -1,4 +1,4 @@
-import {FIND_USER} from "../../actions/users-actions";
+import {FIND_USER,USER_GAMES} from "../../actions/users-actions";
 
 
 const userReducer = (state=null,action) => {
@@ -7,6 +7,9 @@ const userReducer = (state=null,action) => {
         case FIND_USER:
             return action.user;
             break
+        case USER_GAMES:
+            const games = action.games
+            return {...state,games}
 
         default:
             return state;
