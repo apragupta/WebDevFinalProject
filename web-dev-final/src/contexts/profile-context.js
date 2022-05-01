@@ -52,9 +52,11 @@ export const ProfileProvider = ({children}) => {
 
     const signout = async() => {
         try {
+            console.log("signout")
             await service.logout()
             setProfile(undefined)
         } catch (e) {
+            setProfile(undefined)
             throw e
         }
     }

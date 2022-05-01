@@ -29,6 +29,7 @@ const NavigationSidebar = () =>{
     const logoutNav = async () => {
         await signout()
         navigate('/home')
+        window.location.reload()
 
     }
 

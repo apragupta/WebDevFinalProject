@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useProfile} from "../contexts/profile-context";
 
 const SecureContent = ({children}) => {
-    const {checkLoggedIn} = useProfile()
+    const {checkLoggedIn, profile} = useProfile()
 
 
     const [currentUser, setCurrentUser] = useState()
@@ -10,9 +10,12 @@ const SecureContent = ({children}) => {
     const check = async () => {
         try {
             const user = await checkLoggedIn()
+            console.log(user)
+            console.log("check ran")
             setCurrentUser(user)
 
         } catch (e) {
+            setCurrentUser(undefined)
         }
     }
     useEffect(() => { check() })

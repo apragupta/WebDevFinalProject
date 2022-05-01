@@ -19,7 +19,7 @@ const GameSidebarItem = ({game}) => {
             </div>
 
             <div className="col-xxl-3 col-xl-4 col-lg-4 pe-2 ">
-                <Link to={`/game/${game._id}`} className="btn btn-outline-info wd-details-button h-100 w-100 p-3  ">
+                <Link to={`/game/${game.id}`} className="btn btn-outline-info wd-details-button h-100 w-100 p-3  ">
                     Details
                 </Link>
 
