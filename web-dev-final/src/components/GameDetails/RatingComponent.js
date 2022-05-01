@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RatingComponent = ({game}) => {
+const RatingComponent = ({game, numberOfPosts}) => {
     const rating_string = () => game.total_rating? Math.round(game.total_rating *100)/100 + "%": "unavailable";
     return (
         <div className="d-flex justify-content-between ">
@@ -22,7 +22,8 @@ const RatingComponent = ({game}) => {
                 </div>
 
             </div>
-            <small>{game.total_rating_count? game.total_rating_count :0} {" Ratings"}</small>
+            <small>{game.total_rating_count ? game.total_rating_count : 0} {" Ratings /"}</small>
+            <small>{numberOfPosts} {" Posts"}</small>
         </div>
     );
 };
