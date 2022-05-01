@@ -54,6 +54,7 @@ export const ProfileProvider = ({children}) => {
         try {
             await service.logout()
             setProfile(undefined)
+            window.location.reload()
         } catch (e) {
             throw e
         }

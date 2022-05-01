@@ -1,4 +1,4 @@
-import react, {useEffect} from 'react'
+import react, {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom";
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
@@ -12,14 +12,42 @@ import RatingComponent from "./RatingComponent";
 import React from "react";
 import {findGame} from "../../actions/games-actions";
 import {useProfile} from "../../contexts/profile-context";
+import {curUserFollowGame} from "../../actions/users-actions";
 
 
 const GameDetails = () => {
-
     const dispatch = useDispatch();
-    const {profile} = useProfile()
+    const {profile} = useProfile();
 
     let { id } = useParams();
+    const user_follows_game = (profile) => {
+        console.log(profile.games)
+        console.log(id)
+        return profile && profile.games.includes(id)
+    }
+    const followButtonString =  (profile) => {
+
+        if (profile) {
+            if(user_follows_game(profile)) {
+                return "Followed!"
+            }
+            else{
+                return "Follow"
+            }
+
+        }
+        else {
+            return "Login to Follow"
+        }
+
+    }
+
+
+
+
+    const [followBtnStr,setFollowBtnStr] = useState(followButtonString(profile))
+
+
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
 
     useEffect(() => {findGamePosts(dispatch, id)}, [dispatch, id]);
@@ -33,39 +61,30 @@ const GameDetails = () => {
     if (game === null) {
         return <></>
     }
-
+    const game_followed = profile && user_follows_game(profile)
     const gameDetails = game.gameDetails;
     const game_search_result = game.gameSearchResult
 
 
 
 
-    const user_follows_game = (profile) => {
-        console.log(profile.games)
-        console.log(id)
-        return profile && profile.games.includes(id)
-    }
 
-    const FollowButtonString =  (profile) => {
 
-       if (profile) {
-           if(user_follows_game(profile)) {
-               return "Followed!"
-           }
-           else{
-               return "Follow"
-           }
 
-       }
-       else {
-           return "Login to Follow"
-       }
+    const handleFollow = () => {
+        if (profile && id) {
+            console.log(id)
 
+            curUserFollowGame(dispatch, id, profile._id)
+            setFollowBtnStr(followButtonString(profile))
+
+
+        }
     }
 
 
 
-    const game_followed = profile && user_follows_game(profile)
+
 
 
     return(
@@ -81,9 +100,10 @@ const GameDetails = () => {
                 <h2 className="w-75 h-auto p-0 pe-1 mb-0"> {game_search_result.name}</h2>
 
                 <button className=" align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto "
-                disabled={!profile ||  game_followed}>
+                disabled={!(followBtnStr=="Follow")}
+                onClick={handleFollow}>
                     {
-                        FollowButtonString(profile)
+                        followBtnStr
                     }
 
                 </button>
@@ -99,7 +119,7 @@ const GameDetails = () => {
 
                 </span>
             <RatingComponent game={game_search_result} />
-            <p className="wd-post-text mt-3 pt-3 border-top border-1">{ (gameDetails && parse(gameDetails.detailed_description)) || (game_search_result.summary)}</p>
+            <p className="wd-post-text mt-3 pt-3 border-top border-1 wd-html-container">{ (gameDetails && parse(gameDetails.detailed_description)) || (game_search_result.summary)}</p>
 
 
             </div>
