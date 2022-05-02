@@ -52,6 +52,11 @@ export const updatePost = async (post) => {
 
 }
 
+export const toggleUserBookmarkPost = async (postId) => {
+    const response = await api.post(`${POSTS_API}/${postId}/bookmark`);
+    return response.data;
+}
+
 export const findPostsByGameId = async (gid) => {
     const response = await api.get(`${GAME_API}/${encodeURIComponent(gid)}/posts`);
     return response.data;
@@ -79,4 +84,10 @@ export const getBookmarkedPostsByUserId = async (userId) => {
     const response = await api.get(`${USER_API}/${userId}/bookmarks`);
     const posts = response.data;
     return posts;
+}
+
+export const getFollowedPostsByUserId = async(userId) => {
+    const response = await api.get(`${USER_API}/${userId}/for-games-followed`);
+    const posts = response.data;
+    return posts
 }

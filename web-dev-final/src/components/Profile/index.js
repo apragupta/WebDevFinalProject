@@ -28,48 +28,42 @@ import SecureContent from "../secure-content";
 
 const Profile = ({profile}) => {
 
-   const [loggedinInUser, setLoggedInUser] = useState()
-    const {checkLoggedIn} = useProfile()
-    const check = async () => {
-
-        try {
-            const user = await checkLoggedIn()
-            if (user._id == profile._id)
-                setLoggedInUser(true)
-            else{ setLoggedInUser(false)}
-        } catch (e) {
-            setLoggedInUser(false)
-        }
-    }
-
-    useEffect(() => { check() })
-
     const join_date = profile && new Date(profile.join_date).toLocaleString('en-us', {month: 'short', year: 'numeric'})
     const [ActiveTab, setActiveTab] = useState(ALL_POSTS)
     console.log("in profile")
 
 
 
+
+
     return (
 
         <div>
-            <img src={profile && profile.banner_image || ""} className="w-100 wd-game-header "/>
+            <img src={profile && profile.banner_image || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
-                        <h1 className=" h-auto p-0 pe-1 mb-0"> {profile &&  profile.name || ""}
+                        <div className="d-flex align-content-center justify-content-start flex-wrap">
 
-                                {loggedinInUser &&
-                                    <Link to="../edit-profile" id="edit-profile"
-                                  className="btn btn-light btn-sm rounded-pill ms-2 h-50 w-auto ">
-                                <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
-                            </Link>}
-
+                        <h1 className=" h-auto p-0 pe-1 mb-1 "> {profile &&  profile.name || ""}
                         </h1>
+
+                                {profile.curUser === profile._id &&
+
+                                    <div className="d-flex align-self-center p-0">
+                                    <div className="btn btn-success btn-sm rounded-pill  h-75 w-auto"> Logged In </div>
+                                    <Link to="../edit-profile" id="edit-profile"
+                                    className="btn btn-light btn-sm rounded-pill ms-2 h-75 w-auto ">
+                                    <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
+                                    </Link>
+                                    </div>
+                                   }
+
+                        </div>
                         <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
                             <span>
-                                <Tag type={profile &&  profile.user_tier || "premium" === "premium" ? "warning" : "info"}
-                                     text={profile &&  profile.user_tier || ""}/>
+                                <Tag type={profile.user_role && (profile.user_role=="admin")? "warning ":"danger"}
+                                     text={profile.user_role && (profile.user_role=="admin")? "admin":"user"}/>
                             </span>
                         </p>
                         <p className="wd-post-text m-0">
@@ -81,11 +75,17 @@ const Profile = ({profile}) => {
                         <p className="wd-post-text m-0">
                             <span>
                                 <i className="fas fa-pen-alt"> &nbsp;</i>
-                            </span>{profile &&  profile.posts && profile.posts.length || 0} posts</p>
+                            </span>{profile &&  profile.posts && profile.posts.length || 0} posts
+                        </p>
+                        {profile.curUser === profile._id && <p className="wd-post-text m-0">
+                            <span>
+                                <i className="fas fa-laptop"> &nbsp;</i>
+                            </span>{profile.email}
+                        </p>}
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
 
-                        <img src={profile &&  profile.avatar_image || ""} className="img-fluid  rounded-circle wd-avatar-border "/>
+                        <img src={profile &&  profile.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border "/>
                     </div>
 
                 </div>

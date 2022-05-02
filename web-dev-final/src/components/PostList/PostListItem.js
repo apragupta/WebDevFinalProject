@@ -4,16 +4,26 @@ import PostStats from "./PostStats.js";
 import {deletePost} from "../../actions/posts-actions";
 import "./post-list.css"
 import {Link} from "react-router-dom";
+import {useProfile} from "../../contexts/profile-context";
 
 const PostListItem = ({post}) => {
     const dispatch = useDispatch();
 
+    const profile = useProfile();
+    console.log(profile)
+    console.log(post.postedBy._id)
+    console.log(profile?.profile && post.postedBy._id === profile?.profile?._id)
+
+
+    function permitedToDelete() {
+        return profile?.profile && (profile?.profile?.user_role === "admin"  || post.postedBy._id === profile?.profile?._id);
+    }
 
     return(
         <div className="list-group-item d-flex my-2  wd-inherit-bkg wd-post-list">
             <div className="col-lg-2 col-sm-3 col-4  h-auto  p-0 ratio-1x1 pe-4  pt-1" >
                 <Link to={`../profile/${post.postedBy._id}`} id="profile-link">
-                <img src={post.postedBy.avatar_image} className = "img-fluid   rounded-circle wd-avatar-border " />
+                <img src={post.postedBy.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className = "img-fluid   rounded-circle wd-avatar-border " />
                 </Link>
             </div>
 
@@ -33,9 +43,7 @@ const PostListItem = ({post}) => {
                     </div>
 
 
-                    <button onClick={() => deletePost(dispatch,post)} className="btn-sm btn-close p-2">
-
-                    </button>
+                    {permitedToDelete() ? <button onClick={() => deletePost(dispatch,post)} className="btn-sm btn-close p-2"></button> : <></>}
 
 
                 </div>

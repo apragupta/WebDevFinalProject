@@ -1,5 +1,5 @@
 import * as service from '../services/posts-service'
-import {USER_POSTS} from "./users-actions";
+
 
 export const CREATE_POST = 'CREATE_POST';
 export const FIND_POSTS = 'FIND_POSTS';
@@ -82,5 +82,19 @@ export const findUserBookmarkedPosts = async (dispatch, userId) => {
 
 }
 
+export const userToggleBookmarkPost = async (postId) => {
+    const status = await service.toggleUserBookmarkPost(postId);
+}
+
+export const findGamesFollowedPosts = async (dispatch,userId) => {
+    const posts = await service.getFollowedPostsByUserId(userId);
+    console.log("posts of games followed")
+    console.log(posts)
+    dispatch({
+        type: FIND_POSTS,
+        posts
+    });
+
+}
 
 
