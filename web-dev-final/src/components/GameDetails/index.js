@@ -2,7 +2,7 @@ import react, {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom";
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
-import {findGamePosts} from "../../actions/posts-actions";
+import {findGamePosts, findGamesFollowedPosts} from "../../actions/posts-actions";
 
 
 import Tag from "./Tag";
@@ -12,23 +12,43 @@ import RatingComponent from "./RatingComponent";
 import React from "react";
 import {findGame} from "../../actions/games-actions";
 import {useProfile} from "../../contexts/profile-context";
-import {curUserFollowGame} from "../../actions/users-actions";
+import {curUserFollowGame, findUser, getUserGames} from "../../actions/users-actions";
 
 
 const GameDetails = () => {
     const dispatch = useDispatch();
     const {profile} = useProfile();
+    const [followClicked,setFollowClicked] = useState(false)
 
     let { id } = useParams();
+    const posts = useSelector(
+        state => state.posts);
+    const game = useSelector(
+        state => state.game)
+    const user = useSelector(
+        state => state.user
+    )
+
     const user_follows_game = (profile) => {
-        console.log(profile.games)
-        console.log(id)
-        return profile && profile.games.includes(id)
+        if(profile) {
+            console.log("USER peofj GAMES")
+            console.log((user.games.find(game=> (game.id==parseInt(id)) || game==parseInt(id))))
+            console.log(profile && (user.games.find(game=> (game.id==parseInt(id)) || game==parseInt(id))))
+            console.log(profile)
+            return (profile && (user.games.find(game=> (game.id==parseInt(id)) || game==parseInt(id))))
+        }
+        else{
+            return false
+        }
+
+
     }
     const followButtonString =  (profile) => {
 
+
         if (profile) {
             if(user_follows_game(profile)) {
+                console.log("n")
                 return "Followed!"
             }
             else{
@@ -47,21 +67,38 @@ const GameDetails = () => {
 
     const [followBtnStr,setFollowBtnStr] = useState(followButtonString(profile))
 
+    useEffect(() => {
 
+        if(profile){
+            findUser(dispatch, profile._id)
+            getUserGames(dispatch,profile._id)}
+        setFollowBtnStr(followButtonString(profile))
+    }, [dispatch, id,profile, followClicked]);
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
 
     useEffect(() => {findGamePosts(dispatch, id)}, [dispatch, id]);
 
 
-    const posts = useSelector(
-        state => state.posts);
-    const game = useSelector(
-        state => state.game);
+
+    const handleFollow = () => {
+        setFollowClicked(!followClicked)
+        if (profile && id) {
+            console.log(id)
+
+            curUserFollowGame(dispatch, id, profile._id)
+            console.log(followButtonString(profile))
+            setFollowBtnStr(followButtonString(profile))
+
+
+        }
+        setFollowClicked(!followClicked)
+    }
+
+
 
     if (game === null) {
         return <></>
     }
-    const game_followed = profile && user_follows_game(profile)
     const gameDetails = game.gameDetails;
     const game_search_result = game.gameSearchResult
 
@@ -71,16 +108,6 @@ const GameDetails = () => {
 
 
 
-    const handleFollow = () => {
-        if (profile && id) {
-            console.log(id)
-
-            curUserFollowGame(dispatch, id, profile._id)
-            setFollowBtnStr(followButtonString(profile))
-
-
-        }
-    }
 
 
 

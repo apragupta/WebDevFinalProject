@@ -37,7 +37,7 @@ const Profile = ({profile}) => {
     return (
 
         <div>
-            <img src={profile && profile.banner_image || ""} className="w-100 wd-game-header "/>
+            <img src={profile && profile.banner_image || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
@@ -69,7 +69,7 @@ const Profile = ({profile}) => {
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
 
-                        <img src={profile &&  profile.avatar_image || ""} className="img-fluid  rounded-circle wd-avatar-border "/>
+                        <img src={profile &&  profile.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border "/>
                     </div>
 
                 </div>

@@ -54,7 +54,7 @@ const EditProfile = ({ profile }) => {
     return (
         <div>
 
-            <img src={profile && profile.banner_image || ""} className="w-100 wd-game-header" />
+            <img src={profile && profile.banner_image || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header" />
             <label for="banner_pic" className="col-form-label ">Banner image: </label>
             <input type="file" ref={bannerRef}id="banner_pic" name="banner_pic" className="form-control rounded-pill"/>
 
@@ -67,7 +67,7 @@ const EditProfile = ({ profile }) => {
                                className="form-control rounded-pill"/>
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
-                        <img src={profile && profile.avatar_image || ""} className="img-fluid  rounded-circle wd-avatar-border " />
+                        <img src={profile && profile.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border " />
                     </div>
 
 

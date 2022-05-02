@@ -86,6 +86,8 @@ export const findUserBookmarkedPosts = async (dispatch, userId) => {
 
 export const findGamesFollowedPosts = async (dispatch,userId) => {
     const posts = await service.getFollowedPostsByUserId(userId);
+    console.log("posts of games followed")
+    console.log(posts)
     dispatch({
         type: FIND_POSTS,
         posts

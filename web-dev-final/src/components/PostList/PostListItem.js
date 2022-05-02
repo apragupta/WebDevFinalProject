@@ -13,7 +13,7 @@ const PostListItem = ({post}) => {
         <div className="list-group-item d-flex my-2  wd-inherit-bkg wd-post-list">
             <div className="col-lg-2 col-sm-3 col-4  h-auto  p-0 ratio-1x1 pe-4  pt-1" >
                 <Link to={`../profile/${post.postedBy._id}`} id="profile-link">
-                <img src={post.postedBy.avatar_image} className = "img-fluid   rounded-circle wd-avatar-border " />
+                <img src={post.postedBy.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className = "img-fluid   rounded-circle wd-avatar-border " />
                 </Link>
             </div>
 
