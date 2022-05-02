@@ -98,6 +98,25 @@ const Register = () => {
                     </div>
 
                 </div>
+
+
+                <legend className="mt-4 h5">Would you like to be Moderator?</legend>
+                <div className="form-check">
+                    <label className="form-check-label">
+                        <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios1"
+                               value="option1"/>
+                            Yes
+                    </label>
+                </div>
+                <div className="form-check">
+                    <label className="form-check-label">
+                        <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios2"
+                               value="option2" checked/>
+                            No
+                    </label>
+                </div>
+
+
             </fieldset>
             </form>
         </div>

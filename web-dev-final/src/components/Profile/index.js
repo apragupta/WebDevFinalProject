@@ -34,6 +34,8 @@ const Profile = ({profile}) => {
 
 
 
+
+
     return (
 
         <div>
@@ -41,15 +43,23 @@ const Profile = ({profile}) => {
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
-                        <h1 className=" h-auto p-0 pe-1 mb-0"> {profile &&  profile.name || ""}
+                        <div className="d-flex align-content-center">
+
+                        <h1 className=" h-auto p-0 pe-1 mb-0 "> {profile &&  profile.name || ""}
+                        </h1>
 
                                 {profile.curUser === profile._id &&
-                                    <Link to="../edit-profile" id="edit-profile"
-                                  className="btn btn-light btn-sm rounded-pill ms-2 h-50 w-auto ">
-                                <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
-                            </Link>}
 
-                        </h1>
+                                    <div className="d-flex align-self-center p-0">
+                                    <div className="btn btn-success btn-sm rounded-pill ms-2 h-75 w-auto"> Logged In </div>
+                                    <Link to="../edit-profile" id="edit-profile"
+                                    className="btn btn-light btn-sm rounded-pill ms-2 h-75 w-auto ">
+                                    <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
+                                    </Link>
+                                    </div>
+                                   }
+
+                        </div>
                         <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
                             <span>
                                 <Tag type={profile &&  profile.user_tier || "premium" === "premium" ? "warning" : "info"}
@@ -65,7 +75,13 @@ const Profile = ({profile}) => {
                         <p className="wd-post-text m-0">
                             <span>
                                 <i className="fas fa-pen-alt"> &nbsp;</i>
-                            </span>{profile &&  profile.posts && profile.posts.length || 0} posts</p>
+                            </span>{profile &&  profile.posts && profile.posts.length || 0} posts
+                        </p>
+                        {profile.curUser === profile._id && <p className="wd-post-text m-0">
+                            <span>
+                                <i className="fas fa-laptop"> &nbsp;</i>
+                            </span>{profile.email}
+                        </p>}
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
 

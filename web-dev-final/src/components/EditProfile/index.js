@@ -88,6 +88,15 @@ const EditProfile = ({ profile }) => {
 
                 <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
+
+                <legend className="mt-4">Switches</legend>
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Moderator
+                            input
+                        </label>
+                </div>
+
             </div>
             <div className="d-flex justify-content-center mb-2">
                 <button onClick={handleEditProfileCancel} className="btn btn-danger btn-block rounded-pill w-50 h-auto mx-2 ">Cancel</button>
