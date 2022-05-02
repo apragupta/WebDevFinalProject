@@ -93,7 +93,6 @@ const EditProfile = ({ profile }) => {
                 <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Moderator
-                            input
                         </label>
                 </div>
 
