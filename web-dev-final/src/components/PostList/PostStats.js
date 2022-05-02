@@ -1,20 +1,30 @@
 import {useDispatch} from "react-redux";
 import React from "react";
-import { updatePost, userToggleBookmarkPost } from "../../actions/posts-actions";
+import {
+    updatePost,
+    userToggleBookmarkPost,
+    findUserLikedPosts,
+    userToggleLikePost,
+    userToggleDislikePost,
+    findUserDislikedPosts
+} from "../../actions/posts-actions";
 import { useProfile } from '../../contexts/profile-context';
 import {useNavigate} from "react-router-dom";
 
 const PostStats = ({post}) => {
     const dispatch = useDispatch();
-    const { checkLoggedIn, profile } = useProfile();
+    const { profile } = useProfile();
     const navigate = useNavigate();
 
-    const calcLikes = (post) => {
+
+    const calcLikes = async (post) => {
         //calculates the new number of likes depending on whether the tweet is already liked
-        if(post.liked){
+        const userLikedPosts = await findUserLikedPosts(profile._id);
+        const userDislikedPosts = await findUserDislikedPosts(profile._id);
+        if(userLikedPosts.includes(post._id)){
             return post.stats.likes -1
         }
-        else{
+        else if (userDislikedPosts.includes(post._id)) {
             return post.stats.likes + 1
         }
 
@@ -31,14 +41,67 @@ const PostStats = ({post}) => {
     }
 
 
-    const handleLike = () => { updatePost(dispatch, {
-        ...post, stats: {...post.stats,
-                    likes: calcLikes(post)},
-                    liked: !post.liked})}
-    const handleDisLike = () => { updatePost(dispatch, {
-        ...post, stats: {...post.stats,
-            dislikes: calcDisLikes(post)},
-        disliked: !post.disliked})}
+    const handleLike = async () => {
+        if (!profile) {
+            navigate('/login');
+            return;
+        }
+
+        const userLikedPosts = await findUserLikedPosts(profile._id);
+        const userDislikedPosts = await findUserDislikedPosts(profile._id);
+        let likeChange = 0;
+        let dislikeChange = 0;
+
+        if(userLikedPosts.includes(post._id)){
+            likeChange = -1;
+        }
+        else if (userDislikedPosts.includes(post._id)) {
+            likeChange = 1;
+            dislikeChange = -1;
+        } else {
+            likeChange = 1;
+        }
+
+        updatePost(dispatch, {
+            ...post,
+            stats: {
+                ...post.stats,
+                likes: post.stats.likes + likeChange,
+                dislikes: post.stats.dislikes + dislikeChange
+            }
+        });
+        userToggleLikePost(post._id);
+    }
+    const handleDisLike = async () => {
+        if (!profile) {
+            navigate('/login');
+            return;
+        }
+
+        const userLikedPosts = await findUserLikedPosts(profile._id);
+        const userDislikedPosts = await findUserDislikedPosts(profile._id);
+        let likeChange = 0;
+        let dislikeChange = 0;
+
+        if(userDislikedPosts.includes(post._id)){
+            dislikeChange = -1;
+        }
+        else if (userLikedPosts.includes(post._id)) {
+            dislikeChange = 1;
+            likeChange = -1;
+        } else {
+            dislikeChange = 1;
+        }
+        updatePost(dispatch, {
+            ...post,
+            stats: {
+                ...post.stats,
+                likes: post.stats.likes + likeChange,
+                dislikes: post.stats.dislikes + dislikeChange
+            }
+        });
+        userToggleDislikePost(post._id);
+    }
 
     const handleBookmark = async () => {
         if (!profile) {
