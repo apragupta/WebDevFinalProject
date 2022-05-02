@@ -85,3 +85,9 @@ export const getBookmarkedPostsByUserId = async (userId) => {
     const posts = response.data;
     return posts;
 }
+
+export const getFollowedPostsByUserId = async(userId) => {
+    const response = await api.get(`${USER_API}/${userId}/for-games-followed`);
+    const posts = response.data;
+    return posts
+}

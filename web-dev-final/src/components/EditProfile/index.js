@@ -38,7 +38,17 @@ const EditProfile = ({ profile }) => {
             profile.name = nameRef.current.value ? nameRef.current.value : profile.name;
             profile.email = emailRef.current.value ? emailRef.current.value : profile.email;
             profile.bio = bioRef.current.value ? bioRef.current.value : profile.bio;
-            const updatedUser = await userService.updateUser(profile);
+            const newProfile = {
+                banner_image: bannerRef.current.value,
+                avatar_image : avatarRef.current.value,
+                username : usernameRef.current.value,
+                password : passwordRef.current.value,
+                name : nameRef.current.value,
+                email : emailRef.current.value,
+                bio : bioRef.current.value,
+                _id: profile._id
+            }
+            const updatedUser = await userService.updateUser(newProfile);
             console.log(updatedUser);
         } catch (e) {
             console.log(e);
@@ -54,7 +64,7 @@ const EditProfile = ({ profile }) => {
     return (
         <div>
 
-            <img src={profile && profile.banner_image || ""} className="w-100 wd-game-header" />
+            <img src={profile && profile.banner_image || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header" />
             <label for="banner_pic" className="col-form-label ">Banner image: </label>
             <input type="file" ref={bannerRef}id="banner_pic" name="banner_pic" className="form-control rounded-pill"/>
 
@@ -67,7 +77,7 @@ const EditProfile = ({ profile }) => {
                                className="form-control rounded-pill"/>
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
-                        <img src={profile && profile.avatar_image || ""} className="img-fluid  rounded-circle wd-avatar-border " />
+                        <img src={profile && profile.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border " />
                     </div>
 
 
@@ -76,7 +86,7 @@ const EditProfile = ({ profile }) => {
                 <label for="profile_username" className="col-form-label">Username: </label>
 
                 <input type="text" ref={usernameRef} id="profile_username" name="profile_username" defaultValue={profile.username} className="form-control rounded-pill me-3" />
-                
+
                 <label for="profile_name" className="col-form-label">Name: </label>
                 <input type="text" ref={nameRef}id="profile_name" name="profile_name" defaultValue={profile.name} className="form-control rounded-pill me-3" />
 
@@ -88,6 +98,7 @@ const EditProfile = ({ profile }) => {
 
                 <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
+
             </div>
             <div className="d-flex justify-content-center mb-2">
                 <button onClick={handleEditProfileCancel} className="btn btn-danger btn-block rounded-pill w-50 h-auto mx-2 ">Cancel</button>
