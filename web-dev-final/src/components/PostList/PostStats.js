@@ -40,12 +40,12 @@ const PostStats = ({post}) => {
             dislikes: calcDisLikes(post)},
         disliked: !post.disliked})}
 
-    const handleBookmark = () => {
-        if (!checkLoggedIn()) {
+    const handleBookmark = async () => {
+        if (!profile) {
             navigate('/login');
             return;
         }
-        userToggleBookmarkPost(post._id);
+        await userToggleBookmarkPost(post._id);
     }
 
 
