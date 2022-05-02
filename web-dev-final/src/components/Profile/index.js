@@ -43,15 +43,15 @@ const Profile = ({profile}) => {
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
-                        <div className="d-flex align-content-center">
+                        <div className="d-flex align-content-center justify-content-start flex-wrap">
 
-                        <h1 className=" h-auto p-0 pe-1 mb-0 "> {profile &&  profile.name || ""}
+                        <h1 className=" h-auto p-0 pe-1 mb-1 "> {profile &&  profile.name || ""}
                         </h1>
 
                                 {profile.curUser === profile._id &&
 
                                     <div className="d-flex align-self-center p-0">
-                                    <div className="btn btn-success btn-sm rounded-pill ms-2 h-75 w-auto"> Logged In </div>
+                                    <div className="btn btn-success btn-sm rounded-pill  h-75 w-auto"> Logged In </div>
                                     <Link to="../edit-profile" id="edit-profile"
                                     className="btn btn-light btn-sm rounded-pill ms-2 h-75 w-auto ">
                                     <i className="fas fa-pencil-alt pe-1"></i> <span className="d-xl-inline d-none">Edit Profile</span>
@@ -62,8 +62,8 @@ const Profile = ({profile}) => {
                         </div>
                         <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
                             <span>
-                                <Tag type={profile &&  profile.user_tier || "premium" === "premium" ? "warning" : "info"}
-                                     text={profile &&  profile.user_tier || ""}/>
+                                <Tag type={profile.user_role && (profile.user_role=="admin")? "warning ":"danger"}
+                                     text={profile.user_role && (profile.user_role=="admin")? "admin":"user"}/>
                             </span>
                         </p>
                         <p className="wd-post-text m-0">

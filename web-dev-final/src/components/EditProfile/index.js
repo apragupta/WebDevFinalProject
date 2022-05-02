@@ -4,6 +4,7 @@ import {Link, useNavigate} from "react-router-dom";
 import Tag from "../GameDetails/Tag";
 import './edit-profile.css';
 import * as userService from '../../services/users-service.js';
+import {Form} from "react-bootstrap";
 
 const EditProfile = ({ profile }) => {
     console.log('rendering edit-profile');
@@ -49,6 +50,10 @@ const EditProfile = ({ profile }) => {
         navigate('/profile');
     }
 
+    const moderator_value  = () => {
+
+    }
+
 
 
     return (
@@ -89,12 +94,13 @@ const EditProfile = ({ profile }) => {
                 <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
 
-                <legend className="mt-4">Switches</legend>
-                <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Moderator
-                        </label>
-                </div>
+                <legend className="mt-4"> Toggle Moderator Access</legend>
+                <Form.Check
+                    type="switch"
+                    id="custom-switch"
+                    label="Moderator Access"
+                />
+
 
             </div>
             <div className="d-flex justify-content-center mb-2">
