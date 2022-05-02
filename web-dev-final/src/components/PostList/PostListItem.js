@@ -4,10 +4,20 @@ import PostStats from "./PostStats.js";
 import {deletePost} from "../../actions/posts-actions";
 import "./post-list.css"
 import {Link} from "react-router-dom";
+import {useProfile} from "../../contexts/profile-context";
 
 const PostListItem = ({post}) => {
     const dispatch = useDispatch();
 
+    const profile = useProfile();
+    console.log(profile)
+    console.log(post.postedBy._id)
+    console.log(profile?.profile && post.postedBy._id === profile?.profile?._id)
+
+
+    function permitedToDelete() {
+        return profile?.profile && (profile?.profile?.user_role === "admin"  || post.postedBy._id === profile?.profile?._id);
+    }
 
     return(
         <div className="list-group-item d-flex my-2  wd-inherit-bkg wd-post-list">
@@ -33,9 +43,7 @@ const PostListItem = ({post}) => {
                     </div>
 
 
-                    <button onClick={() => deletePost(dispatch,post)} className="btn-sm btn-close p-2">
-
-                    </button>
+                    {permitedToDelete() ? <button onClick={() => deletePost(dispatch,post)} className="btn-sm btn-close p-2"></button> : <></>}
 
 
                 </div>
