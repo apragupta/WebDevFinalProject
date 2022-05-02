@@ -1,8 +1,8 @@
-import react, {useEffect} from 'react'
+import react, {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom";
 import PostList from "../PostList";
 import {useDispatch, useSelector} from "react-redux";
-import {findGamePosts} from "../../actions/posts-actions";
+import {findGamePosts, findGamesFollowedPosts} from "../../actions/posts-actions";
 
 
 import Tag from "./Tag";
@@ -12,60 +12,92 @@ import RatingComponent from "./RatingComponent";
 import React from "react";
 import {findGame} from "../../actions/games-actions";
 import {useProfile} from "../../contexts/profile-context";
+import {curUserFollowGame, findUser, getUserGames} from "../../actions/users-actions";
 
 
 const GameDetails = () => {
-
     const dispatch = useDispatch();
-    const {profile} = useProfile()
+    const {profile} = useProfile();
 
     let { id } = useParams();
+    const posts = useSelector(
+        state => state.posts);
+    const game = useSelector(
+        state => state.game)
+    const user = useSelector(
+        state => state.user
+    )
+
+    const user_follows_game = (profile) => {
+        if(profile) {
+            console.log("USER peofj GAMES")
+            console.log((user.games.find(game=> (game.id==parseInt(id)) || game==parseInt(id))))
+            console.log(profile && (user.games.find(game=> (game.id==parseInt(id)) || game==parseInt(id))))
+            console.log(profile)
+            return (profile && (user.games.find(game=> (game.id==parseInt(id)) || game==parseInt(id))))
+        }
+        else{
+            return false
+        }
+
+
+    }
+    const followButtonString =  (profile) => {
+
+
+        if (profile) {
+            if(user_follows_game(profile)) {
+                console.log("n")
+                return "Followed!"
+            }
+            else{
+                return "Follow"
+            }
+
+        }
+        else {
+            return "Login to Follow"
+        }
+
+    }
+
+    useEffect(() => {
+
+        if(profile){
+            findUser(dispatch, profile._id)
+            getUserGames(dispatch,profile._id)}
+    }, [dispatch, id,profile]);
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
 
     useEffect(() => {findGamePosts(dispatch, id)}, [dispatch, id]);
 
 
-    const posts = useSelector(
-        state => state.posts);
-    const game = useSelector(
-        state => state.game);
+
+    const handleFollow = () => {
+        if (profile && id) {
+            console.log(id)
+            curUserFollowGame(dispatch, id, profile._id)
+        }
+    }
+
+
 
     if (game === null) {
         return <></>
     }
-
     const gameDetails = game.gameDetails;
     const game_search_result = game.gameSearchResult
 
 
 
 
-    const user_follows_game = (profile) => {
-        console.log(profile.games)
-        console.log(id)
-        return profile && profile.games.includes(id)
-    }
-
-    const FollowButtonString =  (profile) => {
-
-       if (profile) {
-           if(user_follows_game(profile)) {
-               return "Followed!"
-           }
-           else{
-               return "Follow"
-           }
-
-       }
-       else {
-           return "Login to Follow"
-       }
-
-    }
 
 
 
-    const game_followed = profile && user_follows_game(profile)
+
+
+
+
 
 
     return(
@@ -81,9 +113,10 @@ const GameDetails = () => {
                 <h2 className="w-75 h-auto p-0 pe-1 mb-0"> {game_search_result.name}</h2>
 
                 <button className=" align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto "
-                disabled={!profile ||  game_followed}>
+                disabled={!(followButtonString(profile)==="Follow")}
+                onClick={handleFollow}>
                     {
-                        FollowButtonString(profile)
+                        followButtonString(profile)
                     }
 
                 </button>
@@ -99,7 +132,7 @@ const GameDetails = () => {
 
                 </span>
             <RatingComponent game={game_search_result} />
-            <p className="wd-post-text mt-3 pt-3 border-top border-1">{ (gameDetails && parse(gameDetails.detailed_description)) || (game_search_result.summary)}</p>
+            <p className="wd-post-text mt-3 pt-3 border-top border-1 wd-html-container">{ (gameDetails && parse(gameDetails.detailed_description)) || (game_search_result.summary)}</p>
 
 
             </div>

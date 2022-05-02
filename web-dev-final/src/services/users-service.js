@@ -2,6 +2,7 @@ import axios from "axios";
 
 const API_BASE = process.env.API_URL  ||  "http://localhost:4000/api";
 const USER_API = `${API_BASE}/users`;
+
 const api = axios.create({withCredentials: true})
 
 export const getUser = async (userId) => {
@@ -24,3 +25,8 @@ export const updateUser = async (user) => {
 
 }
 
+export const currentUserFollowGame = async (gid) =>{
+    const response = await api.post(`${USER_API}/follow-game/${encodeURIComponent(gid)}`);
+    return response.data;
+
+}

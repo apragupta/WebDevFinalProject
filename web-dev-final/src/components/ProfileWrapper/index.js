@@ -44,9 +44,9 @@ const ProfileWrapper = () => {
 
     console.log("this user")
     console.log(this_user);
+    const u2 = {...this_user, curUser: profile?._id}
 
-
-    return ((this_user!=null) && this_user ? <Profile profile={this_user}/> : <div></div>);
+    return ((this_user!=null) && this_user ? <Profile profile={u2}/> : <div></div>);
 
 }
 

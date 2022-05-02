@@ -10,7 +10,7 @@ const GameSidebar = () => {
     const {profile} = useProfile();
     const dispatch = useDispatch();
     useEffect(() => {
-        findUser(dispatch,profile._id)
+        //findUser(dispatch,profile._id)
         getUserGames(dispatch,profile._id)}, [dispatch, profile._id]);
 
 

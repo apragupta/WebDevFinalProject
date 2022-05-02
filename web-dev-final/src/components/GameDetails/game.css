@@ -32,3 +32,8 @@
     border-width: 1px;
     border-color: var(--bs-gray-500) !important;
 }
+
+p.wd-html-container  img {
+    width: 100%;
+    height: auto;
+}
