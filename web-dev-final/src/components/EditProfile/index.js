@@ -4,7 +4,6 @@ import {Link, useNavigate} from "react-router-dom";
 import Tag from "../GameDetails/Tag";
 import './edit-profile.css';
 import * as userService from '../../services/users-service.js';
-import {Form} from "react-bootstrap";
 
 const EditProfile = ({ profile }) => {
     console.log('rendering edit-profile');
@@ -39,7 +38,17 @@ const EditProfile = ({ profile }) => {
             profile.name = nameRef.current.value ? nameRef.current.value : profile.name;
             profile.email = emailRef.current.value ? emailRef.current.value : profile.email;
             profile.bio = bioRef.current.value ? bioRef.current.value : profile.bio;
-            const updatedUser = await userService.updateUser(profile);
+            const newProfile = {
+                banner_image: bannerRef.current.value,
+                avatar_image : avatarRef.current.value,
+                username : usernameRef.current.value,
+                password : passwordRef.current.value,
+                name : nameRef.current.value,
+                email : emailRef.current.value,
+                bio : bioRef.current.value,
+                _id: profile._id
+            }
+            const updatedUser = await userService.updateUser(newProfile);
             console.log(updatedUser);
         } catch (e) {
             console.log(e);
@@ -48,10 +57,6 @@ const EditProfile = ({ profile }) => {
 
     const handleEditProfileCancel = () => {
         navigate('/profile');
-    }
-
-    const moderator_value  = () => {
-
     }
 
 
@@ -81,7 +86,7 @@ const EditProfile = ({ profile }) => {
                 <label for="profile_username" className="col-form-label">Username: </label>
 
                 <input type="text" ref={usernameRef} id="profile_username" name="profile_username" defaultValue={profile.username} className="form-control rounded-pill me-3" />
-                
+
                 <label for="profile_name" className="col-form-label">Name: </label>
                 <input type="text" ref={nameRef}id="profile_name" name="profile_name" defaultValue={profile.name} className="form-control rounded-pill me-3" />
 
@@ -93,14 +98,6 @@ const EditProfile = ({ profile }) => {
 
                 <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
-
-                <legend className="mt-4"> Toggle Moderator Access</legend>
-                <Form.Check
-                    type="switch"
-                    id="custom-switch"
-                    label="Moderator Access"
-                />
-
 
             </div>
             <div className="d-flex justify-content-center mb-2">
