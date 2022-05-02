@@ -9,6 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import {findAllPosts} from "../../actions/posts-actions";
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
+import {Form} from "react-bootstrap";
+
 const Register = () => {
 
     const validationSchema = Yup.object().shape({
@@ -24,15 +26,23 @@ const Register = () => {
             .required('Username is required')
             .min(4, 'Username must be at least 4 characters'),
         name: Yup.string()
-            .required('Name is required')
+            .required('Name is required'),
+        user_role: Yup.string()
+
 
     });
+    const [userRole,setUserRole] = useState("user")
 
     const formOptions = { resolver: yupResolver(validationSchema), mode: "onChange" };
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
     const navigate = useNavigate()
     const  onSubmit = async(data)  => {
+
+        if(data.user_role != "admin"){
+            data.user_role = "user";
+        }
+        console.log(data)
         try {
             await service.signup(
                 data
@@ -84,11 +94,22 @@ const Register = () => {
                 <div className="form-group">
                     <label htmlFor="name" className="form-label mt-4">Name</label>
                     <div className="d-flex justify-content-between">
-                        <input name={"naeme"} type="text" {...register('name')} className={`form-control rounded-pill me-3 ${errors.name ? 'is-invalid' : ''}`} id="name"
+                        <input name={"name"} type="text" {...register('name')} className={`form-control rounded-pill me-3 ${errors.name ? 'is-invalid' : ''}`} id="name"
                                placeholder="Enter Name"/>
                     </div>
                     <div className="invalid-feedback d-block">{errors.name?.message}</div>
                 </div>
+                <div className="form-group">
+                <label htmlFor="user_role" className="form-label mt-4">Would you like Moderator Access?</label>
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox" {...register('user_role')} name={"user_role"} id="user_role" value={userRole}
+                    onChange={(e)=>{setUserRole(e.target.value=="user"? "admin":"user")
+                        console.log(e.target.value)
+                    }}/>
+                        <label className="form-check-label" htmlFor="user_role">Moderator Access</label>
+                </div>
+                </div>
+
 
                 <div className="d-flex flex-column align-items-center">
                     <div className="d-flex align-items-center flex-column">
@@ -98,6 +119,11 @@ const Register = () => {
                     </div>
 
                 </div>
+
+
+
+
+
             </fieldset>
             </form>
         </div>
