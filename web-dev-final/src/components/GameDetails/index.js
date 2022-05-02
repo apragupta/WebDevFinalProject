@@ -18,7 +18,6 @@ import {curUserFollowGame, findUser, getUserGames} from "../../actions/users-act
 const GameDetails = () => {
     const dispatch = useDispatch();
     const {profile} = useProfile();
-    const [followClicked,setFollowClicked] = useState(false)
 
     let { id } = useParams();
     const posts = useSelector(
@@ -62,18 +61,12 @@ const GameDetails = () => {
 
     }
 
-
-
-
-    const [followBtnStr,setFollowBtnStr] = useState(followButtonString(profile))
-
     useEffect(() => {
 
         if(profile){
             findUser(dispatch, profile._id)
             getUserGames(dispatch,profile._id)}
-        setFollowBtnStr(followButtonString(profile))
-    }, [dispatch, id,profile, followClicked]);
+    }, [dispatch, id,profile]);
     useEffect(() => {findGame(dispatch, id)}, [dispatch, id]);
 
     useEffect(() => {findGamePosts(dispatch, id)}, [dispatch, id]);
@@ -81,17 +74,10 @@ const GameDetails = () => {
 
 
     const handleFollow = () => {
-        setFollowClicked(!followClicked)
         if (profile && id) {
             console.log(id)
-
             curUserFollowGame(dispatch, id, profile._id)
-            console.log(followButtonString(profile))
-            setFollowBtnStr(followButtonString(profile))
-
-
         }
-        setFollowClicked(!followClicked)
     }
 
 
@@ -127,10 +113,10 @@ const GameDetails = () => {
                 <h2 className="w-75 h-auto p-0 pe-1 mb-0"> {game_search_result.name}</h2>
 
                 <button className=" align-self-end btn btn-primary btn-block rounded-pill w-25 h-50  mx-auto "
-                disabled={!(followBtnStr=="Follow")}
+                disabled={!(followButtonString(profile)==="Follow")}
                 onClick={handleFollow}>
                     {
-                        followBtnStr
+                        followButtonString(profile)
                     }
 
                 </button>
