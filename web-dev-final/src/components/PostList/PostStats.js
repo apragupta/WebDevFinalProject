@@ -1,9 +1,14 @@
 import {useDispatch} from "react-redux";
 import React from "react";
-import {updatePost} from "../../actions/posts-actions";
+import { updatePost, userToggleBookmarkPost } from "../../actions/posts-actions";
+import { useProfile } from '../../contexts/profile-context';
+import {useNavigate} from "react-router-dom";
 
 const PostStats = ({post}) => {
     const dispatch = useDispatch();
+    const { checkLoggedIn, profile } = useProfile();
+    const navigate = useNavigate();
+
     const calcLikes = (post) => {
         //calculates the new number of likes depending on whether the tweet is already liked
         if(post.liked){
@@ -35,8 +40,13 @@ const PostStats = ({post}) => {
             dislikes: calcDisLikes(post)},
         disliked: !post.disliked})}
 
-    const handleBookmark = () => { updatePost(dispatch,
-        {...post,  bookmarked: !post.bookmarked})}
+    const handleBookmark = () => {
+        if (!checkLoggedIn()) {
+            navigate('/login');
+            return;
+        }
+        userToggleBookmarkPost(post._id);
+    }
 
 
     return (
@@ -75,19 +85,17 @@ const PostStats = ({post}) => {
 
             </span>
             <span onClick={handleBookmark} className="align-text-top">
-                  {
-                      post.bookmarked &&
-                      <i className="fa fa-bookmark d-flex float-start"
-                         style={{color: 'white'}}>
-                      </i>
-                  }
                 {
-                    !post.bookmarked &&
-                    <i className="far fa-bookmark  float-start">
-
+                    profile &&
+                    profile.bookmarks?.includes(post._id) &&
+                    <i className="fa fa-bookmark d-flex float-start"
+                        style={{color: 'white'}}>
                     </i>
                 }
-
+                {
+                    (!profile || !profile.bookmarks?.includes(post._id)) &&
+                    <i className="far fa-bookmark  float-start"></i>
+                }
             </span>
         </div>
 
