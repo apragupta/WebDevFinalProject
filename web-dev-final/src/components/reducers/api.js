@@ -19,7 +19,7 @@ const axiosBaseQuery =
 export const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: axiosBaseQuery({ baseUrl: 'http://localhost:4000/api' }),
-    tagTypes: ['Post'],
+    tagTypes: ['Post', 'User'],
     // The "endpoints" represent operations and requests for this server
     endpoints: builder => ({
         // The `getPosts` endpoint is a "query" operation that returns data
