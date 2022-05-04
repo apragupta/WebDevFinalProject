@@ -98,7 +98,8 @@ const Profile = ({profile}) => {
             <div className="wd-post-list-border p-3">
                 <Tabs defaultActiveKey={ALL_POSTS} id="uncontrolled-tab-example" className="mb-3" justify variant="tabs"
                       activeKey={ActiveTab}
-                      onSelect={(tab) => setActiveTab(tab)}>
+                      onSelect={(tab) => setActiveTab(tab)}
+                      unmountOnExit={true}>
                     <Tab eventKey={ALL_POSTS} title="Posts">
                         <ProfilePostListWrapper type={ActiveTab} userId={profile._id}/>
                     </Tab>
