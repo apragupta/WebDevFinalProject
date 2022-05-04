@@ -118,7 +118,7 @@ export const apiSlice = createApi({
                 url: `/users/${uid}/for-games-followed`,
                 method: "get"
             }),
-            providesTags: ['Post']
+            providesTags: (result, error, arg) => [{ type: 'User', id: arg }, 'Post']
         }),
         getGame: builder.query({
             query: gid => ({
