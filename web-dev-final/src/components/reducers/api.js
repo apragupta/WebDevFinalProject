@@ -26,7 +26,7 @@ export const apiSlice = createApi({
         getPosts: builder.query({
             // The URL for the request is '/fakeApi/posts'
             query: () => ({url: '/posts', method: "get"}),
-            providesTags: ['Post']
+            providesTags: ['Post', 'User']
         }),
         addNewPost: builder.mutation({
             query: initialPost => ({
@@ -118,7 +118,7 @@ export const apiSlice = createApi({
                 url: `/users/${uid}/for-games-followed`,
                 method: "get"
             }),
-            providesTags: ['Post']
+            providesTags: (result, error, arg) => [{ type: 'User', id: arg }, 'Post']
         }),
         getGame: builder.query({
             query: gid => ({

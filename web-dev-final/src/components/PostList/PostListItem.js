@@ -3,7 +3,7 @@ import PostStats from "./PostStats.js";
 import "./post-list.css"
 import {Link} from "react-router-dom";
 import {useProfile} from "../../contexts/profile-context";
-import {useDeletePostMutation} from "../reducers/api";
+import {useDeletePostMutation, useGetUserQuery} from "../reducers/api";
 
 const PostListItem = ({post}) => {
 
@@ -14,9 +14,14 @@ const PostListItem = ({post}) => {
     console.log(post.postedBy._id)
     console.log(profile?.profile && post.postedBy._id === profile?.profile?._id)
 
+    const {
+        data: userInfo,
+        isSuccess: isSuccessUser
+    } = useGetUserQuery(profile?.profile?._id || "62615f8352e1b898edf51bc6")
+
 
     function permitedToDelete() {
-        return profile?.profile && (profile?.profile?.user_role === "admin"  || post.postedBy._id === profile?.profile?._id);
+        return profile?.profile && isSuccessUser && (userInfo?.user_role === "admin"  || post.postedBy._id === profile?.profile?._id);
     }
 
     return(
