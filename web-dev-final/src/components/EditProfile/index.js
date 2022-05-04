@@ -48,9 +48,9 @@ const EditProfile = ({ profile }) => {
                 email : emailRef.current.value,
                 bio : bioRef.current.value,
                 _id: profile._id,
-                user_role: profile.user_role
+                user_role: userRole
             }
-            await updateUser(newProfile).unwrap()
+            await updateUser(newProfile).unwrap().then(navigate('/profile'))
         } catch (e) {
             console.log(e);
         }
