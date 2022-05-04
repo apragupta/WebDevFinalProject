@@ -21,12 +21,16 @@ export const apiSlice = createApi({
     baseQuery: axiosBaseQuery({ baseUrl: 'http://localhost:4000/api' }),
     tagTypes: ['Post', 'User'],
     // The "endpoints" represent operations and requests for this server
+    refetchOnMountOrArgChange: 5,
     endpoints: builder => ({
         // The `getPosts` endpoint is a "query" operation that returns data
         getPosts: builder.query({
             // The URL for the request is '/fakeApi/posts'
-            query: () => ({url: '/posts', method: "get"}),
-            providesTags: ['Post', 'User']
+            query: () => {
+                console.log('/posts')
+                return ({url: '/posts', method: "get"})
+            },
+            providesTags: ['Post']
         }),
         addNewPost: builder.mutation({
             query: initialPost => ({
@@ -161,6 +165,16 @@ export const apiSlice = createApi({
             }),
             invalidatesTags: (result, error, arg) => [{ type: 'User', id: arg._id }]
         }),
+        invalidateCache: builder.mutation({
+            query: gid => {
+                const unused = {
+                    url: `/posts`,
+                    method: 'get'
+                };
+                return unused
+            },
+            invalidatesTags: ['User', 'Post']
+        })
     })
 })
 
@@ -184,6 +198,7 @@ export const {
     useUpdateUserMutation,
     useFollowGameMutation,
     useToggleLikeMutation,
-    useToggleDislikeMutation
+    useToggleDislikeMutation,
+    useInvalidateCacheMutation
 } = apiSlice
 

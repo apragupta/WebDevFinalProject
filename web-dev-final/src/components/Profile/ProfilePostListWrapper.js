@@ -15,10 +15,10 @@ export const BOOKMARKED_POSTS = 'BOOKMARKED_POSTS';
 
 
 const ProfilePostListWrapper = ({type, userId}) => {
-    let allPosts = useGetPostsByUserIdQuery(userId)
-    let likedPosts = useGetLikedPostsByUserIdQuery(userId)
-    let dislikedPosts = useGetDislikedPostsByUserIdQuery(userId)
-    let bookmarkedPosts = useGetBookmarkedPostsByUserIdQuery(userId)
+    let allPosts = useGetPostsByUserIdQuery(userId, {pollingInterval: 3000})
+    let likedPosts = useGetLikedPostsByUserIdQuery(userId, {pollingInterval: 3000})
+    let dislikedPosts = useGetDislikedPostsByUserIdQuery(userId, {pollingInterval: 3000})
+    let bookmarkedPosts = useGetBookmarkedPostsByUserIdQuery(userId, {pollingInterval: 3000})
 
 
     let res

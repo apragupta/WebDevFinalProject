@@ -10,9 +10,6 @@ const PostListItem = ({post}) => {
     const [deletePost] = useDeletePostMutation()
 
     const profile = useProfile();
-    console.log(profile)
-    console.log(post.postedBy._id)
-    console.log(profile?.profile && post.postedBy._id === profile?.profile?._id)
 
     const {
         data: userInfo,

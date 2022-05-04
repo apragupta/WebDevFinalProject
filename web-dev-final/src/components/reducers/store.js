@@ -8,6 +8,6 @@ export default configureStore({
         active: activeReducer,
         [apiSlice.reducerPath]: apiSlice.reducer
     },
-    middleware: getDefaultMiddleware =>
+    middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(apiSlice.middleware).concat(logger)
 })

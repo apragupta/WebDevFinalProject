@@ -10,12 +10,12 @@ import {useGetFollowedPostsByUserIdQuery, useGetPostsQuery} from '../reducers/ap
 import {Spinner} from "react-bootstrap";
 
 const HomeScreen = () => {
-    const allPosts = useGetPostsQuery()
     const dispatch = useDispatch();
     const {profile} = useProfile()
     let userId = profile?._id || "62615f8352e1b898edf51bc6"
+    const allPosts = useGetPostsQuery(undefined, {pollingInterval: 3000})
 
-    const userPosts = useGetFollowedPostsByUserIdQuery(userId)
+    const userPosts = useGetFollowedPostsByUserIdQuery(userId, {pollingInterval: 3000})
     let res
 
     if (profile && profile._id) {
