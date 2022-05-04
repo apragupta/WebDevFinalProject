@@ -84,6 +84,17 @@ export const findUserBookmarkedPosts = async (dispatch, userId) => {
 
 export const userToggleBookmarkPost = async (postId) => {
     const status = await service.toggleUserBookmarkPost(postId);
+    return status
+}
+
+export const userToggleLikePost = async (postId) => {
+    const status = await service.toggleUserLikePost(postId);
+    return status
+}
+
+export const userToggleDislikePost = async (postId) => {
+    const status = await service.toggleUserDislikePost(postId);
+    return status
 }
 
 export const findGamesFollowedPosts = async (dispatch,userId) => {

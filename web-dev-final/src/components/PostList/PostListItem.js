@@ -1,18 +1,22 @@
-import React from "react"
+import React, {useState} from "react"
 import {useDispatch} from "react-redux";
 import PostStats from "./PostStats.js";
 import {deletePost} from "../../actions/posts-actions";
 import "./post-list.css"
 import {Link} from "react-router-dom";
 import {useProfile} from "../../contexts/profile-context";
+import {getUserPostInteractions} from "../../services/posts-service";
 
 const PostListItem = ({post}) => {
     const dispatch = useDispatch();
 
+
     const profile = useProfile();
-    console.log(profile)
-    console.log(post.postedBy._id)
-    console.log(profile?.profile && post.postedBy._id === profile?.profile?._id)
+
+
+
+
+
 
 
     function permitedToDelete() {
@@ -73,5 +77,7 @@ const PostListItem = ({post}) => {
 
         </div>);
 };
+
+
 
 export default PostListItem;

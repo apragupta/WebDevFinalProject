@@ -57,6 +57,16 @@ export const toggleUserBookmarkPost = async (postId) => {
     return response.data;
 }
 
+export const toggleUserLikePost = async (postId) => {
+    const response = await api.post(`${POSTS_API}/${postId}/like`);
+    return response.data;
+}
+
+export const toggleUserDislikePost = async (postId) => {
+    const response = await api.post(`${POSTS_API}/${postId}/dislike`);
+    return response.data;
+}
+
 export const findPostsByGameId = async (gid) => {
     const response = await api.get(`${GAME_API}/${encodeURIComponent(gid)}/posts`);
     return response.data;
@@ -90,4 +100,16 @@ export const getFollowedPostsByUserId = async(userId) => {
     const response = await api.get(`${USER_API}/${userId}/for-games-followed`);
     const posts = response.data;
     return posts
+}
+
+export const getUserPostInteractions = async(userId,postId) => {
+    const response = await api.get(`${POSTS_API}/${postId}/interaction-from-user/${userId}`)
+    return response.data
+
+}
+
+export const getPostStats = async(postId) => {
+    const response = await api.get(`${POSTS_API}/${postId}/stats`)
+    return response.data
+
 }

@@ -30,3 +30,4 @@ export const currentUserFollowGame = async (gid) =>{
     return response.data;
 
 }
+

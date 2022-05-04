@@ -3,7 +3,7 @@ import {
     FIND_POSTS,
     CREATE_POST,
     UPDATE_POST} from "../../actions/posts-actions";
-
+export const UPDATE_POST_FIELDS = "UPDATE_POST_FIELDS"
 const postsReducer =
     (state = [], action) => {
         switch (action.type) {
@@ -30,6 +30,11 @@ const postsReducer =
 
             case UPDATE_POST:
                 return state.map(post => post._id === action.post._id ? action.post: post);
+
+            case UPDATE_POST_FIELDS:
+                //updates without overwriting entire post
+                return state.map(post => post._id === action.post._id ? Object.assign(post,action.post): post);
+
 
             default:
                 return state
