@@ -143,7 +143,7 @@ const GameDetails = () => {
                     </h6>
                 </span>
                 <RatingComponent game={game_search_result} numberOfPosts={(!isLoading && posts.length) || 0}/>
-                <p className="wd-post-text mt-3 pt-3 border-top border-1">
+                <p className="wd-post-text mt-3 pt-3 border-top border-1 wd-html-container  ">
                     { (gameDetails && parse(gameDetails.detailed_description)) || (game_search_result.summary)}
                 </p>
             </div>
