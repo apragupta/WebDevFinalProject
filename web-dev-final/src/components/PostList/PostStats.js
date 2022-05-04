@@ -39,7 +39,7 @@ const PostStats = ({post}) => {
     useEffect(() => {
         fetchPostStats();
         fetchUserPostInteractions()
-    }, [dispatch,post._id,profile])
+    }, [dispatch,post._id,profile,post])
 
 
     // const calcLikes = (post) => {
