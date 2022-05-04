@@ -63,7 +63,7 @@ const Profile = ({profile}) => {
                         <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
                             <span>
                                 <Tag type={profile.user_role && (profile.user_role=="admin")? "warning ":"danger"}
-                                     text={profile.user_role && (profile.user_role=="admin")? "admin":"user"}/>
+                                     text={profile.user_role && (profile.user_role=="admin")? "moderator":"user"}/>
                             </span>
                         </p>
                         <p className="wd-post-text m-0">

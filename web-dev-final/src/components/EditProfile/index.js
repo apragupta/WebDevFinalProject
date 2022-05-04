@@ -1,13 +1,19 @@
-import react, {useRef, useEffect} from 'react'
+import react, {useRef, useEffect, useState} from 'react'
 import {useDispatch} from "react-redux";
 import {Link, useNavigate} from "react-router-dom";
 import Tag from "../GameDetails/Tag";
 import './edit-profile.css';
 import * as userService from '../../services/users-service.js';
+import React from "react";
 
 const EditProfile = ({ profile }) => {
     console.log('rendering edit-profile');
     console.log(profile)
+
+
+    const [userRole,setUserRole] = useState(profile.user_role)
+    console.log(userRole)
+
     const bannerRef = useRef();
     const avatarRef = useRef();
     const usernameRef = useRef();
@@ -29,7 +35,9 @@ const EditProfile = ({ profile }) => {
         console.log(usernameRef.current.value);
         console.log(nameRef.current.value);
         console.log(emailRef.current.value);
-        console.log(bioRef.current.value);
+        console.log(bioRef.current.value)
+        console.log(userRole)
+
         try {
             profile.banner_image = bannerRef.current.value ? bannerRef.current.value : profile.banner_image;
             profile.avatar_image = avatarRef.current.value ? avatarRef.current.value : profile.avatar_image;
@@ -38,6 +46,7 @@ const EditProfile = ({ profile }) => {
             profile.name = nameRef.current.value ? nameRef.current.value : profile.name;
             profile.email = emailRef.current.value ? emailRef.current.value : profile.email;
             profile.bio = bioRef.current.value ? bioRef.current.value : profile.bio;
+            profile.user_role = userRole;
             const newProfile = {
                 banner_image: bannerRef.current.value,
                 avatar_image : avatarRef.current.value,
@@ -46,9 +55,11 @@ const EditProfile = ({ profile }) => {
                 name : nameRef.current.value,
                 email : emailRef.current.value,
                 bio : bioRef.current.value,
-                _id: profile._id
+                _id: profile._id,
+                user_role: profile.user_role
             }
             const updatedUser = await userService.updateUser(newProfile);
+            console.log("updated user")
             console.log(updatedUser);
         } catch (e) {
             console.log(e);
@@ -98,6 +109,19 @@ const EditProfile = ({ profile }) => {
 
                 <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
+
+
+                <div className="form-group">
+                    <label htmlFor="user_role" className="form-label mt-4">Would you like Moderator Access?</label>
+                    <div className="form-check form-switch">
+                        <input className="form-check-input" type="checkbox" name={"user_role"} id="user_role" value={userRole}
+                               checked={userRole=="admin"}
+                               onChange={(e)=>{
+                                   setUserRole(userRole=="user"?"admin":"user")
+                               }}/>
+                        <label className="form-check-label" htmlFor="user_role">Moderator Access</label>
+                    </div>
+                </div>
 
             </div>
             <div className="d-flex justify-content-center mb-2">
