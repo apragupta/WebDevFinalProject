@@ -42,44 +42,7 @@ const PostStats = ({post}) => {
     }, [dispatch,post._id,profile,post])
 
 
-    // const calcLikes = (post) => {
-    //     //calculates the new number of likes depending on whether the tweet is already liked
-    //     if(post.liked){
-    //         return post.stats.likes -1
-    //     }
-    //     else{
-    //         return post.stats.likes + 1
-    //     }
-    //
-    // }
-    // const calcDisLikes = (post) => {
-    //     //calculates the new number of likes depending on whether the tweet is already liked
-    //     if(post.disliked){
-    //         return post.stats.dislikes -1
-    //     }
-    //     else{
-    //         return post.stats.dislikes + 1
-    //     }
-    //
-    // }
-    //
-    //
-    // const handleLike = () => { updatePost(dispatch, {
-    //     ...post, stats: {...post.stats,
-    //                 likes: calcLikes(post)},
-    //                 liked: !post.liked})}
-    // const handleDisLike = () => { updatePost(dispatch, {
-    //     ...post, stats: {...post.stats,
-    //         dislikes: calcDisLikes(post)},
-    //     disliked: !post.disliked})}
-    //
-    // const handleBookmark = async () => {
-    //     if (!profile) {
-    //         navigate('/login');
-    //         return;
-    //     }
-    //     await userToggleBookmarkPost(post._id);
-    // }
+
 
     const handleLike = async () => {
         if (!profile) {

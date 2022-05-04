@@ -61,6 +61,7 @@ const EditProfile = ({ profile }) => {
             const updatedUser = await userService.updateUser(newProfile);
             console.log("updated user")
             console.log(updatedUser);
+            navigate('/profile');
         } catch (e) {
             console.log(e);
         }
