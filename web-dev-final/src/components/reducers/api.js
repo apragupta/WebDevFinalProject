@@ -26,7 +26,7 @@ export const apiSlice = createApi({
         getPosts: builder.query({
             // The URL for the request is '/fakeApi/posts'
             query: () => ({url: '/posts', method: "get"}),
-            providesTags: ['Post']
+            providesTags: ['Post', 'User']
         }),
         addNewPost: builder.mutation({
             query: initialPost => ({
