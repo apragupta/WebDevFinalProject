@@ -1,29 +1,14 @@
-import react, {useEffect, useState} from 'react'
-import user from '../../sample_data/user'
+import React, {useState} from 'react'
 import Tag from "../GameDetails/Tag";
-import RatingComponent from "../GameDetails/RatingComponent";
-import parse from "html-react-parser";
-import PostList from "../PostList";
 import '../GameDetails/game.css'
 import '../HomeScreen/home.css'
 import './profile.css'
-import React from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import ProfilePostListWrapper from "./ProfilePostListWrapper";
 import {ALL_POSTS,LIKED_POSTS,DISLIKED_POSTS,BOOKMARKED_POSTS} from "./ProfilePostListWrapper";
-import * as service from "../../services/auth-service";
-import * as userService from "../../services/users-service";
-import {useProfile} from "../../contexts/profile-context";
 
 import {Tabs,Tab} from "react-bootstrap";
-import {useDispatch, useSelector} from "react-redux";
-import {findAllPosts} from "../../actions/posts-actions";
-import GameDetails from "../GameDetails";
-import GamesSidebarItem from "../GamesSidebar/GameItem.js";
-import GameSidebarItem from "../GamesSidebar/GameItem";
 import GamesList from "../GamesSidebar/GamesList";
-import * as userActions from "../../actions/users-actions";
-import SecureContent from "../secure-content";
 
 
 const Profile = ({profile}) => {
@@ -39,13 +24,13 @@ const Profile = ({profile}) => {
     return (
 
         <div>
-            <img src={profile && profile.banner_image || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header "/>
+            <img src={(profile && profile.banner_image) || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header "/>
             <div className="wd-paragraph-border my-3">
                 <div className="d-flex justify-content-between   mb-3">
                     <div className="w-75">
                         <div className="d-flex align-content-center justify-content-start flex-wrap">
 
-                        <h1 className=" h-auto p-0 pe-1 mb-1 "> {profile &&  profile.name || ""}
+                        <h1 className=" h-auto p-0 pe-1 mb-1 "> {(profile &&  profile.name) || ""}
                         </h1>
 
                                 {profile.curUser === profile._id &&
@@ -60,7 +45,7 @@ const Profile = ({profile}) => {
                                    }
 
                         </div>
-                        <p className="wd-post-text mb-1"> @{profile &&  profile.username || ""} &nbsp;
+                        <p className="wd-post-text mb-1"> @{(profile &&  profile.username) || ""} &nbsp;
                             <span>
                                 <Tag type={profile.user_role && (profile.user_role=="admin")? "warning ":"danger"}
                                      text={profile.user_role && (profile.user_role=="admin")? "moderator":"user"}/>
@@ -75,7 +60,7 @@ const Profile = ({profile}) => {
                         <p className="wd-post-text m-0">
                             <span>
                                 <i className="fas fa-pen-alt"> &nbsp;</i>
-                            </span>{profile &&  profile.posts && profile.posts.length || 0} posts
+                            </span>{(profile &&  profile.posts && profile.posts.length) || 0} posts
                         </p>
                         {profile.curUser === profile._id && <p className="wd-post-text m-0">
                             <span>
@@ -85,11 +70,11 @@ const Profile = ({profile}) => {
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
 
-                        <img src={profile &&  profile.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border "/>
+                        <img src={(profile &&  profile.avatar_image) || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border "/>
                     </div>
 
                 </div>
-                <p className="wd-post-text mt-3 pt-3 border-top border-1">{profile && profile.bio || ""}</p>
+                <p className="wd-post-text mt-3 pt-3 border-top border-1">{(profile && profile.bio) || ""}</p>
 
             </div>
 

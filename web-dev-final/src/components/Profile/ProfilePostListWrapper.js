@@ -1,14 +1,12 @@
 import React from 'react';
 import PostList from "../PostList";
-import {useEffect} from "react";
-import {useDispatch} from "react-redux";
 import {
-    findUserBookmarkedPosts,
-    findUserDislikedPosts,
-    findUserLikedPosts,
-    findUserPosts
-} from "../../actions/posts-actions";
-import {useSelector} from "react-redux";
+    useGetBookmarkedPostsByUserIdQuery,
+    useGetDislikedPostsByUserIdQuery,
+    useGetLikedPostsByUserIdQuery,
+    useGetPostsByUserIdQuery
+} from "../reducers/api";
+import {Spinner} from "react-bootstrap";
 export const  ALL_POSTS = 'ALL_POSTS';
 export const LIKED_POSTS = 'LIKED_POSTS';
 export const DISLIKED_POSTS = 'DISLIKED_POSTS';
@@ -17,37 +15,56 @@ export const BOOKMARKED_POSTS = 'BOOKMARKED_POSTS';
 
 
 const ProfilePostListWrapper = ({type, userId}) => {
-    const dispatch = useDispatch();
-    useEffect(() => {
-        console.log("happening")
-        console.log(type,userId)
-        switch(type) {
-            case ALL_POSTS:
-                findUserPosts(dispatch, userId);
-                break;
-            case LIKED_POSTS:
-                findUserLikedPosts(dispatch, userId);
-                break;
-            case DISLIKED_POSTS:
-                findUserDislikedPosts(dispatch, userId);
-                break;
-            case BOOKMARKED_POSTS:
-                findUserBookmarkedPosts(dispatch, userId);
-                break;
-            default:
-                findUserPosts(dispatch, userId);
-                break;
-        }},[dispatch,type,userId]);
+    let allPosts = useGetPostsByUserIdQuery(userId)
+    let likedPosts = useGetLikedPostsByUserIdQuery(userId)
+    let dislikedPosts = useGetDislikedPostsByUserIdQuery(userId)
+    let bookmarkedPosts = useGetBookmarkedPostsByUserIdQuery(userId)
+
+
+    let res
+
+    switch(type) {
+        case ALL_POSTS:
+            res = allPosts
+            break;
+        case LIKED_POSTS:
+            res = likedPosts
+            break;
+        case DISLIKED_POSTS:
+            res = dislikedPosts
+            break;
+        case BOOKMARKED_POSTS:
+            res = bookmarkedPosts
+            break;
+        default:
+            res = allPosts
+            break;
+    }
+
+    let {
+        data: posts,
+        isLoading,
+        isSuccess,
+        isError,
+        error
+    } = res
 
 
 
 
-    const posts = useSelector(
-        state => state.posts);
+    let content
+
+    if (isLoading) {
+        content = <Spinner text="Loading..." />
+    } else if (isSuccess) {
+        content = <PostList posts={posts}/>
+    } else if (isError) {
+        content = <div>{error.error}</div>
+    }
 
     return (
 
-            <PostList posts={posts}/>
+        content
 
     );
 };

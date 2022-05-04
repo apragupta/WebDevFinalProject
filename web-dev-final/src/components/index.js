@@ -1,25 +1,11 @@
 import {Outlet} from "react-router-dom";
 import NavigationSidebar from "./NavigationSidebar";
-import postsReducer from "./reducers/posts-reducer";
-import gamesReducer from "./reducers/games-reducer";
-import userReducer from "./reducers/user-reducer";
-import {combineReducers,createStore, applyMiddleware} from "redux";
-import logger from 'redux-logger'
 
 import {Provider} from "react-redux";
 import GameSidebar from "./GamesSidebar";
-import searchReducer from "./reducers/search-reducer";
-import activeReducer from "./reducers/active-reducer";
 import SecureContent from "./secure-content";
+import store from './reducers/store'
 
-const reducer = combineReducers({
-    posts: postsReducer,
-    game: gamesReducer,
-    user: userReducer, 
-    search: searchReducer,
-    active: activeReducer
-});
-const store = createStore(reducer,applyMiddleware(logger));
 
 const MainApp =() => {
 

@@ -1,15 +1,12 @@
-import react, {useEffect, useState} from 'react'
+import {useState} from 'react'
 import './../GameDetails/game.css'
 import './login.css'
-import React, {useRef} from 'react';
+import React from 'react';
 import * as service from '../../services/auth-service'
 import {useNavigate} from "react-router-dom";
-import {useProfile} from "../../contexts/profile-context";
 import { yupResolver } from '@hookform/resolvers/yup';
-import {findAllPosts} from "../../actions/posts-actions";
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
-import {Form} from "react-bootstrap";
 
 const Register = () => {
 

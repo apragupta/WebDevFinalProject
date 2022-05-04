@@ -1,7 +1,5 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import React from "react";
 import PostListItem from "./PostListItem";
-import {findAllPosts} from "../../actions/posts-actions";
 
 const PostList = ({posts}) => {
 

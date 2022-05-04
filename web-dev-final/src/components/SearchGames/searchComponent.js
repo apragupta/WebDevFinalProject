@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import '../HomeScreen/home.css'
-import {useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {search} from "../../actions/search-actions";
 
 
 
@@ -10,22 +8,13 @@ const SearchComponent = (startingTerm) => {
 
     let navigate = useNavigate();
 
-
     let [searchTerm, setSearchTerm]
         = useState(startingTerm.startingTerm || "");
-    const dispatch = useDispatch();
 
     const searchClickHandler = () => {
         console.log(searchTerm);
-        search(dispatch, searchTerm)
         navigate(`/search/${encodeURIComponent(searchTerm)}`)
     }
-
-
-    useEffect(() => {if (startingTerm.startingTerm) search(dispatch, startingTerm.startingTerm);},
-        [startingTerm.startingTerm, dispatch]);
-
-
 
     return (
             <div className="input-group border border-1 wd-border-color rounded-pill pe-3 my-2 mb-3">

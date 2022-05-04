@@ -1,42 +1,58 @@
-import react, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import PostList from "../PostList";
 import MakePost from "./MakePost";
 import SearchComponent from "../SearchGames/searchComponent";
-import {useDispatch, useSelector} from "react-redux";
-import {findAllPosts, findGamesFollowedPosts} from "../../actions/posts-actions";
+import {useDispatch} from "react-redux";
 import './home.css'
 import SecureContent from "../secure-content";
 import {useProfile} from "../../contexts/profile-context";
-import {findUser, getUserGames} from "../../actions/users-actions";
-import {useParams} from "react-router-dom";
+import {useGetFollowedPostsByUserIdQuery, useGetPostsQuery} from '../reducers/api'
+import {Spinner} from "react-bootstrap";
 
 const HomeScreen = () => {
-
+    const allPosts = useGetPostsQuery()
     const dispatch = useDispatch();
     const {profile} = useProfile()
+    let userId = profile?._id || "62615f8352e1b898edf51bc6"
 
+    const userPosts = useGetFollowedPostsByUserIdQuery(userId)
+    let res
 
+    if (profile && profile._id) {
+        res = userPosts
+    } else {
+        res = allPosts
+    }
+
+    const {
+        data: posts,
+        isLoading,
+        isSuccess,
+        isError,
+        error
+    } = res
+
+    let content
+
+    if (isLoading) {
+        content = <Spinner text="Loading..." />
+    } else if (isSuccess) {
+        content = <PostList posts={posts}/>
+    } else if (isError) {
+        content = <div>{error.error}</div>
+    }
 
     const updateNav = () => {
         dispatch({type: 'nav-change', value:'home'});};
 
     useEffect(() => {
         updateNav();
-        //if user is loggedin
-        if(profile && profile._id){
-            const userId = profile._id
-            findGamesFollowedPosts(dispatch,userId)
-        }
-        else{
-            findAllPosts(dispatch);
-        }
-    },[dispatch,profile])
+    },[dispatch])
 
 
 
 
-    const posts = useSelector(
-        state => state.posts)
+    //const posts = useSelector(selectAllPosts)
 
     return(
         <div>
@@ -48,7 +64,7 @@ const HomeScreen = () => {
                 {/*//TODO figure out why this currentUser is not getting updated :(*/}
             </SecureContent>
             <div className="wd-post-list-border">
-            <PostList posts={posts}/>
+                {content}
             </div>
         </div>
     )

@@ -1,13 +1,15 @@
 import {useDispatch} from "react-redux";
 import React from "react";
-import { updatePost, userToggleBookmarkPost } from "../../actions/posts-actions";
+import { updatePost } from "../../actions/posts-actions";
 import { useProfile } from '../../contexts/profile-context';
 import {useNavigate} from "react-router-dom";
+import {useToggleBookmarkMutation} from "../reducers/api";
 
 const PostStats = ({post}) => {
     const dispatch = useDispatch();
-    const { checkLoggedIn, profile } = useProfile();
+    const { profile } = useProfile();
     const navigate = useNavigate();
+    const [toggleBookmark] = useToggleBookmarkMutation()
 
     const calcLikes = (post) => {
         //calculates the new number of likes depending on whether the tweet is already liked
@@ -45,7 +47,7 @@ const PostStats = ({post}) => {
             navigate('/login');
             return;
         }
-        await userToggleBookmarkPost(post._id);
+        await toggleBookmark(post._id).unwrap()
     }
 
 

@@ -1,14 +1,10 @@
 import {useProfile} from "../../contexts/profile-context";
-import {useNavigate, useParams} from "react-router-dom";
-import * as service from "../../services/auth-service";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {findAllPosts, findUserPosts} from "../../actions/posts-actions";
-import * as userActions from "../../actions/users-actions";
+import {useParams} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import React, {useEffect} from "react";
 import Profile from "../Profile";
-import {ALL_POSTS} from "../Profile/ProfilePostListWrapper";
-import {findUser, getUserGames} from "../../actions/users-actions";
-import {getUserGamesFollowed} from "../../services/users-service";
+import {Spinner} from "react-bootstrap";
+import {useGetUserGamesFollowedQuery, useGetUserQuery} from "../reducers/api";
 
 const ProfileWrapper = () => {
     console.log("in profile wrapper")
@@ -21,20 +17,37 @@ const ProfileWrapper = () => {
         userId = profile._id;
     }
 
-    console.log("user id")
-    console.log(userId);
 
-    useEffect(() => {
-            findUser(dispatch,userId)
-            getUserGames(dispatch,userId)}, [dispatch,userId]);
+    let {
+        data: user,
+        isLoading,
+        isSuccess,
+        isError,
+        error
+    } = useGetUserQuery(userId)
 
 
-    console.log("profile")
-    console.log(profile);
+    let {
+        data: games,
+        isLoading: gamesLoading,
+        isSuccess: gamesSuccess,
+        isError: gamesError,
+        error: gError
+    } = useGetUserGamesFollowedQuery(userId)
 
-    console.log("in profile wrapper 2");
 
-    let this_user = useSelector(state => state.user);
+    const u2 = {...user, games, curUser: profile?._id}
+
+    let content
+
+    if (isLoading || gamesLoading) {
+        content = <Spinner text="Loading..." />
+    } else if (isSuccess && gamesSuccess) {
+        content = <Profile profile={u2}/>
+    } else if (isError || gamesError) {
+        content = <div>{error.error}{gError.error}</div>
+    }
+
 
     const updateNav = () => {
         dispatch({type: 'nav-change', value: 'profile'});
@@ -42,11 +55,7 @@ const ProfileWrapper = () => {
     useEffect(updateNav, [dispatch]);
 
 
-    console.log("this user")
-    console.log(this_user);
-    const u2 = {...this_user, curUser: profile?._id}
-
-    return ((this_user!=null) && this_user ? <Profile profile={u2}/> : <div></div>);
+    return content
 
 }
 

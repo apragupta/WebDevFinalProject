@@ -1,13 +1,13 @@
 import React from "react"
-import {useDispatch} from "react-redux";
 import PostStats from "./PostStats.js";
-import {deletePost} from "../../actions/posts-actions";
 import "./post-list.css"
 import {Link} from "react-router-dom";
 import {useProfile} from "../../contexts/profile-context";
+import {useDeletePostMutation} from "../reducers/api";
 
 const PostListItem = ({post}) => {
-    const dispatch = useDispatch();
+
+    const [deletePost] = useDeletePostMutation()
 
     const profile = useProfile();
     console.log(profile)
@@ -43,7 +43,7 @@ const PostListItem = ({post}) => {
                     </div>
 
 
-                    {permitedToDelete() ? <button onClick={() => deletePost(dispatch,post)} className="btn-sm btn-close p-2"></button> : <></>}
+                    {permitedToDelete() ? <button onClick={async () => await deletePost(post).unwrap()} className="btn-sm btn-close p-2"></button> : <></>}
 
 
                 </div>

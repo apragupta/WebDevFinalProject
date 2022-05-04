@@ -1,10 +1,8 @@
-import react, {useRef, useEffect, useState} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import {useDispatch} from "react-redux";
-import {Link, useNavigate} from "react-router-dom";
-import Tag from "../GameDetails/Tag";
+import {useNavigate} from "react-router-dom";
 import './edit-profile.css';
-import * as userService from '../../services/users-service.js';
-import React from "react";
+import {useUpdateUserMutation} from "../reducers/api";
 
 const EditProfile = ({ profile }) => {
     console.log('rendering edit-profile');
@@ -28,6 +26,8 @@ const EditProfile = ({ profile }) => {
     };
     useEffect(updateNav);
 
+    const [updateUser] = useUpdateUserMutation()
+
     const handleEditProfileSave = async () => {
         console.log("handle edit profile save");
         console.log(bannerRef.current.value);
@@ -39,14 +39,6 @@ const EditProfile = ({ profile }) => {
         console.log(userRole)
 
         try {
-            profile.banner_image = bannerRef.current.value ? bannerRef.current.value : profile.banner_image;
-            profile.avatar_image = avatarRef.current.value ? avatarRef.current.value : profile.avatar_image;
-            profile.username = usernameRef.current.value ? usernameRef.current.value : profile.username;
-            profile.password = passwordRef.current.value ? passwordRef.current.value : profile.password;
-            profile.name = nameRef.current.value ? nameRef.current.value : profile.name;
-            profile.email = emailRef.current.value ? emailRef.current.value : profile.email;
-            profile.bio = bioRef.current.value ? bioRef.current.value : profile.bio;
-            profile.user_role = userRole;
             const newProfile = {
                 banner_image: bannerRef.current.value,
                 avatar_image : avatarRef.current.value,
@@ -58,9 +50,7 @@ const EditProfile = ({ profile }) => {
                 _id: profile._id,
                 user_role: profile.user_role
             }
-            const updatedUser = await userService.updateUser(newProfile);
-            console.log("updated user")
-            console.log(updatedUser);
+            await updateUser(newProfile).unwrap()
         } catch (e) {
             console.log(e);
         }
@@ -75,9 +65,9 @@ const EditProfile = ({ profile }) => {
     return (
         <div>
 
-            <img src={profile && profile.banner_image || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header" />
-            <label for="banner_pic" className="col-form-label ">Banner image: </label>
-            <input type="file" ref={bannerRef}id="banner_pic" name="banner_pic" className="form-control rounded-pill"/>
+            <img src={(profile && profile.banner_image) || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header" />
+            <label htmlFor="banner_pic" className="col-form-label ">Banner image: </label>
+            <input type="file" ref={bannerRef} id="banner_pic" name="banner_pic" className="form-control rounded-pill"/>
 
 
             <div className="wd-paragraph-border my-3">
@@ -88,26 +78,26 @@ const EditProfile = ({ profile }) => {
                                className="form-control rounded-pill"/>
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
-                        <img src={profile && profile.avatar_image || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border " />
+                        <img src={(profile && profile.avatar_image) || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border " />
                     </div>
 
 
                 </div>
 
-                <label for="profile_username" className="col-form-label">Username: </label>
+                <label htmlFor="profile_username" className="col-form-label">Username: </label>
 
                 <input type="text" ref={usernameRef} id="profile_username" name="profile_username" defaultValue={profile.username} className="form-control rounded-pill me-3" />
 
-                <label for="profile_name" className="col-form-label">Name: </label>
-                <input type="text" ref={nameRef}id="profile_name" name="profile_name" defaultValue={profile.name} className="form-control rounded-pill me-3" />
+                <label htmlFor="profile_name" className="col-form-label">Name: </label>
+                <input type="text" ref={nameRef} id="profile_name" name="profile_name" defaultValue={profile.name} className="form-control rounded-pill me-3" />
 
-                <label for="profile_password" className="col-form-label">Password: </label>
+                <label htmlFor="profile_password" className="col-form-label">Password: </label>
                 <input type="password" ref={passwordRef} id="profile_password" name="profile_password" defaultValue={profile.password} className="form-control rounded-pill me-3" />
 
-                <label for="profile_email" className="col-form-label">Email: </label>
-                <input type="text" ref={emailRef}id="profile_email" name="profile_email" defaultValue={profile.email} className="form-control rounded-pill me-3"/>
+                <label htmlFor="profile_email" className="col-form-label">Email: </label>
+                <input type="text" ref={emailRef} id="profile_email" name="profile_email" defaultValue={profile.email} className="form-control rounded-pill me-3"/>
 
-                <label for="profile_bio" className="col-form-label">Bio (500 character limit): </label>
+                <label htmlFor="profile_bio" className="col-form-label">Bio (500 character limit): </label>
                 <textarea ref={bioRef} id="profile_bio" name="profile_bio" defaultValue={profile.bio} className="form-control wd-textarea-rounded me-3"/>
 
 

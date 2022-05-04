@@ -1,19 +1,34 @@
 import {useProfile} from "../../contexts/profile-context";
-import {useNavigate, useParams} from "react-router-dom";
-import * as service from "../../services/auth-service";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {findAllPosts} from "../../actions/posts-actions";
-import * as userActions from "../../actions/users-actions";
+import React from "react";
 import EditProfile from "../EditProfile";
+import { useGetUserQuery} from "../reducers/api";
+import {Spinner} from "react-bootstrap";
 
 const EditProfileWrapper = () => {
 	console.log("in edit-profile wrapper");
 	const { profile } = useProfile();
 	console.log("edit-profile wrapper");
 	console.log(profile);
-	const navigate = useNavigate();
-	return (<EditProfile profile={profile}/>);
+	let userId = profile._id
+	const {
+		data: user,
+		isLoading,
+		isSuccess,
+		isError,
+		error
+	} = useGetUserQuery(userId)
+
+
+	let content
+
+	if (isLoading) {
+		content = <Spinner text="Loading..." />
+	} else if (isSuccess) {
+		content = <EditProfile profile={user}/>
+	} else if (isError) {
+		content = <div>{error.error}</div>
+	}
+	return content
 }
 
 export default EditProfileWrapper;
