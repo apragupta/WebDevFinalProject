@@ -67,7 +67,7 @@ const EditProfile = ({ profile }) => {
 
             <img src={(profile && profile.banner_image) || "https://i.imgur.com/1RtiIWn.jpg"} className="w-100 wd-game-header" />
             <label htmlFor="banner_pic" className="col-form-label ">Banner image: </label>
-            <input type="file" ref={bannerRef} id="banner_pic" name="banner_pic" className="form-control rounded-pill"/>
+            <input type="file" ref={bannerRef} id="banner_pic" name="banner_pic" className="form-control rounded-pill" defaultValue={profile.banner_image}/>
 
 
             <div className="wd-paragraph-border my-3">
@@ -75,7 +75,7 @@ const EditProfile = ({ profile }) => {
                     <div className="w-75 align-self-center">
                         <label htmlFor="profile_pic" className="col-form-label">Profile image: </label>
                         <input type="file" ref={avatarRef} id="profile_pic" name="profile_pic"
-                               className="form-control rounded-pill"/>
+                               className="form-control rounded-pill" defaultValue={profile.avatar_image}/>
                     </div>
                     <div className="w-25 h-auto px-lg-3 px-2 ratio-1x1 align-self-center">
                         <img src={(profile && profile.avatar_image) || "https://i.imgur.com/Lsi7bXT.jpg"} className="img-fluid  rounded-circle wd-avatar-border " />
