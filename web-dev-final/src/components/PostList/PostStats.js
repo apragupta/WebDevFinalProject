@@ -1,39 +1,23 @@
 import {useDispatch} from "react-redux";
 import React from "react";
-import { updatePost } from "../../actions/posts-actions";
 import { useProfile } from '../../contexts/profile-context';
 import {useNavigate} from "react-router-dom";
-import {useToggleBookmarkMutation} from "../reducers/api";
+import {
+    useGetUserGamesFollowedQuery,
+    useGetUserQuery,
+    useToggleBookmarkMutation,
+    useToggleDislikeMutation,
+    useToggleLikeMutation
+} from "../reducers/api";
+import {Spinner} from "react-bootstrap";
+import Profile from "../Profile";
 
 const PostStats = ({post}) => {
-    const dispatch = useDispatch();
     const { profile } = useProfile();
     const navigate = useNavigate();
     const [toggleBookmark] = useToggleBookmarkMutation()
-
-
-    const calcLikes = async (post) => {
-        //calculates the new number of likes depending on whether the tweet is already liked
-        const userLikedPosts = await findUserLikedPosts(profile._id);
-        const userDislikedPosts = await findUserDislikedPosts(profile._id);
-        if(userLikedPosts.includes(post._id)){
-            return post.stats.likes -1
-        }
-        else if (userDislikedPosts.includes(post._id)) {
-            return post.stats.likes + 1
-        }
-
-    }
-    const calcDisLikes = (post) => {
-        //calculates the new number of likes depending on whether the tweet is already liked
-        if(post.disliked){
-            return post.stats.dislikes -1
-        }
-        else{
-            return post.stats.dislikes + 1
-        }
-
-    }
+    const [toggleLike] = useToggleLikeMutation()
+    const [toggleDislike] = useToggleDislikeMutation()
 
 
     const handleLike = async () => {
@@ -42,30 +26,7 @@ const PostStats = ({post}) => {
             return;
         }
 
-        const userLikedPosts = await findUserLikedPosts(profile._id);
-        const userDislikedPosts = await findUserDislikedPosts(profile._id);
-        let likeChange = 0;
-        let dislikeChange = 0;
-
-        if(userLikedPosts.includes(post._id)){
-            likeChange = -1;
-        }
-        else if (userDislikedPosts.includes(post._id)) {
-            likeChange = 1;
-            dislikeChange = -1;
-        } else {
-            likeChange = 1;
-        }
-
-        updatePost(dispatch, {
-            ...post,
-            stats: {
-                ...post.stats,
-                likes: post.stats.likes + likeChange,
-                dislikes: post.stats.dislikes + dislikeChange
-            }
-        });
-        userToggleLikePost(post._id);
+        await toggleLike({post: post._id, user: profile._id}).unwrap();
     }
     const handleDisLike = async () => {
         if (!profile) {
@@ -73,29 +34,7 @@ const PostStats = ({post}) => {
             return;
         }
 
-        const userLikedPosts = await findUserLikedPosts(profile._id);
-        const userDislikedPosts = await findUserDislikedPosts(profile._id);
-        let likeChange = 0;
-        let dislikeChange = 0;
-
-        if(userDislikedPosts.includes(post._id)){
-            dislikeChange = -1;
-        }
-        else if (userLikedPosts.includes(post._id)) {
-            dislikeChange = 1;
-            likeChange = -1;
-        } else {
-            dislikeChange = 1;
-        }
-        updatePost(dispatch, {
-            ...post,
-            stats: {
-                ...post.stats,
-                likes: post.stats.likes + likeChange,
-                dislikes: post.stats.dislikes + dislikeChange
-            }
-        });
-        userToggleDislikePost(post._id);
+        await toggleDislike({post: post._id, user: profile._id}).unwrap();
     }
 
     const handleBookmark = async () => {
@@ -103,8 +42,19 @@ const PostStats = ({post}) => {
             navigate('/login');
             return;
         }
-        await toggleBookmark(post._id).unwrap()
+        await toggleBookmark({post: post._id, user: profile._id}).unwrap()
     }
+    const userId = profile?._id || "62615f8352e1b898edf51bc6"
+
+    const {
+        data: user,
+        isSuccess
+    } = useGetUserQuery(userId)
+
+
+    const bookmarked = profile && isSuccess && user.bookmarks?.includes(post._id)
+    const liked = profile && isSuccess && user.liked?.includes(post._id)
+    const disliked = profile && isSuccess && user.disliked?.includes(post._id)
 
 
     return (
@@ -112,14 +62,13 @@ const PostStats = ({post}) => {
             <i className="far fa-comment mx-1"> { post.stats && post.stats.comments} </i>
             <span onClick={handleDisLike} className="align-text-top">
                   {
-                      post.disliked &&
-                      <i className="fas fa-thumbs-down d-flex float-start"
-                         style={{color: 'white'}}>
+                      disliked &&
+                      <i className="fas fa-thumbs-down d-flex float-start">
                           <span className="mx-1">{post.stats && post.stats.dislikes}</span>
                       </i>
                   }
                 {
-                    !post.disliked &&
+                    !disliked &&
                     <i className="far fa-thumbs-down  float-start">
                         <span className="mx-1">{post.stats && post.stats.dislikes}</span>
                     </i>
@@ -128,14 +77,14 @@ const PostStats = ({post}) => {
             </span>
             <span onClick={handleLike} className="align-text-top">
                   {
-                      post.liked &&
+                      liked &&
                       <i className="fas fa-heart d-flex float-start"
                          style={{color: 'white'}}>
                           <span className="mx-1">{post.stats && post.stats.likes}</span>
                       </i>
                   }
                 {
-                    !post.liked &&
+                    !liked &&
                     <i className="far fa-heart  float-start">
                         <span className="mx-1">{post.stats && post.stats.likes}</span>
                     </i>
@@ -144,14 +93,13 @@ const PostStats = ({post}) => {
             </span>
             <span onClick={handleBookmark} className="align-text-top">
                 {
-                    profile &&
-                    profile.bookmarks?.includes(post._id) &&
+                    bookmarked &&
                     <i className="fa fa-bookmark d-flex float-start"
                         style={{color: 'white'}}>
                     </i>
                 }
                 {
-                    (!profile || !profile.bookmarks?.includes(post._id)) &&
+                    (!bookmarked) &&
                     <i className="far fa-bookmark  float-start"></i>
                 }
             </span>

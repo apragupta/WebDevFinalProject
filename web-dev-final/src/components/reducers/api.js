@@ -54,8 +54,22 @@ export const apiSlice = createApi({
             invalidatesTags: ['Post']
         }),
         toggleBookmark: builder.mutation({
-            query: postId => ({
-                url: `/posts/${postId}/bookmark`,
+            query: args => ({
+                url: `/posts/${args.post}/bookmark`,
+                method: 'post'
+            }),
+            invalidatesTags: ['Post', 'User']
+        }),
+        toggleLike: builder.mutation({
+            query: args => ({
+                url: `/posts/${args.post}/like`,
+                method: 'post'
+            }),
+            invalidatesTags: ['Post', 'User']
+        }),
+        toggleDislike: builder.mutation({
+            query: args => ({
+                url: `/posts/${args.post}/dislike`,
                 method: 'post'
             }),
             invalidatesTags: ['Post', 'User']
@@ -168,6 +182,8 @@ export const {
     useGetUserQuery,
     useGetUserGamesFollowedQuery,
     useUpdateUserMutation,
-    useFollowGameMutation
+    useFollowGameMutation,
+    useToggleLikeMutation,
+    useToggleDislikeMutation
 } = apiSlice
 
