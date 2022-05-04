@@ -30,3 +30,23 @@ export const currentUserFollowGame = async (gid) =>{
     return response.data;
 
 }
+
+export const userLikedPost = async (userId,postId)=>{
+    const liked = await api.get(`${USER_API}/${encodeURIComponent(userId)}/liked/post/${encodeURIComponent(postId)}`);
+    console.log("liked service")
+    console.log(liked.data)
+    return liked.data
+
+}
+export const userDisLikedPost = async (userId,postId)=>{
+    const disliked = await api.get(`${USER_API}/${encodeURIComponent(userId)}/disliked/post/${encodeURIComponent(postId)}`);
+    console.log("dislike service")
+    console.log(disliked.data)
+    return disliked.data
+}
+export const userBookmarkedPost = async (userId,postId)=>{
+    const bookmarked = await api.get(`${USER_API}/${encodeURIComponent(userId)}/bookmarked/post/${encodeURIComponent(postId)}`);
+    console.log("bookmark service")
+    console.log(bookmarked.data)
+    return bookmarked.data
+}

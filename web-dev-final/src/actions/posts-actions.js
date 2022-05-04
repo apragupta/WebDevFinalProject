@@ -29,6 +29,16 @@ export const updatePost = async (dispatch, post) => {
         post
     });
 }
+
+export const refreshPost = async (dispatch, post_id) => {
+    const post = await service.findPostById(post_id);
+    dispatch({
+        type: UPDATE_POST,
+        post
+    });
+    return post
+}
+
 export const deletePost = async (dispatch, post) => {
     const response = await service.deletePost(post);
     dispatch({
@@ -85,7 +95,12 @@ export const findUserBookmarkedPosts = async (dispatch, userId) => {
 export const userToggleBookmarkPost = async (postId) => {
     const status = await service.toggleUserBookmarkPost(postId);
 }
-
+export const userToggleLikePost = async (postId) => {
+    const status = await service.toggleUserLikePost(postId);
+}
+export const userToggleDislikePost = async (postId) => {
+    const status = await service.toggleUserDislikePost(postId);
+}
 export const findGamesFollowedPosts = async (dispatch,userId) => {
     const posts = await service.getFollowedPostsByUserId(userId);
     console.log("posts of games followed")
@@ -96,5 +111,6 @@ export const findGamesFollowedPosts = async (dispatch,userId) => {
     });
 
 }
+
 
 

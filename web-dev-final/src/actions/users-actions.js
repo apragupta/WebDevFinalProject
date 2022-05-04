@@ -1,4 +1,7 @@
 import * as service from '../services/users-service'
+import * as userService from "../services/users-service";
+import user from "../sample_data/user";
+import {UPDATE_POST} from "./posts-actions";
 
 
 export const FIND_USER = 'FIND_USER';
@@ -38,14 +41,34 @@ export const curUserFollowGame = async (dispatch, gid, userId) => {
         }
 
     catch (e) {
-       throw (e)
+
         console.log("ERROR FOLLOW")
         console.log(e)
+        throw (e)
     }
 
 
 
+
 }
+
+// export const updateUser = async (dispatch,updatedProfile) =>{
+//     try {
+//         await userService.updateUser(updatedProfile);
+//         dispatch()
+//     }
+//     catch (e) {
+//
+//         console.log("UPDATE ERROR")
+//         console.log(e)
+//         throw (e)
+//     }
+//
+//
+//
+//
+//
+// }
 
 
 

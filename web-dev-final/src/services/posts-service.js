@@ -52,8 +52,21 @@ export const updatePost = async (post) => {
 
 }
 
+export const findPostById = async (post_id) =>{
+    const response = await  api.get(`${POSTS_API}/${post_id}`)
+    return response.data
+}
+
 export const toggleUserBookmarkPost = async (postId) => {
     const response = await api.post(`${POSTS_API}/${postId}/bookmark`);
+    return response.data;
+}
+export const toggleUserLikePost = async (postId) => {
+    const response = await api.post(`${POSTS_API}/${postId}/like`);
+    return response.data;
+}
+export const toggleUserDislikePost = async (postId) => {
+    const response = await api.post(`${POSTS_API}/${postId}/dislike`);
     return response.data;
 }
 
@@ -91,3 +104,4 @@ export const getFollowedPostsByUserId = async(userId) => {
     const posts = response.data;
     return posts
 }
+
